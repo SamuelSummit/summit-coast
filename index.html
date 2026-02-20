@@ -19,7 +19,6 @@
         }
         .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); align-items: center; justify-content: center; padding: 20px; }
         .modal.active { display: flex; }
-        .accent-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }
     </style>
 </head>
 <body>
@@ -29,8 +28,8 @@
             <div class="text-2xl font-bold tracking-tighter uppercase">Summit <span class="text-emerald-500 italic font-light">Coast Capital</span></div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
                 <a href="#solutions" class="hover:text-emerald-400 transition">Solutions</a>
-                <a href="#experience" class="hover:text-emerald-400 transition text-emerald-500 border-b border-emerald-500/50">Experience</a>
-                <a href="mailto:Samuel@summitcoastcapital.com?subject=New Loan Application" class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-500 transition tracking-widest text-[9px]">Apply Now</a>
+                <a href="#experience" class="hover:text-emerald-400 transition">Experience</a>
+                <a href="mailto:Samuel@summitcoastcapital.com?subject=New Loan Application&body=1. Property Address:%0D%0A2. Est. Value:%0D%0A3. Loan Amount:%0D%0A4. Exit Strategy:" class="bg-emerald-600 text-white px-6 py-3 rounded-full hover:bg-emerald-500 transition tracking-widest text-[9px]">Apply Now</a>
             </div>
         </div>
     </nav>
@@ -38,65 +37,48 @@
     <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-5xl">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none">Private Capital. <br><span class="italic font-light text-emerald-500">Unrestricted Growth.</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 max-w-3xl mx-auto italic">Strategic funding from a 18-year real estate veteran.</p>
-            <a href="#solutions" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition transform hover:-translate-y-1">View Loan Programs</a>
+            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 max-w-3xl mx-auto italic">Strategic funding from an 18-year real estate veteran.</p>
+            <a href="#solutions" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition">View Loan Programs</a>
         </div>
     </section>
 
     <section id="experience" class="py-32 px-8 bg-[#080808] border-y border-white/5">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="order-2 md:order-1">
-                    <span class="text-emerald-500 text-xs font-bold tracking-[0.4em] uppercase mb-4 block accent-glow">Founder & Principal</span>
+                <div>
+                    <span class="text-emerald-500 text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Founder & Principal</span>
                     <h2 class="serif text-5xl md:text-7xl mb-8 leading-tight">Samuel <br><span class="italic text-gray-400">Summit</span></h2>
-                    
-                    <div class="space-y-6 text-gray-400 font-light text-lg leading-relaxed mb-10">
-                        <p>With <strong class="text-white underline decoration-emerald-500 decoration-2">18 years of "scar tissue"</strong> across the most competitive markets in Florida and Colorado, Samuel isn't just a lender—he's a cycle-tested veteran who understands the forensic details of a deal.</p>
-                        <p>From navigating the 2008 REO collapse to pioneering AI-driven equity scouting today, Samuel has funded over $500M in transaction volume, helping professional investors scale from their first flip to multi-unit dominance.</p>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
-                        <div>
-                            <p class="text-emerald-500 font-bold text-2xl mb-1">18+</p>
-                            <p class="text-[10px] uppercase tracking-widest text-gray-500">Years Industry Experience</p>
-                        </div>
-                        <div>
-                            <p class="text-emerald-500 font-bold text-2xl mb-1">FL // CO</p>
-                            <p class="text-[10px] uppercase tracking-widest text-gray-500">Regional Expertise</p>
-                        </div>
-                    </div>
+                    <p class="text-gray-400 text-lg leading-relaxed font-light mb-8 italic">
+                        18 years of "scar tissue" navigating the Florida and Colorado markets. Over $500M in transaction volume managed since 2008.
+                    </p>
+                    <a href="mailto:Samuel@summitcoastcapital.com?subject=Strategic Consultation Request" class="inline-block border border-white/20 text-white px-8 py-4 rounded-full text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition">Talk to the Founder</a>
                 </div>
-                
-                <div class="order-1 md:order-2 glass-card p-1 rounded-[50px] overflow-hidden">
-                    <div class="p-12 text-center bg-gradient-to-br from-emerald-900/20 to-transparent rounded-[48px]">
-                        <h3 class="serif text-3xl mb-4 italic text-white">"We fund based on the deal's potential, not your tax returns."</h3>
-                        <div class="h-1 w-20 bg-emerald-500 mx-auto mb-8"></div>
-                        <p class="text-sm text-gray-400 font-light tracking-wide mb-8 uppercase">Providing liquidity to Pinellas County & The Front Range.</p>
-                        <a href="mailto:Samuel@summitcoastcapital.com?subject=Strategic Consultation Request" class="inline-block border border-white/20 text-white px-8 py-4 rounded-full text-[10px] uppercase tracking-widest hover:bg-white hover:text-black transition">Talk to the Founder</a>
-                    </div>
+                <div class="glass-card p-12 rounded-[50px] border-emerald-500/20 text-center">
+                    <p class="text-emerald-500 font-bold text-5xl mb-2">18+</p>
+                    <p class="text-[10px] uppercase tracking-widest text-gray-500 italic">Years in the Trenches</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="solutions" class="py-32 px-8">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="serif text-5xl mb-20 text-center">Lending <span class="italic text-emerald-500">Programs</span></h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="serif text-5xl mb-20">Lending <span class="italic text-emerald-500">Suite</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-12 rounded-[40px] cursor-pointer" onclick="openModal('dscr')">
                     <h3 class="text-2xl font-bold mb-4 uppercase text-emerald-400">DSCR Loans</h3>
-                    <p class="text-gray-400 font-light mb-6 text-sm">Property-focused liquidity. No DTI checks.</p>
-                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW SPECS →</span>
+                    <p class="text-gray-400 font-light mb-6 text-sm italic">No-DTI. Property-focused liquidity.</p>
+                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW DETAILS →</span>
                 </div>
                 <div class="glass-card p-12 rounded-[40px] cursor-pointer" onclick="openModal('bridge')">
-                    <h3 class="text-2xl font-bold mb-4 uppercase text-emerald-400">Bridge / Fix</h3>
-                    <p class="text-gray-400 font-light mb-6 text-sm">Close in 7 days. High-leverage acquisitions.</p>
-                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW SPECS →</span>
+                    <h3 class="text-2xl font-bold mb-4 uppercase text-emerald-400">Bridge / Flip</h3>
+                    <p class="text-gray-400 font-light mb-6 text-sm italic">Close in 7 days. High-leverage.</p>
+                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW DETAILS →</span>
                 </div>
                 <div class="glass-card p-12 rounded-[40px] cursor-pointer" onclick="openModal('equity')">
                     <h3 class="text-2xl font-bold mb-4 uppercase text-emerald-400">Equity Access</h3>
-                    <p class="text-gray-400 font-light mb-6 text-sm">Cash-out refinance for scaling portfolios.</p>
-                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW SPECS →</span>
+                    <p class="text-gray-400 font-light mb-6 text-sm italic">Cash-out refi for portfolio growth.</p>
+                    <span class="text-[10px] text-emerald-500 font-bold tracking-[0.2em]">VIEW DETAILS →</span>
                 </div>
             </div>
         </div>
@@ -104,23 +86,23 @@
 
     <div id="dscr-modal" class="modal" onclick="closeModal('dscr')">
         <div class="bg-[#0a0a0a] p-10 md:p-16 rounded-[40px] max-w-2xl border border-emerald-500/30" onclick="event.stopPropagation()">
-            <h2 class="serif text-4xl mb-6 text-emerald-400 italic font-bold">DSCR Guidelines</h2>
+            <h2 class="serif text-4xl mb-6 text-emerald-400 italic">DSCR Underwriting</h2>
             <ul class="text-gray-300 space-y-4 mb-10 text-sm">
                 <li>• 80% LTV Purchase / 75% LTV Cash-Out</li>
-                <li>• No Personal Income Verification</li>
-                <li>• 30-Year Fixed or Interest-Only</li>
+                <li>• No Tax Returns or DTI Checks</li>
                 <li>• Close in LLC, Corp, or Trust</li>
             </ul>
             <button onclick="closeModal('dscr')" class="w-full bg-emerald-600 py-4 rounded-full font-bold uppercase tracking-widest text-[10px]">Close</button>
         </div>
     </div>
+
     <script>
         function openModal(id) { document.getElementById(id + '-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
         function closeModal(id) { document.getElementById(id + '-modal').classList.remove('active'); document.body.style.overflow = 'auto'; }
     </script>
 
     <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em] border-t border-white/5">
-        © 2026 Summit Coast Capital. Tarpon Springs, FL // Colorado.
+        © 2026 Summit Coast Capital. FL // CO.
     </footer>
 
 </body>
