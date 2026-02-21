@@ -14,9 +14,10 @@
         .glass-nav { background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); height: 120px; display: flex; align-items: center; }
         .logo-container img { height: 85px; width: auto; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1)); }
 
-        .hero-v2 { 
+        /* REBUILT HERO TO FORCE CACHE CLEAR */
+        .hero-final { 
             min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            background: linear-gradient(rgba(2, 6, 23, 0.5), rgba(2, 6, 23, 1)), 
+            background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 1)), 
             url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); 
             background-size: cover; background-position: center; background-attachment: fixed;
             text-align: center; padding-top: 120px;
@@ -50,11 +51,13 @@
         </div>
     </nav>
 
-    <section class="hero-v2">
+    <section class="hero-final">
         <div class="max-w-5xl px-6">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Private Capital. <br><span class="font-light text-slate-400 not-italic">Unrestricted Growth.</span></h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic">"We qualify the property, not the person."</p>
-            <button onclick="openVaultModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition">Request Quote</button>
+            
+            <p class="text-2xl md:text-4xl text-white font-light mb-12 italic serif">"We qualify the property, not the person."</p>
+            
+            <button onclick="openVaultModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition shadow-2xl">Request Quote</button>
         </div>
     </section>
 
