@@ -11,6 +11,11 @@
         body { background-color: #020617; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        
+        /* LOGO ENHANCEMENT */
+        .brand-logo { height: 70px; width: auto; transition: all 0.3s ease; filter: drop-shadow(0 0 10px rgba(255,255,255,0.1)); }
+        .brand-logo:hover { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(27, 54, 93, 0.4)); }
+
         .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; cursor: pointer; }
         .glass-card:hover { border-color: #4A607D; transform: translateY(-5px); background: rgba(74, 96, 125, 0.1); }
         .hero-bg { 
@@ -18,8 +23,13 @@
             url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); 
             background-size: cover; background-position: center; background-attachment: fixed;
         }
+        
+        /* MODAL & CLOSE BUTTON */
         .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(15px); align-items: center; justify-content: center; padding: 20px; }
         .modal.active { display: flex !important; }
+        .close-btn { position: absolute; top: 20px; right: 25px; font-size: 24px; color: #64748b; cursor: pointer; transition: color 0.2s; }
+        .close-btn:hover { color: #ffffff; }
+
         input, select, textarea { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; padding: 12px; border-radius: 8px; width: 100%; outline: none; margin-bottom: 12px; }
         input:focus { border-color: #4A607D !important; }
         .btn-navy { background-color: #1B365D; color: white; transition: all 0.3s; border-radius: 50px; }
@@ -29,15 +39,15 @@
 <body>
 
     <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-14 w-auto">
+        <div class="max-w-7xl mx-auto px-8 h-28 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="brand-logo">
             </div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
                 <a href="#experience" class="hover:text-slate-400 transition">Experience</a>
                 <a href="#solutions" class="hover:text-slate-400 transition">Lending Suite</a>
                 <a href="https://samuelsummit.github.io/the-vault/" class="text-slate-400 border-b border-white/10 pb-1">The Vault</a>
-                <button onclick="openModal('apply')" class="btn-navy px-8 py-3 tracking-widest text-[9px] font-bold">Apply Now</button>
+                <button onclick="openModal('apply')" class="btn-navy px-8 py-3 tracking-widest text-[9px] font-bold">Get a Quote</button>
             </div>
         </div>
     </nav>
@@ -45,16 +55,8 @@
     <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-5xl">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Private Capital. <br><span class="font-light text-slate-400 not-italic">Unrestricted Growth.</span></h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic">Get a custom deal analysis from Samuel Salankey.</p>
+            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic">Precision lending engineered by Samuel Salankey.</p>
             <button onclick="openModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition">Get a Quote</button>
-        </div>
-    </section>
-
-    <section id="experience" class="py-32 px-8 bg-[#020617] border-y border-white/5 text-center">
-        <div class="max-w-4xl mx-auto">
-            <span class="text-slate-400 text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Founder & Principal</span>
-            <h2 class="serif text-5xl md:text-7xl mb-8 leading-tight italic text-white">Samuel <span class="text-slate-500 not-italic">Salankey</span></h2>
-            <p class="text-gray-400 text-lg leading-relaxed font-light italic">18 years of experience from the REO fallout to today’s high-velocity market. I look at your property’s future to bridge the gap in capital.</p>
         </div>
     </section>
 
@@ -79,14 +81,15 @@
     </section>
 
     <div id="apply-modal" class="modal" onclick="closeModal('apply')">
-        <div class="bg-[#020617] p-10 md:p-12 rounded-[30px] border border-white/10 max-w-xl w-full text-left" onclick="event.stopPropagation()">
-            <h2 class="serif text-3xl mb-4 text-white italic text-center">Request Deal Quote</h2>
-            <p class="text-slate-500 text-[10px] text-center uppercase tracking-widest mb-8 text-center">Estimated Terms & Cost Analysis</p>
+        <div class="bg-[#020617] p-10 md:p-12 rounded-[30px] border border-white/10 max-w-xl w-full text-left relative shadow-2xl" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('apply')">&times;</span>
+            <h2 class="serif text-3xl mb-2 text-white italic text-center">Request Quote</h2>
+            <p class="text-slate-500 text-[10px] text-center uppercase tracking-widest mb-8">Confidential Deal Review</p>
             <form id="loanForm" class="space-y-1">
                 <input type="text" id="name" placeholder="Full Name" required>
                 <div class="grid grid-cols-2 gap-4">
                     <input type="text" id="phone" placeholder="Phone Number" required>
-                    <input type="text" id="credit" placeholder="Est. Credit Score (e.g. 720)">
+                    <input type="text" id="credit" placeholder="Credit Score">
                 </div>
                 <input type="text" id="address" placeholder="Property Address" required>
                 <div class="grid grid-cols-2 gap-4">
@@ -94,76 +97,59 @@
                     <input type="text" id="arv" placeholder="Est. ARV">
                 </div>
                 <select id="strategy">
-                    <option value="" disabled selected>Select Strategy</option>
+                    <option value="" disabled selected>Strategy</option>
                     <option value="Flip">Fix & Flip</option>
-                    <option value="Rent">Long-Term Rental</option>
-                    <option value="Refi">Cash-Out Refi</option>
+                    <option value="Rent">Rental (DSCR)</option>
+                    <option value="Refi">Cash-Out</option>
                 </select>
-                <textarea id="exp" rows="3" placeholder="Experience (Deals closed in last 24 months)"></textarea>
+                <textarea id="exp" rows="2" placeholder="Experience..."></textarea>
                 <button type="button" onclick="sendApp()" class="w-full btn-navy py-4 font-bold uppercase tracking-widest text-[10px]">Submit</button>
             </form>
         </div>
     </div>
 
     <div id="dscr-modal" class="modal" onclick="closeModal('dscr')">
-        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg text-left" onclick="event.stopPropagation()">
-            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">DSCR Quote Info</h3>
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg relative shadow-2xl" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('dscr')">&times;</span>
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">DSCR Quotes</h3>
             <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
-                <li>• 80% LTV Purchase / 75% LTV Cash-Out</li>
-                <li>• Qualify on Rental Income coverage (DSCR)</li>
-                <li>• Submit below for a custom rate & cost breakdown.</li>
+                <li>• Leverage up to 80% LTV</li>
+                <li>• No personal income verification</li>
+                <li>• Institutional rates for professional landlords</li>
             </ul>
-            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest mb-4">Request Cost Estimate</button>
-            <button onclick="closeModal('dscr')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest">Get Custom Estimate</button>
         </div>
     </div>
 
     <div id="bridge-modal" class="modal" onclick="closeModal('bridge')">
-        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg text-left" onclick="event.stopPropagation()">
-            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">Bridge/Flip Quote Info</h3>
-            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
-                <li>• Up to 90% Acquisition / 100% Rehab</li>
-                <li>• Fast closings based on asset value.</li>
-                <li>• Submit below for a custom rate & cost breakdown.</li>
-            </ul>
-            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest mb-4">Request Cost Estimate</button>
-            <button onclick="closeModal('bridge')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg relative" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('bridge')">&times;</span>
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">Bridge/Flip</h3>
+            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest">Get Custom Estimate</button>
         </div>
     </div>
 
     <div id="equity-modal" class="modal" onclick="closeModal('equity')">
-        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg text-left" onclick="event.stopPropagation()">
-            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">Equity Access Info</h3>
-            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
-                <li>• Unlock up to 80% of current equity.</li>
-                <li>• Blanket loans and portfolio options available.</li>
-                <li>• Submit below for a custom rate & cost breakdown.</li>
-            </ul>
-            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest mb-4">Request Cost Estimate</button>
-            <button onclick="closeModal('equity')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg relative" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal('equity')">&times;</span>
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold text-center">Equity Access</h3>
+            <button onclick="openModal('apply')" class="w-full btn-navy py-4 text-[10px] uppercase tracking-widest">Get Custom Estimate</button>
         </div>
     </div>
 
     <script>
         function openModal(id) { 
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(m => m.classList.remove('active')); // Close others
-            const modal = document.getElementById(id + '-modal');
-            if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+            document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+            document.getElementById(id + '-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
         function closeModal(id) { 
-            const modal = document.getElementById(id + '-modal');
-            if (modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+            document.getElementById(id + '-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
         function sendApp() {
-            const body = `Name: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nCredit Score: ${document.getElementById('credit').value}\nAddress: ${document.getElementById('address').value}\nAmount: ${document.getElementById('amount').value}\nARV: ${document.getElementById('arv').value}\nStrategy: ${document.getElementById('strategy').value}\nExp: ${document.getElementById('exp').value}`;
-            window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=DEAL QUOTE REQUEST&body=${encodeURIComponent(body)}`;
+            const body = `Name: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nCredit: ${document.getElementById('credit').value}\nAddress: ${document.getElementById('address').value}\nAmount: ${document.getElementById('amount').value}\nARV: ${document.getElementById('arv').value}\nStrategy: ${document.getElementById('strategy').value}\nExp: ${document.getElementById('exp').value}`;
+            window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=DEAL QUOTE&body=${encodeURIComponent(body)}`;
         }
     </script>
 
