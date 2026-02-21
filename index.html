@@ -2,57 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit Coast Capital | Property-First Private Lending</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Summit Coast Capital | Institutional Real Estate Liquidity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        html { scroll-behavior: smooth; }
-        body { background-color: #020617; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+        
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
-        .glass-nav { background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); height: 120px; display: flex; align-items: center; }
-        .logo-container img { height: 85px; width: auto; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1)); }
-        .hero-final { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 1)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; background-attachment: fixed; text-align: center; }
-        .btn-navy { background-color: #1B365D; color: white; transition: 0.3s; border-radius: 50px; padding: 1rem 2.5rem; font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
-        .modal-overlay { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(20px); align-items: center; justify-content: center; padding: 20px; }
-        .modal-overlay.active { display: flex !important; }
-        .modal-box { background: #020617; padding: 3.5rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 30px; width: 100%; max-width: 600px; position: relative; }
-        .close-trigger { position: absolute; top: 20px; right: 25px; font-size: 35px; color: #4A607D; cursor: pointer; line-height: 1; }
-        input, select, textarea { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; padding: 14px; border-radius: 12px; width: 100%; margin-bottom: 12px; }
+        
+        /* BRAND NAVY HERO */
+        .main-hero { 
+            background: #1B365D;
+            color: white;
+            padding: 120px 24px 80px;
+            text-align: center;
+        }
+
+        /* FLUID CARD SYSTEM */
+        .service-card { 
+            background: #f8fafc; 
+            border: 1px solid #e2e8f0; 
+            padding: 40px 30px;
+            transition: 0.3s ease;
+            text-align: left;
+        }
+        .service-card:hover { border-color: #1B365D; transform: translateY(-5px); background: white; box-shadow: 0 15px 30px rgba(27, 54, 93, 0.1); }
+
+        /* THE ACTION BUTTONS */
+        .btn-scc { 
+            background: #1B365D; color: white; padding: 18px 32px; 
+            font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 11px;
+            border: none; cursor: pointer; transition: 0.3s; display: inline-block;
+        }
+        .btn-scc:hover { background: #0f172a; }
+
+        /* MOBILE NAV LOGO */
+        .nav-logo { height: 40px; }
+        @media (max-width: 640px) { .nav-logo { height: 32px; } }
     </style>
 </head>
 <body>
-    <nav class="fixed top-0 w-full z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-8 w-full flex justify-between items-center">
-            <div class="logo-container"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital"></div>
-            <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
-                <a href="#experience" class="hover:text-slate-400 transition">Experience</a>
-                <a href="#solutions" class="hover:text-slate-400 transition">Lending Suite</a>
-                <a href="https://samuelsummit.github.io/the-vault/" class="text-white border-b border-emerald-500/50 pb-1">The Vault</a>
-                <button onclick="openModal('apply')" class="btn-navy">Get a Quote</button>
-            </div>
-        </div>
+
+    <nav class="p-6 bg-white border-b border-slate-100 flex justify-between items-center sticky top-0 z-50">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="nav-logo">
+        <a href="#onboard" class="text-[9px] font-bold uppercase tracking-widest text-[#1B365D] border-b-2 border-[#1B365D]">Onboard</a>
     </nav>
 
-    <section class="hero-final">
-        <div class="max-w-5xl px-6">
-            <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Private Capital. <br><span class="font-light text-slate-400 not-italic">Unrestricted Growth.</span></h1>
-            <p class="text-2xl md:text-4xl text-white font-light mb-12 italic serif">"We qualify the property, not the person."</p>
+    <header class="main-hero">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="serif text-5xl md:text-8xl mb-6 italic leading-tight">Capital. <br><span class="text-white not-italic font-bold uppercase tracking-tighter">Engineered.</span></h1>
+            <p class="text-slate-300 text-sm md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto uppercase tracking-widest">
+                Asset-Based Lending & Forensic Equity Intelligence for Modern Real Estate Partners.
+            </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button onclick="openModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] hover:bg-slate-200 transition shadow-2xl">Request Quote</button>
-                <button onclick="openModal('apply')" class="border border-white/20 text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] hover:bg-white/5 transition">Request POF</button>
+                <a href="#onboard" class="bg-white text-[#1B365D] px-10 py-5 font-bold uppercase tracking-widest text-xs hover:bg-slate-200 transition">Request POF</a>
+                <a href="/the-vault" class="border border-white text-white px-10 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
             </div>
+        </div>
+    </header>
+
+    <main class="py-24 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="service-card">
+            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-6 uppercase">01 / Deployment</h4>
+            <h2 class="serif text-3xl italic mb-4">Hard Money</h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-8">Speed-to-close liquidity for residential and commercial fix-and-flip or bridge scenarios. 7-day closings.</p>
+            <a href="mailto:deals@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Submit Deal</a>
+        </div>
+
+        <div class="service-card border-t-4 border-[#1B365D]">
+            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-6 uppercase">02 / Intelligence</h4>
+            <h2 class="serif text-3xl italic mb-4">The Vault</h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-8">Access our proprietary courthouse scraper and AI logic to find high-equity distress before the market.</p>
+            <a href="/the-vault" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Enter Terminal</a>
+        </div>
+
+        <div class="service-card">
+            <h4 class="text-[#1B365D] text-[10px] font-black tracking-widest mb-6 uppercase">03 / Partnership</h4>
+            <h2 class="serif text-3xl italic mb-4">Joint Ventures</h2>
+            <p class="text-slate-500 text-sm leading-relaxed mb-8">We partner with experienced operators on high-conviction assets, providing both capital and strategic oversight.</p>
+            <a href="mailto:partner@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Apply for JV</a>
+        </div>
+    </main>
+
+    
+
+[Image of the real estate investment life cycle]
+
+
+    <section id="onboard" class="py-24 bg-slate-50 border-y border-slate-200 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h3 class="serif text-4xl italic text-[#1B365D] mb-6">Institutional Onboarding</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-10">Whether you are seeking capital for a current deal or access to our forensic data, our onboarding process is streamlined for professional speed.</p>
+            <a href="mailto:admin@summitcoastcapital.com" class="btn-scc">Start Onboarding</a>
         </div>
     </section>
 
-    <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em] border-t border-white/5">
-        © 2026 Summit Coast Capital. Principal: Samuel Salankey. <br>
-        <span class="mt-4 block opacity-50">Lending subject to asset-based underwriting. All Rights Reserved.</span>
+    <footer class="py-20 text-center opacity-50">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-8 mx-auto mb-6 grayscale">
+        <p class="text-[9px] tracking-[0.5em] uppercase text-[#1B365D]">© 2026 Summit Coast Capital • All Rights Reserved</p>
     </footer>
 
-    <script>
-        function openModal(id) { document.getElementById(id + '-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeModal(id) { document.getElementById(id + '-modal').classList.remove('active'); document.body.style.overflow = 'auto'; }
-    </script>
 </body>
 </html>
