@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Summit Coast Capital | Asset-Based Real Estate Liquidity</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Summit Coast Capital | Institutional Real Estate Liquidity</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         
+        /* THE FOUNDATION */
         body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* MODERN TROPICAL HERO - HIGH CONTRAST */
+        /* MODERN TROPICAL HERO - HIGH IMPACT */
         .main-hero { 
             position: relative;
-            background: linear-gradient(rgba(27, 54, 93, 0.8), rgba(10, 31, 68, 0.95)), 
+            background: linear-gradient(rgba(27, 54, 93, 0.82), rgba(10, 31, 68, 0.95)), 
                         url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1920');
             background-size: cover;
             background-position: center;
@@ -22,14 +26,16 @@
             color: white;
             padding: 140px 24px;
             text-align: center;
+            border-bottom: 8px solid #1B365D;
         }
 
+        /* MOBILE OVERRIDE */
         @media (max-width: 768px) {
             .main-hero { background-attachment: scroll; padding: 100px 20px; }
-            .hero-h1 { font-size: 3.5rem !important; }
+            .hero-h1 { font-size: 3.5rem !important; line-height: 0.9 !important; }
         }
 
-        /* SERVICE TILES */
+        /* FLUID SERVICE TILES */
         .service-tile { 
             background: #ffffff; 
             border: 1px solid #e2e8f0; 
@@ -38,12 +44,13 @@
         }
         .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
 
-        .btn-scc-main { 
-            background: #1B365D; color: white; padding: 20px 45px; 
+        .btn-scc-action { 
+            background: #ffffff; color: #1B365D; padding: 20px 45px; 
             font-weight: 800; text-transform: uppercase; letter-spacing: 4px; font-size: 11px;
             border: none; cursor: pointer; transition: 0.3s; display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .btn-scc-main:hover { background: #0f172a; }
+        .btn-scc-action:hover { background: #f1f5f9; transform: scale(1.02); }
     </style>
 </head>
 <body>
@@ -53,54 +60,69 @@
         <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
             <a href="#solutions" class="hover:text-[#1B365D]">Solutions</a>
             <a href="/the-vault" class="hover:text-[#1B365D]">The Vault</a>
-            <a href="mailto:admin@summitcoastcapital.com" class="hover:text-[#1B365D]">Contact</a>
+            <a href="mailto:admin@summitcoastcapital.com" class="hover:text-[#1B365D]">Onboarding</a>
         </div>
     </nav>
 
     <header class="main-hero">
         <div class="max-w-5xl mx-auto">
-            <h1 class="serif hero-h1 text-5xl md:text-9xl mb-8 italic leading-tight">Capital. <br><span class="text-white not-italic font-bold uppercase tracking-tighter">Redefined.</span></h1>
-            <p class="text-slate-200 text-sm md:text-xl font-light mb-8 uppercase tracking-[0.5em] leading-relaxed max-w-3xl mx-auto italic">
+            <h1 class="serif hero-h1 text-6xl md:text-9xl mb-8 italic leading-tight tracking-tighter uppercase">Capital. <br><span class="text-white not-italic font-bold uppercase tracking-tighter">Redefined.</span></h1>
+            
+            <p class="text-white text-lg md:text-2xl font-light mb-4 uppercase tracking-[0.4em] italic">
                 "We don't approve you—we approve the asset."
             </p>
-            <p class="text-slate-400 text-[10px] md:text-xs font-bold mb-14 uppercase tracking-[0.4em]">
-                Asset-Based Lending & Forensic Equity Intelligence
+            <p class="text-slate-400 text-[10px] md:text-xs font-bold mb-14 uppercase tracking-[0.6em] opacity-80">
+                Institutional Lending & Forensic Equity Intelligence
             </p>
+
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="mailto:admin@summitcoastcapital.com" class="bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-slate-100 transition shadow-2xl">Request POF / Terms</a>
-                <a href="/the-vault" class="border border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
+                <a href="mailto:admin@summitcoastcapital.com" class="btn-scc-action">Request POF / Terms</a>
+                <a href="/the-vault" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
             </div>
         </div>
     </header>
 
     
+
     <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="service-tile">
-            <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">01 / Asset-Based</h4>
+            <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">01 / Asset-Based</h4>
             <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">Lending</h2>
             <p class="text-slate-500 text-sm leading-loose mb-8">Speed-to-close liquidity for residential and commercial bridge scenarios. 7-day closings on high-conviction assets.</p>
-            <a href="mailto:deals@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Submit Deal</a>
+            <a href="mailto:deals@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Submit Deal</a>
         </div>
 
         <div class="service-tile border-t-8 border-[#1B365D]">
-            <h4 class="text-[#1B365D] text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">02 / Forensic</h4>
-            <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">The Vault</h2>
+            <h4 class="text-[#1B365D] text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">02 / Forensic</h4>
+            <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">The Vault</h2>
             <p class="text-slate-500 text-sm leading-relaxed mb-8">Access our proprietary courthouse scraper and AI logic to identify high-equity distress before the market moves.</p>
-            <a href="/the-vault" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Enter Vault</a>
+            <a href="/the-vault" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Terminal</a>
         </div>
 
         <div class="service-tile">
-            <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">03 / Strategic</h4>
+            <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">03 / Strategic</h4>
             <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">Joint Ventures</h2>
             <p class="text-slate-500 text-sm leading-loose mb-8">Strategic equity partnerships. We provide the capital and the intelligence to secure off-market inventory.</p>
-            <a href="mailto:partner@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline">Inquire</a>
+            <a href="mailto:partner@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Inquire</a>
         </div>
     </section>
 
     
+
+[Image of the real estate investment life cycle]
+
+
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h3 class="serif text-4xl italic text-[#1B365D] mb-8">Principal Onboarding</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-12 max-w-xl mx-auto">Summit Coast Capital operates as a principal-to-principal partner. Whether seeking liquidity or intelligence, our process is built for professional speed.</p>
+            <a href="mailto:admin@summitcoastcapital.com" class="bg-[#1B365D] text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-[#0f172a] transition">Start Onboarding</a>
+        </div>
+    </section>
+
     <footer class="py-24 text-center">
         <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10 mx-auto mb-8 opacity-40 grayscale">
-        <p class="text-[9px] tracking-[1.5em] uppercase text-[#1B365D] font-bold opacity-30">Summit Coast Capital • Institutional Assets</p>
+        <p class="text-[9px] tracking-[1.5em] uppercase text-[#1B365D] font-bold opacity-30 italic">Summit Coast Capital • Institutional Assets</p>
     </footer>
 
 </body>
