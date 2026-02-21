@@ -2,123 +2,180 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Summit Coast Capital | Institutional Real Estate Liquidity</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Coast Capital | Institutional Acquisition Desk</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        html { scroll-behavior: smooth; }
-        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
-        .serif { font-family: 'Playfair Display', serif; }
-        
-        /* THE TROPICAL NAVY HERO */
-        .main-hero { 
-            position: relative;
-            background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(10, 31, 68, 0.95)), 
-                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+        :root {
+            --navy: #1a2a6c;
+            --gold: #b8926a;
+            --slate: #2c3e50;
+            --light-bg: #f4f7f9;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            color: var(--slate);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        header {
+            background: var(--navy);
             color: white;
-            padding: 140px 24px;
+            padding: 40px 20px;
             text-align: center;
-            border-bottom: 8px solid #1B365D;
+            border-bottom: 5px solid var(--gold);
         }
-
-        @media (max-width: 768px) {
-            .main-hero { background-attachment: scroll; padding: 100px 20px; }
-            .hero-h1 { font-size: 3.5rem !important; line-height: 0.9 !important; }
+        .hero-title {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
         }
-
-        .service-tile { 
-            background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 40px;
-            transition: 0.4s ease; height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
         }
-        .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
-
-        .loan-detail-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
-        .label-sm { font-size: 9px; text-transform: uppercase; color: #94a3b8; font-weight: 800; letter-spacing: 1px; }
-        .val-sm { font-size: 11px; font-weight: 700; color: #1B365D; }
+        /* THE VAULT SECTION */
+        .vault-card {
+            background: white;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 50px;
+        }
+        .btn-vault {
+            background: var(--gold);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3em;
+            border-radius: 6px;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(184, 146, 106, 0.4);
+        }
+        .btn-vault:hover {
+            background: #a67c52;
+            transform: translateY(-2px);
+        }
+        /* INTAKE FORM STYLING */
+        .form-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .full-width { grid-column: span 2; }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        input:focus {
+            border-color: var(--gold);
+            outline: none;
+        }
+        .btn-submit {
+            grid-column: span 2;
+            background: var(--navy);
+            color: white;
+            padding: 18px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            background: #0f1a4a;
+        }
     </style>
 </head>
 <body>
 
-    <nav class="p-8 bg-white border-b border-slate-50 flex justify-between items-center sticky top-0 z-50">
-        <a href="index.html"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-8 md:h-12"></a>
-        <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
-            <a href="#solutions" class="hover:text-[#1B365D]">Solutions</a>
-            <a href="the-vault/index.html" class="hover:text-[#1B365D]">The Vault</a>
-            <a href="#onboard" class="hover:text-[#1B365D]">Onboarding</a>
-        </div>
-    </nav>
+<header>
+    <h1 class="hero-title">Summit Coast Capital</h1>
+    <p>Private Equity | Asset-Based Lending | Acquisition Intelligence</p>
+</header>
 
-    <header class="main-hero">
-        <div class="max-w-5xl mx-auto">
-            <h1 class="serif hero-h1 text-6xl md:text-9xl mb-8 italic leading-tight tracking-tighter uppercase">Capital. <br><span class="text-white not-italic font-bold uppercase tracking-tighter">Redefined.</span></h1>
-            <p class="text-white text-lg md:text-2xl font-light mb-4 uppercase tracking-[0.4em] italic">"We don't approve you—we approve the asset."</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center mt-12">
-                <a href="mailto:admin@summitcoastcapital.com?subject=POF Request" class="bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-slate-100 transition shadow-2xl">Request POF / Terms</a>
-                <a href="the-vault/index.html" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
-            </div>
-        </div>
-    </header>
-
-    <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <div class="service-tile border-t-8 border-slate-100">
-            <div>
-                <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">01 / Deployment</h4>
-                <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">Lending</h2>
-                <div class="space-y-1 mb-8">
-                    <div class="loan-detail-row"><span class="label-sm">Fix & Flip</span> <span class="val-sm">90% LTC / 100% Rehab</span></div>
-                    <div class="loan-detail-row"><span class="label-sm">Bridge</span> <span class="val-sm">75% LTV (As-Is)</span></div>
-                    <div class="loan-detail-row"><span class="label-sm">Rates</span> <span class="val-sm">Starting at 9.99%</span></div>
-                    <div class="loan-detail-row"><span class="label-sm">Closing</span> <span class="val-sm">7-Day Funding</span></div>
-                </div>
-                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">No FICO Check • No Tax Returns</p>
-            </div>
-            <a href="mailto:deals@summitcoastcapital.com" class="mt-8 text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Submit Deal</a>
-        </div>
-
-        <div class="service-tile border-t-8 border-[#1B365D]">
-            <div>
-                <h4 class="text-[#1B365D] text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">02 / Intelligence</h4>
-                <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">The Vault</h2>
-                <p class="text-slate-500 text-sm leading-relaxed mb-8 italic">Access proprietary forensic data. Identify high-equity distress 45 days before the market moves.</p>
-            </div>
-            <a href="the-vault/index.html" class="bg-[#1B365D] text-white py-4 text-center font-bold text-[10px] uppercase tracking-widest hover:bg-[#0f172a] transition">Enter Terminal</a>
-        </div>
-
-        <div class="service-tile border-t-8 border-slate-100">
-            <div>
-                <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b pb-4">03 / Strategic</h4>
-                <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">JV Equity</h2>
-                <p class="text-slate-500 text-sm leading-loose mb-8">Up to 100% Capital Stack provided for experienced operators. We solve the liquidity gap.</p>
-            </div>
-            <a href="mailto:partner@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Partner with Us</a>
-        </div>
-    </section>
-
+<div class="container">
     
+    <div class="vault-card">
+        <h2 style="color: var(--navy);">🗝️ Access "The Vault"</h2>
+        <p style="font-size: 1.1em; max-width: 700px; margin: 10px auto 30px;">
+            The complete Institutional Acquisition System. Includes Scraper Maps, Forensic Math Terminal, 
+            AI Command Center, and Priority Funding Access.
+        </p>
+        <a href="#" class="btn-vault">ENTER THE VAULT — $497</a>
+        <p style="margin-top: 15px; font-size: 0.85em; color: #888;">Instant Digital Access | 2026 Strategy Guide</p>
+    </div>
 
-[Image of the real estate investment life cycle]
+    <div class="form-section">
+        <h2 style="color: var(--navy); border-bottom: 2px solid var(--light-bg); padding-bottom: 10px;">Forensic Asset Submission</h2>
+        <p>Use this portal to submit "Green Light" deals for Principal Underwriting.</p>
+        
+        <form class="form-grid">
+            <div class="full-width">
+                <label>Property Street Address</label>
+                <input type="text" placeholder="Enter the Subject Property Address">
+            </div>
 
+            <div>
+                <label>Total Debt / Payoff ($)</label>
+                <input type="number" placeholder="Mortgage + Liens + Arrears">
+            </div>
 
-    <section id="onboard" class="py-24 bg-slate-50 border-y border-slate-200 text-center">
-        <div class="max-w-4xl mx-auto px-8">
-            <h3 class="serif text-4xl italic text-[#1B365D] mb-8">Principal Onboarding</h3>
-            <p class="text-slate-500 text-sm leading-relaxed mb-12 max-w-xl mx-auto italic font-light">"Professional capital deployment at institutional speed."</p>
-            <a href="mailto:admin@summitcoastcapital.com" class="bg-[#1B365D] text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-[#0f172a] transition">Start Onboarding</a>
-        </div>
-    </section>
+            <div>
+                <label>Estimated Market Value (ARV)</label>
+                <input type="number" placeholder="As-Is or Renovated Value">
+            </div>
 
-    <footer class="py-24 text-center opacity-40">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10 mx-auto mb-8 grayscale">
-        <p class="text-[9px] tracking-[1.5em] uppercase text-[#1B365D] font-bold">Summit Coast Capital • Institutional Assets</p>
-    </footer>
+            <div>
+                <label>Owner Credit Rating</label>
+                <select>
+                    <option value="">Select Profile</option>
+                    <option value="high">Institutional (740+)</option>
+                    <option value="mid">Standard (640-739)</option>
+                    <option value="low">Distressed (<640)</option>
+                    <option value="unknown">Unknown / Defaulted</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Calculated Net Equity ($)</label>
+                <input type="number" placeholder="The Forensic Margin">
+            </div>
+
+            <button type="submit" class="btn-submit">Trigger Underwriting Review</button>
+        </form>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9em;">
+    &copy; 2026 Summit Coast Capital. All Rights Reserved. Institutional Use Only.
+</footer>
 
 </body>
 </html>
