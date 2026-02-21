@@ -12,6 +12,7 @@
         .serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(0, 0, 0, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
         .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s ease; cursor: pointer; }
+        .glass-card:hover { border-color: #10b981; transform: translateY(-5px); background: rgba(16, 185, 129, 0.05); }
         .hero-bg { 
             background: linear-gradient(rgba(0,0,0,0.5), rgba(5,5,5,1)), 
             url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); 
@@ -19,7 +20,7 @@
         }
         .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); align-items: center; justify-content: center; padding: 20px; }
         .modal.active { display: flex; }
-        input, select, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; padding: 12px; border-radius: 8px; width: 100%; outline: none; }
+        input, select, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; padding: 12px; border-radius: 8px; width: 100%; outline: none; margin-bottom: 10px; }
         input:focus { border-color: #10b981 !important; }
     </style>
 </head>
@@ -40,14 +41,25 @@
     <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-5xl">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic">Private Capital. <br><span class="font-light text-emerald-500 not-italic">Unrestricted Growth.</span></h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 italic italic">Scale your portfolio with Samuel Salankey—an 18-year real estate veteran.</p>
+            <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 italic">Scale your portfolio with Samuel Salankey—an 18-year real estate veteran.</p>
             <button onclick="openModal('apply')" class="bg-white text-black px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-emerald-400 transition transform hover:-translate-y-1">Start Application</button>
+        </div>
+    </section>
+
+    <section id="experience" class="py-32 px-8 bg-[#080808] border-y border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-emerald-500 text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Founder & Principal</span>
+            <h2 class="serif text-5xl md:text-7xl mb-8 leading-tight italic">Samuel <span class="text-gray-400 not-italic">Salankey</span></h2>
+            <p class="text-white text-2xl serif italic mb-6 leading-relaxed">"Banks look at your past; I look at your property’s future."</p>
+            <p class="text-gray-400 text-lg leading-relaxed font-light">
+                With 18 years of experience from the REO fallout to today’s high-velocity market, I provide the liquidity professional investors need to move when the timing is perfect.
+            </p>
         </div>
     </section>
 
     <section id="solutions" class="py-32 px-8">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="serif text-5xl mb-16 italic text-white">Lending <span class="not-italic text-emerald-500">Suite</span></h2>
+            <h2 class="serif text-5xl mb-16 italic text-white text-center">Lending <span class="not-italic text-emerald-500">Suite</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-12 rounded-[40px]" onclick="openModal('dscr')">
                     <h3 class="text-xl font-bold uppercase text-emerald-400 mb-4">DSCR Loans</h3>
@@ -67,64 +79,73 @@
 
     <div id="apply-modal" class="modal" onclick="closeModal('apply')">
         <div class="bg-[#0a0a0a] p-10 md:p-12 rounded-[30px] max-w-xl w-full border border-emerald-500/30 text-left relative" onclick="event.stopPropagation()">
-            <h2 class="serif text-3xl mb-2 text-white italic">Loan Application</h2>
-            <p class="text-gray-500 text-xs mb-8 uppercase tracking-widest">Initial Underwriting Review</p>
-            
-            <form id="loanForm" class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="text" id="name" placeholder="Full Name" required>
-                    <input type="text" id="phone" placeholder="Phone Number" required>
-                </div>
+            <h2 class="serif text-3xl mb-8 text-white italic">Loan Application</h2>
+            <form id="loanForm" class="space-y-2">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
                 <input type="text" id="address" placeholder="Property Address" required>
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" id="amount" placeholder="Loan Amount Requested">
-                    <input type="text" id="arv" placeholder="Estimated ARV">
+                    <input type="text" id="amount" placeholder="Loan Amount">
+                    <input type="text" id="arv" placeholder="Est. ARV">
                 </div>
                 <select id="strategy">
-                    <option value="" disabled selected>Select Exit Strategy</option>
+                    <option value="" disabled selected>Select Strategy</option>
                     <option value="Flip">Fix & Flip</option>
-                    <option value="Rent">Long-Term Rental (DSCR)</option>
-                    <option value="Refi">Cash-Out Refinance</option>
+                    <option value="Rent">Long-Term Rental</option>
+                    <option value="Refi">Cash-Out Refi</option>
                 </select>
-                <textarea id="experience" rows="3" placeholder="Number of deals closed in last 24 months..."></textarea>
-                
-                <button type="button" onclick="sendApplication()" class="w-full bg-emerald-600 py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-emerald-500 transition">Submit To Underwriting</button>
+                <textarea id="exp" rows="3" placeholder="Experience (Deals closed in last 24 months)"></textarea>
+                <button type="button" onclick="sendApp()" class="w-full bg-emerald-600 py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-emerald-500 transition">Submit To Underwriting</button>
             </form>
         </div>
     </div>
 
     <div id="dscr-modal" class="modal" onclick="closeModal('dscr')">
         <div class="bg-[#0a0a0a] p-10 rounded-[30px] max-w-lg border border-emerald-500/20" onclick="event.stopPropagation()">
-            <h3 class="serif text-2xl mb-4 text-emerald-400 italic">DSCR Specs</h3>
+            <h3 class="serif text-2xl mb-4 text-emerald-400 italic">DSCR Underwriting</h3>
             <ul class="text-gray-400 text-sm space-y-3 mb-8">
                 <li>• 80% LTV Purchase</li>
                 <li>• No Tax Returns / No DTI</li>
                 <li>• Qualify on Property Cash Flow</li>
             </ul>
-            <button onclick="closeModal('dscr')" class="w-full border border-white/10 py-3 rounded-lg text-xs uppercase">Close</button>
+            <button onclick="closeModal('dscr')" class="w-full bg-white/5 py-3 rounded-lg text-xs uppercase">Close</button>
         </div>
     </div>
+
+    <div id="bridge-modal" class="modal" onclick="closeModal('bridge')">
+        <div class="bg-[#0a0a0a] p-10 rounded-[30px] max-w-lg border border-emerald-500/20" onclick="event.stopPropagation()">
+            <h3 class="serif text-2xl mb-4 text-emerald-400 italic">Bridge & Flip</h3>
+            <ul class="text-gray-400 text-sm space-y-3 mb-8">
+                <li>• 90% Acquisition / 100% Rehab</li>
+                <li>• 7-10 Day Closings</li>
+                <li>• Interest-Only Payments</li>
+            </ul>
+            <button onclick="closeModal('bridge')" class="w-full bg-white/5 py-3 rounded-lg text-xs uppercase">Close</button>
+        </div>
+    </div>
+
+    <div id="equity-modal" class="modal" onclick="closeModal('equity')">
+        <div class="bg-[#0a0a0a] p-10 rounded-[30px] max-w-lg border border-emerald-500/20" onclick="event.stopPropagation()">
+            <h3 class="serif text-2xl mb-4 text-emerald-400 italic">Equity Access</h3>
+            <ul class="text-gray-400 text-sm space-y-3 mb-8">
+                <li>• Unlock up to 80% Equity</li>
+                <li>• Cash-out for New Acquisitions</li>
+                <li>• 90-Day Seasoning Options</li>
+            </ul>
+            <button onclick="closeModal('equity')" class="w-full bg-white/5 py-3 rounded-lg text-xs uppercase">Close</button>
+        </div>
+    </div>
+
     <script>
         function openModal(id) { document.getElementById(id + '-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
         function closeModal(id) { document.getElementById(id + '-modal').classList.remove('active'); document.body.style.overflow = 'auto'; }
-
-        function sendApplication() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const address = document.getElementById('address').value;
-            const amount = document.getElementById('amount').value;
-            const arv = document.getElementById('arv').value;
-            const strategy = document.getElementById('strategy').value;
-            const exp = document.getElementById('experience').value;
-
-            const subject = encodeURIComponent(`NEW APPLICATION: ${address}`);
-            const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nAddress: ${address}\nLoan Amount: ${amount}\nARV: ${arv}\nStrategy: ${strategy}\nExperience: ${exp}`);
-            
-            window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=${subject}&body=${body}`;
+        function sendApp() {
+            const body = `Name: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nAddress: ${document.getElementById('address').value}\nAmount: ${document.getElementById('amount').value}\nARV: ${document.getElementById('arv').value}\nStrategy: ${document.getElementById('strategy').value}\nExp: ${document.getElementById('exp').value}`;
+            window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=NEW LOAN APP&body=${encodeURIComponent(body)}`;
         }
     </script>
 
-    <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em] border-t border-white/5">
+    <footer class="p-20 text-center text-[10px] text-gray-600 uppercase tracking-[0.4em]">
         © 2026 Summit Coast Capital. Samuel Salankey.
     </footer>
 
