@@ -30,8 +30,7 @@
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
             <div class="flex items-center gap-4">
-                <img src="PASTE_YOUR_LOGO_LINK_HERE" alt="Summit Coast Capital" class="h-12 w-auto">
-                <div class="text-xl font-bold tracking-tighter uppercase hidden md:block">Summit <span class="text-slate-400 italic font-light">Coast Capital</span></div>
+                <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-14 w-auto">
             </div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
                 <a href="#experience" class="hover:text-slate-400 transition">Experience</a>
@@ -45,10 +44,86 @@
     <section class="hero-bg min-h-screen flex items-center justify-center pt-24 px-6 text-center">
         <div class="max-w-5xl">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Private Capital. <br><span class="font-light text-slate-400 not-italic">Unrestricted Growth.</span></h1>
-            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic">Institutional liquidity engineered by Samuel Salankey.</p>
+            <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic italic">Banks look at your past; I look at your property’s future.</p>
             <button onclick="openModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition">Start Application</button>
         </div>
     </section>
 
-    </body>
+    <section id="experience" class="py-32 px-8 bg-[#020617] border-y border-white/5 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="text-slate-400 text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Founder & Principal</span>
+            <h2 class="serif text-5xl md:text-7xl mb-8 leading-tight italic text-white">Samuel <span class="text-slate-500 not-italic">Salankey</span></h2>
+            <p class="text-gray-400 text-lg leading-relaxed font-light italic">18 years of experience from the REO fallout to today’s high-velocity market. Strategic liquidity engineered for professional investors across Florida and Colorado.</p>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="serif text-5xl mb-16 italic text-white">Lending <span class="not-italic text-slate-500">Suite</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-12 rounded-[40px]" onclick="openModal('dscr')">
+                    <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">DSCR Loans</h3>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
+                </div>
+                <div class="glass-card p-12 rounded-[40px]" onclick="openModal('bridge')">
+                    <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">Bridge / Flip</h3>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
+                </div>
+                <div class="glass-card p-12 rounded-[40px]" onclick="openModal('equity')">
+                    <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">Equity Access</h3>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="apply-modal" class="modal" onclick="closeModal('apply')">
+        <div class="bg-[#020617] p-10 md:p-12 rounded-[30px] border border-white/10 max-w-xl w-full text-left" onclick="event.stopPropagation()">
+            <h2 class="serif text-3xl mb-8 text-white italic text-center">Loan Application</h2>
+            <form id="loanForm" class="space-y-1">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+                <input type="text" id="address" placeholder="Property Address" required>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" id="amount" placeholder="Loan Amount">
+                    <input type="text" id="arv" placeholder="Est. ARV">
+                </div>
+                <select id="strategy">
+                    <option value="" disabled selected>Select Strategy</option>
+                    <option value="Flip">Fix & Flip</option>
+                    <option value="Rent">Long-Term Rental</option>
+                    <option value="Refi">Cash-Out Refi</option>
+                </select>
+                <textarea id="exp" rows="3" placeholder="Investment Experience..."></textarea>
+                <button type="button" onclick="sendApp()" class="w-full btn-navy py-4 font-bold uppercase tracking-widest text-[10px]">Submit To Underwriting</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="dscr-modal" class="modal" onclick="closeModal('dscr')">
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()">
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">DSCR Underwriting</h3>
+            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
+                <li>• 80% LTV Purchase / 75% LTV Cash-Out</li>
+                <li>• No Tax Returns or DTI Checks Required</li>
+                <li>• Qualify on Rental Income coverage</li>
+            </ul>
+            <button onclick="closeModal('dscr')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+        </div>
+    </div>
+    
+    <div id="bridge-modal" class="modal" onclick="closeModal('bridge')"><div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()"><h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">Bridge & Flip</h3><ul class="text-slate-400 text-sm space-y-4 mb-10 italic"><li>• Up to 90% Acquisition / 100% Rehab</li><li>• 7-10 Business Day Closings</li><li>• Non-Recourse available</li></ul><button onclick="closeModal('bridge')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button></div></div>
+    <div id="equity-modal" class="modal" onclick="closeModal('equity')"><div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()"><h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">Equity Access</h3><ul class="text-slate-400 text-sm space-y-4 mb-10 italic"><li>• Unlock up to 80% of current equity</li><li>• Blanket loans available</li><li>• Seasoning as low as 90 days</li></ul><button onclick="closeModal('equity')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button></div></div>
+
+    <script>
+        function openModal(id) { const m = document.getElementById(id + '-modal'); if(m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; } }
+        function closeModal(id) { const m = document.getElementById(id + '-modal'); if(m) { m.classList.remove('active'); document.body.style.overflow = 'auto'; } }
+        function sendApp() {
+            const body = `Name: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nAddress: ${document.getElementById('address').value}\nAmount: ${document.getElementById('amount').value}\nARV: ${document.getElementById('arv').value}\nStrategy: ${document.getElementById('strategy').value}\nExp: ${document.getElementById('exp').value}`;
+            window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=INSTITUTIONAL LOAN APP&body=${encodeURIComponent(body)}`;
+        }
+    </script>
+
+    <footer class="p-20 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">© 2026 Summit Coast Capital. Principal: Samuel Salankey.</footer>
+</body>
 </html>
