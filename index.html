@@ -1,21 +1,3 @@
-I’m not tired at all! I'm locked in until we get this exactly right. I hear you loud and clear: Keep the luxury mansion house background, but swap the green accents for the professional Navy and Slate.
-
-The reason it "didn't change a thing" is almost certainly your browser's "cache"—it’s essentially looking at a saved picture of the old green site instead of the new code you just pasted.
-
-The "Luxury Navy" Overwrite Protocol
-Go to your summit-coast repository on GitHub.
-
-Open index.html and click the Pencil Icon.
-
-Delete every single line of code so the box is empty.
-
-Paste the code below into that empty box.
-
-The Force-Push: When you click "Commit changes," name the commit NAVY BRANDING V6 - RESTORED MANSION.
-
-The "Hard" Refresh: On your Dell, press Ctrl + F5. (This is the most important step to kill the green memory).
-
-HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +9,7 @@ HTML
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
         html { scroll-behavior: smooth; }
         
-        /* NAVY BRANDING COLORS FROM LOGO */
+        /* FORTUNE 500 NAVY PALETTE */
         body { background-color: #020617; color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
         .glass-nav { background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
@@ -35,18 +17,18 @@ HTML
         .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease; cursor: pointer; }
         .glass-card:hover { border-color: #4A607D; transform: translateY(-5px); background: rgba(74, 96, 125, 0.1); }
         
-        /* THE LUXURY HOUSE BACKGROUND (RESTORED) */
+        /* THE LUXURY MANSION BACKGROUND */
         .hero-bg { 
             background: linear-gradient(rgba(2, 6, 23, 0.5), rgba(2, 6, 23, 1)), 
             url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80'); 
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         
+        /* MODAL FIXES */
         .modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(2, 6, 23, 0.98); backdrop-filter: blur(15px); align-items: center; justify-content: center; padding: 20px; }
-        .modal.active { display: flex; }
+        .modal.active { display: flex !important; }
         
         input, select, textarea { background: rgba(255,255,255,0.03) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; padding: 12px; border-radius: 8px; width: 100%; outline: none; margin-bottom: 12px; }
-        input:focus { border-color: #4A607D !important; }
         
         .btn-navy { background-color: #1B365D; color: white; transition: all 0.3s; border-radius: 50px; }
         .btn-navy:hover { background-color: #0A1F44; transform: translateY(-2px); }
@@ -56,9 +38,7 @@ HTML
 
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <div class="text-2xl font-bold tracking-tighter uppercase">Summit <span class="text-slate-400 italic font-light">Coast Capital</span></div>
-            </div>
+            <div class="text-2xl font-bold tracking-tighter uppercase">Summit <span class="text-slate-400 italic font-light">Coast Capital</span></div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.4em] font-medium items-center">
                 <a href="#solutions" class="hover:text-slate-400 transition">Lending Suite</a>
                 <a href="#experience" class="hover:text-slate-400 transition">Experience</a>
@@ -72,25 +52,25 @@ HTML
         <div class="max-w-5xl">
             <h1 class="serif text-6xl md:text-9xl mb-8 leading-none italic text-white">Private Capital. <br><span class="font-light text-slate-400 not-italic">Unrestricted Growth.</span></h1>
             <p class="text-xl md:text-2xl text-slate-300 font-light mb-12 italic">Institutional liquidity engineered by Samuel Salankey.</p>
-            <button onclick="openModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition transform hover:-translate-y-1">Start Application</button>
+            <button onclick="openModal('apply')" class="bg-white text-slate-900 px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition">Start Application</button>
         </div>
     </section>
 
     <section id="solutions" class="py-32 px-8">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="serif text-5xl mb-16 italic text-white text-center">Lending <span class="not-italic text-slate-500 uppercase tracking-widest text-3xl">Suite</span></h2>
+            <h2 class="serif text-5xl mb-16 italic text-white">Lending <span class="not-italic text-slate-500">Suite</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass-card p-12 rounded-[40px]" onclick="openModal('dscr')">
                     <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">DSCR Loans</h3>
-                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">REVENUE BASED →</p>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
                 </div>
                 <div class="glass-card p-12 rounded-[40px]" onclick="openModal('bridge')">
                     <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">Bridge / Flip</h3>
-                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">ASSET BASED →</p>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
                 </div>
                 <div class="glass-card p-12 rounded-[40px]" onclick="openModal('equity')">
                     <h3 class="text-xl font-bold uppercase text-slate-300 mb-4 tracking-widest">Equity Access</h3>
-                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">PORTFOLIO BASED →</p>
+                    <p class="text-[9px] text-slate-500 font-bold tracking-[0.3em]">VIEW GUIDELINES →</p>
                 </div>
             </div>
         </div>
@@ -98,7 +78,7 @@ HTML
 
     <div id="apply-modal" class="modal" onclick="closeModal('apply')">
         <div class="bg-[#020617] p-10 md:p-12 rounded-[30px] border border-white/10 max-w-xl w-full text-left relative" onclick="event.stopPropagation()">
-            <h2 class="serif text-3xl mb-8 text-white italic">Loan Application</h2>
+            <h2 class="serif text-3xl mb-8 text-white italic text-center">Loan Application</h2>
             <form id="loanForm" class="space-y-1">
                 <input type="text" id="name" placeholder="Full Name" required>
                 <input type="text" id="phone" placeholder="Phone Number" required>
@@ -121,8 +101,8 @@ HTML
 
     <div id="dscr-modal" class="modal" onclick="closeModal('dscr')">
         <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()">
-            <h3 class="serif text-3xl mb-6 text-slate-300 italic">DSCR Underwriting</h3>
-            <ul class="text-slate-400 text-sm space-y-4 mb-10">
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">DSCR Underwriting</h3>
+            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
                 <li>• 80% LTV Purchase / 75% LTV Cash-Out</li>
                 <li>• No Tax Returns or DTI Checks Required</li>
                 <li>• Qualify on Rental Income coverage</li>
@@ -131,9 +111,39 @@ HTML
         </div>
     </div>
 
+    <div id="bridge-modal" class="modal" onclick="closeModal('bridge')">
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()">
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">Bridge & Flip</h3>
+            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
+                <li>• Up to 90% Acquisition / 100% Rehab</li>
+                <li>• Closing in 7-10 Business Days</li>
+                <li>• Non-Recourse available</li>
+            </ul>
+            <button onclick="closeModal('bridge')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+        </div>
+    </div>
+
+    <div id="equity-modal" class="modal" onclick="closeModal('equity')">
+        <div class="bg-[#020617] p-12 rounded-[30px] border border-white/10 max-w-lg" onclick="event.stopPropagation()">
+            <h3 class="serif text-3xl mb-6 text-slate-300 italic font-bold">Equity Access</h3>
+            <ul class="text-slate-400 text-sm space-y-4 mb-10 italic">
+                <li>• Unlock up to 80% of current equity</li>
+                <li>• Blanket loans available</li>
+                <li>• Seasoning as low as 90 days</li>
+            </ul>
+            <button onclick="closeModal('equity')" class="w-full border border-white/10 py-4 text-[10px] uppercase tracking-widest rounded-lg">Close</button>
+        </div>
+    </div>
+
     <script>
-        function openModal(id) { document.getElementById(id + '-modal').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeModal(id) { document.getElementById(id + '-modal').classList.remove('active'); document.body.style.overflow = 'auto'; }
+        function openModal(id) { 
+            const m = document.getElementById(id + '-modal');
+            if(m) { m.classList.add('active'); document.body.style.overflow = 'hidden'; }
+        }
+        function closeModal(id) { 
+            const m = document.getElementById(id + '-modal');
+            if(m) { m.classList.remove('active'); document.body.style.overflow = 'auto'; }
+        }
         function sendApp() {
             const body = `Name: ${document.getElementById('name').value}\nPhone: ${document.getElementById('phone').value}\nAddress: ${document.getElementById('address').value}\nAmount: ${document.getElementById('amount').value}\nARV: ${document.getElementById('arv').value}\nStrategy: ${document.getElementById('strategy').value}\nExp: ${document.getElementById('exp').value}`;
             window.location.href = `mailto:Samuel@summitcoastcapital.com?subject=INSTITUTIONAL LOAN APP&body=${encodeURIComponent(body)}`;
