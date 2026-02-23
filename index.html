@@ -3,41 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit Coast Capital | Institutional Lending</title>
+    <title>Summit Coast Capital | Private Real Estate Lending</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        .hero { background: linear-gradient(rgba(0,32,91,0.85), rgba(0,32,91,0.85)), url('https://images.unsplash.com/photo-1449156001533-cb39c731426c?auto=format&fit=crop&w=1600&q=80'); 
-                background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; }
-        .hero h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: 2px; }
-        .btn-container { margin-top: 40px; }
-        .btn { display: inline-block; padding: 15px 35px; text-decoration: none; font-weight: bold; border-radius: 4px; transition: 0.3s; margin: 10px; }
-        .btn-primary { background: #00205b; color: white; border: 2px solid white; }
-        .btn-secondary { background: #00a8e8; color: white; border: 2px solid #00a8e8; }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
-        .lending-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1100px; margin: 50px auto; padding: 0 20px; }
-        .card { border: 1px solid #eee; padding: 30px; text-align: center; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card h3 { color: #00205b; font-size: 1.8rem; margin: 0; }
-        .section-title { text-align: center; color: #00205b; margin-top: 60px; }
+        :root { --navy: #00205b; --gold: #c5a059; --light-blue: #00a8e8; --white: #ffffff; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        
+        /* Navigation */
+        nav { background: var(--navy); padding: 20px; display: flex; justify-content: space-between; align-items: center; color: white; }
+        .logo { font-weight: bold; letter-spacing: 2px; font-size: 1.2rem; }
+
+        /* Hero Section */
+        .hero { 
+            background: linear-gradient(rgba(0,32,91,0.8), rgba(0,32,91,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80'); 
+            background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; 
+        }
+        .hero h1 { font-size: 3.5rem; margin: 0; letter-spacing: 3px; }
+        .hero p { font-size: 1.2rem; margin: 20px 0 40px; opacity: 0.9; }
+
+        /* THE TWO BUTTONS */
+        .btn-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 18px 40px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: all 0.3s ease; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-lending { background: var(--white); color: var(--navy); border: 2px solid var(--white); }
+        .btn-vault { background: transparent; color: var(--white); border: 2px solid var(--white); }
+        .btn-lending:hover { background: var(--gold); border-color: var(--gold); color: white; }
+        .btn-vault:hover { background: var(--light-blue); border-color: var(--light-blue); }
+
+        /* Stats Grid */
+        .stats-section { padding: 80px 20px; max-width: 1200px; margin: auto; text-align: center; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .stat-card { padding: 40px; border: 1px solid #eee; border-radius: 10px; transition: 0.3s; }
+        .stat-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .stat-card h3 { font-size: 2.5rem; color: var(--navy); margin: 0; }
+        .stat-card p { font-weight: bold; color: var(--gold); margin: 10px 0 0; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
+    <nav>
+        <div class="logo">SUMMIT COAST CAPITAL</div>
+        <div>Lending | Acquisition | Strategy</div>
+    </nav>
+
     <section class="hero">
-        <h1>SUMMIT COAST CAPITAL</h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: auto;">Bridging the gap between institutional capital and off-market opportunity.</p>
+        <h1>Institutional Capital for the Modern Investor</h1>
+        <p>Direct Private Lending & Proprietary Acquisition Strategies</p>
+        
         <div class="btn-container">
-            <a href="#lending" class="btn btn-primary">Institutional Lending</a>
-            <a href="the-vault/index.html" class="btn btn-secondary">Access The Vault</a>
+            <a href="#lending-params" class="btn btn-lending">Apply for Funding</a>
+            <a href="/the-vault/index.html" class="btn btn-vault">The Vault Protocol</a>
         </div>
     </section>
 
-    <h2 class="section-title" id="lending">Institutional Lending Parameters</h2>
-    <div class="lending-grid">
-        <div class="card"><h3>90% LTC</h3><p>Purchase & Rehab</p></div>
-        <div class="card"><h3>75% LTV</h3><p>Based on ARV</p></div>
-        <div class="card"><h3>9.99%</h3><p>Starting Rates</p></div>
-        <div class="card"><h3>7 Days</h3><p>Fast Closing</p></div>
-    </div>
+    <section id="lending-params" class="stats-section">
+        <h2 style="color: var(--navy); font-size: 2rem;">Lending Parameters</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>90%</h3>
+                <p>Loan To Cost</p>
+            </div>
+            <div class="stat-card">
+                <h3>75%</h3>
+                <p>Loan To Value (ARV)</p>
+            </div>
+            <div class="stat-card">
+                <h3>9.99%</h3>
+                <p>Starting Interest Rate</p>
+            </div>
+            <div class="stat-card">
+                <h3>7 Days</h3>
+                <p>Rapid Closing</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #f4f4f4; padding: 40px; text-align: center; font-size: 0.8rem; color: #666;">
+        &copy; 2026 Summit Coast Capital. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
