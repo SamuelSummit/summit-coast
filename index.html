@@ -27,7 +27,12 @@
         .loan-card:hover { background: #1B365D; color: white; }
         .loan-card:hover h3, .loan-card:hover p { color: white; }
 
-        /* MODAL & FORM STYLING */
+        .service-tile { 
+            background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 40px; transition: 0.4s ease;
+            height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
+
         #dealModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.95); backdrop-filter: blur(5px); }
         .modal-content { background: white; margin: 2% auto; padding: 40px; border-radius: 4px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative; }
         .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 2px; }
@@ -88,13 +93,54 @@
         </div>
     </section>
 
+    <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-tile">
+            <div>
+                <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">01 / Asset-Based</h4>
+                <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">Lending</h2>
+                <p class="text-slate-500 text-sm leading-loose mb-8">Speed-to-close liquidity for residential and commercial bridge scenarios. 7-day closings on high-conviction assets.</p>
+            </div>
+            <button onclick="openModal()" class="text-[#1B365D] text-left font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Submit Deal</button>
+        </div>
+
+        <div class="service-tile border-t-8 border-[#1B365D]">
+            <div>
+                <h4 class="text-[#1B365D] text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">02 / Forensic</h4>
+                <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">The Vault</h2>
+                <p class="text-slate-500 text-sm leading-relaxed mb-8">Access our proprietary courthouse scraper and AI logic to identify high-equity distress before the market moves.</p>
+            </div>
+            <a href="the-vault/index.html" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Terminal</a>
+        </div>
+
+        <div class="service-tile">
+            <div>
+                <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">03 / Strategic</h4>
+                <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">Joint Ventures</h2>
+                <p class="text-slate-500 text-sm leading-loose mb-8">Strategic equity partnerships. We provide the capital and the intelligence to secure off-market inventory.</p>
+            </div>
+            <a href="mailto:partner@summitcoastcapital.com" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Inquire</a>
+        </div>
+    </section>
+
+    <section id="onboard" class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-8 text-center">
+            <h3 class="serif text-4xl italic text-[#1B365D] mb-8">Principal Onboarding</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-12 max-w-xl mx-auto">Summit Coast Capital operates as a principal-to-principal partner. Whether seeking liquidity or intelligence, our process is built for professional speed.</p>
+            <button onclick="openModal()" class="bg-[#1B365D] text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-[#0f172a] transition">Start Onboarding</button>
+        </div>
+    </section>
+
+    <footer class="py-24 text-center">
+        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10 mx-auto mb-8 opacity-40 grayscale">
+        <p class="text-[9px] tracking-[1.5em] uppercase text-[#1B365D] font-bold opacity-30 italic">Summit Coast Capital • Institutional Assets</p>
+    </footer>
+
     <div id="dealModal">
         <div class="modal-content">
             <div id="modalHeader" class="flex justify-between items-center mb-8 border-b pb-4">
                 <h3 class="serif text-2xl italic text-[#1B365D]">Asset Underwriting</h3>
                 <button onclick="closeModal()" class="text-slate-400 hover:text-black text-2xl">✕</button>
             </div>
-
             <form id="dealForm" onsubmit="handleFormSubmit(event)">
                 <div class="grid grid-cols-2 gap-4">
                     <div>
@@ -135,10 +181,9 @@
                 <label class="form-label">Upload Repair Estimates / Photos</label>
                 <input type="file" name="attachments" class="form-input" multiple>
                 <label class="form-label">Deal Narrative</label>
-                <textarea name="message" class="form-input h-24" placeholder="Briefly describe the deal..."></textarea>
-                <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs mt-4 hover:bg-black transition">Submit</button>
+                <textarea name="message" class="form-input h-24"></textarea>
+                <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs mt-4">Submit</button>
             </form>
-
             <div id="successMessage">
                 <div class="text-5xl mb-6">✓</div>
                 <h3 class="serif text-3xl italic text-[#1B365D] mb-4">Thank You</h3>
@@ -148,19 +193,6 @@
         </div>
     </div>
 
-    
-
-    <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="service-tile">
-            <div>
-                <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">01 / Asset-Based</h4>
-                <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">Lending</h2>
-                <p class="text-slate-500 text-sm leading-loose mb-8">Speed-to-close liquidity for residential and commercial bridge scenarios.</p>
-            </div>
-            <button onclick="openModal()" class="text-[#1B365D] text-left font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Submit Deal</button>
-        </div>
-        </section>
-
     <script>
         function openModal() { 
             document.getElementById('dealModal').style.display = 'block'; 
@@ -169,12 +201,7 @@
             document.getElementById('modalHeader').style.display = 'flex';
             document.getElementById('successMessage').style.display = 'none';
         }
-        
-        function closeModal() { 
-            document.getElementById('dealModal').style.display = 'none'; 
-            document.body.style.overflow = 'auto'; 
-        }
-
+        function closeModal() { document.getElementById('dealModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
         function handleFormSubmit(event) {
             event.preventDefault(); 
             document.getElementById('dealForm').style.display = 'none';
