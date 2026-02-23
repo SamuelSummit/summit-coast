@@ -13,7 +13,7 @@
         body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* Ensures the Solutions link lands with the loan programs visible */
+        /* Fixed navigation landing spot */
         #loan-programs { scroll-margin-top: 100px; }
 
         .main-hero { 
@@ -36,7 +36,7 @@
         }
         .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
 
-        /* MODAL (THE CAPTURE BOX) */
+        /* THE CAPTURE BOX MODAL */
         #dealModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.95); backdrop-filter: blur(5px); }
         .modal-content { background: white; margin: 2% auto; padding: 40px; border-radius: 4px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative; }
         .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 2px; }
@@ -58,7 +58,7 @@
         <a href="index.html"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-8 md:h-12"></a>
         <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
             <a href="#loan-programs" class="hover:text-[#1B365D] transition">Solutions</a>
-            <a href="the-vault/index.html" class="hover:text-[#1B365D] transition">The Vault</a>
+            <a href="./the-vault/index.html" class="hover:text-[#1B365D] transition">The Vault</a>
             <a href="#onboard" class="hover:text-[#1B365D] transition">Onboarding</a>
         </div>
     </nav>
@@ -71,7 +71,7 @@
 
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <button onclick="openModal()" class="btn-scc-action">Submit Deal</button>
-                <a href="the-vault/index.html" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
+                <a href="./the-vault/index.html" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
             </div>
         </div>
     </header>
@@ -115,7 +115,7 @@
                 <h2 class="serif text-3xl italic mb-4 text-[#1B365D]">The Vault</h2>
                 <p class="text-slate-500 text-sm leading-relaxed mb-8">Access our proprietary courthouse scraper and AI logic to identify high-equity distress before the market moves.</p>
             </div>
-            <a href="the-vault/index.html" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Terminal</a>
+            <a href="./the-vault/index.html" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Terminal</a>
         </div>
     </section>
 
