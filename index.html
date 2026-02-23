@@ -13,6 +13,9 @@
         body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
         
+        /* Ensures the section isn't hidden behind the sticky nav when clicking the link */
+        #loan-programs { scroll-margin-top: 100px; }
+
         .main-hero { 
             position: relative;
             background: linear-gradient(rgba(27, 54, 93, 0.82), rgba(10, 31, 68, 0.95)), 
@@ -22,7 +25,7 @@
         }
 
         .loan-card {
-            background: #f8fafc; border: 1px solid #e2e8f0; padding: 30px; text-align: center; transition: 0.3s;
+            background: #f8fafc; border: 1px solid #e2e8f0; padding: 30px; text-align: center; transition: 0.3s; height: 100%;
         }
         .loan-card:hover { background: #1B365D; color: white; }
         .loan-card:hover h3, .loan-card:hover p { color: white; }
@@ -33,6 +36,7 @@
         }
         .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
 
+        /* MODAL STYLING */
         #dealModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.95); backdrop-filter: blur(5px); }
         .modal-content { background: white; margin: 2% auto; padding: 40px; border-radius: 4px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative; }
         .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 2px; }
@@ -70,30 +74,30 @@
         </div>
     </header>
 
-    <section id="loan-programs" class="py-20 bg-white">
+    <section id="loan-programs" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16">
                 <h2 class="serif text-4xl italic text-[#1B365D]">Loan Programs</h2>
                 <div class="h-1 w-20 bg-[#1B365D] mx-auto mt-4"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="loan-card">
                     <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Fix & Flip</h3>
                     <p class="text-sm leading-loose">Up to 90% LTC / 75% LTV. Designed for rapid acquisitions and heavy renovations with 7-day closing cycles.</p>
                 </div>
                 <div class="loan-card">
                     <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">DSCR</h3>
-                    <p class="text-sm leading-loose">No income verification. We qualify the loan based on the property’s rental income (Debt Service Coverage Ratio).</p>
+                    <p class="text-sm leading-loose">No income verification required. We qualify the loan based on the property’s rental income (Debt Service Coverage Ratio).</p>
                 </div>
                 <div class="loan-card">
                     <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Bridge</h3>
-                    <p class="text-sm leading-loose">Fast, interest-only capital to secure an asset while you wait for permanent financing or a sale.</p>
+                    <p class="text-sm leading-loose">Fast, interest-only capital to secure an asset while you wait for permanent financing or a strategic sale.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solutions" class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="py-24 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="service-tile">
             <div>
                 <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-10 uppercase italic border-b border-slate-100 pb-4">01 / Asset-Based</h4>
@@ -181,11 +185,11 @@
                 <label class="form-label">Upload Repair Estimates / Photos</label>
                 <input type="file" name="attachments" class="form-input" multiple>
                 <label class="form-label">Deal Narrative</label>
-                <textarea name="message" class="form-input h-24"></textarea>
+                <textarea name="message" class="form-input h-24" placeholder="Briefly describe the deal..."></textarea>
                 <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs mt-4">Submit</button>
             </form>
             <div id="successMessage">
-                <div class="text-5xl mb-6">✓</div>
+                <div class="text-5xl mb-6 text-green-600">✓</div>
                 <h3 class="serif text-3xl italic text-[#1B365D] mb-4">Thank You</h3>
                 <p class="text-slate-500 text-sm leading-loose mb-8">Your deal has been successfully submitted. Our team will review the asset and contact you within 24 hours.</p>
                 <button onclick="closeModal()" class="bg-[#1B365D] text-white px-8 py-3 font-bold uppercase tracking-widest text-[10px]">Close Window</button>
