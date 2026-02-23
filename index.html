@@ -5,81 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summit Coast Capital | Asset-Based Lending</title>
     <style>
-        :root { --navy: #00205b; --blue: #00a8e8; --white: #ffffff; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: var(--navy); background-color: #f8f9fa; }
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #00205b; }
         
-        /* Hero Section */
-        .hero { 
-            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); 
-            background-size: cover; background-position: center; padding: 100px 20px; text-align: center;
+        /* Hero Section with that Tropical/Coastal feel */
+        .hero {
+            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
         }
-        .hero h1 { font-size: 3rem; margin: 0; letter-spacing: 2px; }
-        .slogan { font-size: 1.5rem; font-weight: bold; color: var(--blue); margin: 20px 0; }
+
+        .hero h1 { font-size: 3.5rem; margin: 0; color: #00205b; letter-spacing: 2px; }
+        .hero h2 { font-size: 1.5rem; color: #00a8e8; margin: 10px 0; font-weight: 300; }
+        .slogan { font-size: 1.8rem; font-style: italic; margin: 30px 0; color: #00205b; border-top: 2px solid #00a8e8; border-bottom: 2px solid #00a8e8; padding: 10px 0; }
+
+        /* THE TWO BUTTONS */
+        .btn-container { display: flex; gap: 20px; margin-top: 20px; }
+        .btn { 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            transition: 0.3s; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+        }
+        .btn-blue { background: #00205b; color: white; border: 2px solid #00205b; }
+        .btn-white { background: white; color: #00205b; border: 2px solid #00205b; }
+        .btn-blue:hover { background: #00a8e8; border-color: #00a8e8; }
+        .btn-white:hover { background: #f0f8ff; }
 
         /* Lending Grid */
-        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: -40px; padding: 0 20px; }
-        .card { background: var(--white); padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; min-width: 180px; }
-        .card h3 { font-size: 2rem; margin: 0; color: var(--navy); }
-        .card p { margin: 5px 0 0; font-size: 0.8rem; font-weight: bold; color: var(--blue); }
-
-        /* Forms Section */
-        .form-container { max-width: 900px; margin: 60px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 0 20px; }
-        .form-box { background: var(--white); padding: 30px; border-radius: 12px; border: 1px solid #eee; }
-        h4 { margin-top: 0; color: var(--navy); border-bottom: 2px solid var(--blue); padding-bottom: 10px; }
-        input, select { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-
-        /* THE TWO SUBMIT BUTTONS - FIXED STYLING */
-        .btn-submit { 
-            width: 100%; 
-            padding: 15px; 
-            border: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            cursor: pointer; 
-            text-transform: uppercase; 
-            transition: 0.3s; 
-            font-size: 1rem;
-        }
-        .btn-lending { background-color: var(--navy); color: white; }
-        .btn-vault { background-color: var(--blue); color: white; }
-        .btn-submit:hover { opacity: 0.9; transform: translateY(-2px); }
-
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: -50px auto 50px; padding: 0 20px; }
+        .card { background: white; padding: 30px; text-align: center; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card h3 { font-size: 2rem; margin: 0; color: #00a8e8; }
+        .card p { margin: 5px 0 0; font-weight: bold; font-size: 0.8rem; text-transform: uppercase; color: #00205b; }
     </style>
 </head>
 <body>
 
     <section class="hero">
         <h1>SUMMIT COAST CAPITAL</h1>
-        <div class="slogan">"We approve the Asset, not the person."</div>
-        <p>Direct Private Lending for Real Estate Investors</p>
+        <h2>Direct Private Money Lending</h2>
+        <p class="slogan">"We approve the property, not the person."</p>
+        
+        <div class="btn-container">
+            <a href="#apply" class="btn btn-blue">Get Funded</a>
+            <a href="/the-vault/index.html" class="btn btn-white">The Vault Protocol</a>
+        </div>
     </section>
 
     <div class="grid">
-        <div class="card"><h3>90%</h3><p>LOAN TO COST</p></div>
-        <div class="card"><h3>75%</h3><p>LOAN TO VALUE</p></div>
-        <div class="card"><h3>9.99%</h3><p>STARTING RATES</p></div>
-        <div class="card"><h3>7 DAYS</h3><p>FAST CLOSING</p></div>
-    </div>
-
-    <div class="form-container">
-        <div class="form-box">
-            <h4>Apply for Funding</h4>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-            <input type="text" placeholder="Property Address">
-            <button class="btn-submit btn-lending">Submit Deal</button>
-        </div>
-
-        <div class="form-box">
-            <h4>Join The Vault</h4>
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
-            <select>
-                <option>Interested in Phase 1: Harvest</option>
-                <option>Full Protocol Access</option>
-            </select>
-            <button class="btn-submit btn-vault">Get Instant Access</button>
-        </div>
+        <div class="card"><h3>90%</h3><p>Loan To Cost</p></div>
+        <div class="card"><h3>75%</h3><p>Loan To Value</p></div>
+        <div class="card"><h3>9.99%</h3><p>Starting Rates</p></div>
+        <div class="card"><h3>7 Days</h3><p>Fast Close</p></div>
     </div>
 
 </body>
