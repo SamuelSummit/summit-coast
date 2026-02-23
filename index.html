@@ -33,7 +33,6 @@
         .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 2px; }
         .form-label { display: block; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #64748b; margin-bottom: 5px; }
 
-        /* SUCCESS MESSAGE STYLING */
         #successMessage { display: none; text-align: center; padding: 40px 20px; }
 
         .btn-scc-action { 
@@ -49,7 +48,7 @@
     <nav class="p-8 bg-white border-b border-slate-50 flex justify-between items-center sticky top-0 z-50">
         <a href="/"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-8 md:h-12"></a>
         <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
-            <a href="#solutions" class="hover:text-[#1B365D] transition">Solutions</a>
+            <a href="#loan-programs" class="hover:text-[#1B365D] transition">Solutions</a>
             <a href="the-vault/index.html" class="hover:text-[#1B365D] transition">The Vault</a>
             <a href="#onboard" class="hover:text-[#1B365D] transition">Onboarding</a>
         </div>
@@ -66,7 +65,7 @@
         </div>
     </header>
 
-    <section class="py-20 bg-white">
+    <section id="loan-programs" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-8">
             <div class="text-center mb-16">
                 <h2 class="serif text-4xl italic text-[#1B365D]">Loan Programs</h2>
@@ -142,8 +141,8 @@
 
             <div id="successMessage">
                 <div class="text-5xl mb-6">✓</div>
-                <h3 class="serif text-3xl italic text-[#1B365D] mb-4">Thank You, Samuel.</h3>
-                <p class="text-slate-500 text-sm leading-loose mb-8">Your deal has been successfully submitted to the terminal. Our underwriting team will review the asset and contact you within 24 hours.</p>
+                <h3 class="serif text-3xl italic text-[#1B365D] mb-4">Thank You</h3>
+                <p class="text-slate-500 text-sm leading-loose mb-8">Your deal has been successfully submitted. Our team will review the asset and contact you within 24 hours.</p>
                 <button onclick="closeModal()" class="bg-[#1B365D] text-white px-8 py-3 font-bold uppercase tracking-widest text-[10px]">Close Window</button>
             </div>
         </div>
@@ -166,7 +165,6 @@
         function openModal() { 
             document.getElementById('dealModal').style.display = 'block'; 
             document.body.style.overflow = 'hidden'; 
-            // Reset modal state
             document.getElementById('dealForm').style.display = 'block';
             document.getElementById('modalHeader').style.display = 'flex';
             document.getElementById('successMessage').style.display = 'none';
@@ -178,10 +176,7 @@
         }
 
         function handleFormSubmit(event) {
-            event.preventDefault(); // Stop page refresh
-            // In a live environment, you would use fetch() to send the data here.
-            
-            // Hide Form & Header, Show Thank You
+            event.preventDefault(); 
             document.getElementById('dealForm').style.display = 'none';
             document.getElementById('modalHeader').style.display = 'none';
             document.getElementById('successMessage').style.display = 'block';
