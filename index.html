@@ -2,40 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Summit Coast Capital | Institutional Real Estate Liquidity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
+        
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: #fff; color: #1e293b; margin: 0; }
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; margin: 0; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
-        .hero { 
+        
+        #loan-programs { scroll-margin-top: 100px; }
+
+        .main-hero { 
+            position: relative;
             background: linear-gradient(rgba(27, 54, 93, 0.85), rgba(10, 31, 68, 0.95)), 
-            url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover; background-position: center; color: white; padding: 120px 24px; text-align: center;
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: white; padding: 140px 24px; text-align: center; border-bottom: 8px solid #1B365D;
         }
+
+        .service-tile { 
+            background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 40px; transition: 0.4s ease;
+            height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .service-tile:hover { border-color: #1B365D; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(27, 54, 93, 0.08); }
+
+        #dealModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.95); backdrop-filter: blur(5px); }
+        .modal-content { background: white; margin: 2% auto; padding: 40px; border-radius: 4px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; position: relative; }
+        .form-input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; border-radius: 2px; }
+        .form-label { display: block; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #64748b; margin-bottom: 5px; }
+
+        #successMessage { display: none; text-align: center; padding: 40px 20px; }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 bg-white border-b flex justify-between items-center sticky top-0 z-50">
-        <img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-10">
-        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-            <a href="https://samuelsummit.github.io/the-vault/" class="hover:text-[#1B365D]">The Vault</a>
-            <a href="#onboard" class="hover:text-[#1B365D]">Onboarding</a>
+    <nav class="p-8 bg-white border-b border-slate-50 flex justify-between items-center sticky top-0 z-50">
+        <a href="index.html"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="Summit Coast Capital" class="h-8 md:h-12"></a>
+        <div class="hidden md:flex gap-10 text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
+            <a href="#loan-programs" class="hover:text-[#1B365D] transition">Solutions</a>
+            <a href="the-vault/index.html" class="hover:text-[#1B365D] transition text-[#1B365D]">The Vault</a>
+            <a href="#onboard" class="hover:text-[#1B365D] transition">Onboarding</a>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1 class="serif text-6xl md:text-8xl mb-6 italic">Capital. Redefined.</h1>
-        <p class="text-xl mb-12 uppercase tracking-[0.3em]">We approve the asset, not the person.</p>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <button onclick="alert('Modal Logic Active')" class="bg-white text-[#1B365D] px-10 py-4 font-bold uppercase text-xs tracking-widest">Submit Deal</button>
-            
-            <a href="https://samuelsummit.github.io/the-vault/" class="border-2 border-white text-white px-10 py-4 font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
+    <header class="main-hero">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="serif text-6xl md:text-9xl mb-8 italic leading-tight tracking-tighter uppercase font-bold">Capital. <br>Redefined.</h1>
+            <p class="text-white text-lg md:text-2xl font-light mb-12 uppercase tracking-[0.4em] italic">"We don't approve you—we approve the asset."</p>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <button onclick="openModal()" class="bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition">Submit Deal</button>
+                <a href="the-vault/index.html" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
+            </div>
         </div>
     </header>
 
+    <section id="loan-programs" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="service-tile">
+                    <h4 class="text-slate-400 text-[9px] font-black tracking-widest mb-6 uppercase italic border-b pb-4">01 / Asset-Based</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">Lending</h2>
+                    <p class="text-slate-500 text-sm leading-loose mb-8">Speed-to-close liquidity for residential and commercial bridge scenarios.</p>
+                    <button onclick="openModal()" class="text-[#1B365D] text-left font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Submit Deal</button>
+                </div>
+                <div class="service-tile border-t-8 border-[#1B365D]">
+                    <h4 class="text-[#1B365D] text-[9px] font-black tracking-widest mb-6 uppercase italic border-b pb-4">02 / Forensic</h4>
+                    <h2 class="serif text-3xl italic mb-6 text-[#1B365D]">The Vault</h2>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8">Access our proprietary courthouse scraper and AI logic to identify high-equity distress.</p>
+                    <a href="the-vault/index.html" class="text-[#1B365D] font-bold text-[10px] uppercase tracking-widest underline decoration-2 underline-offset-8">Enter Terminal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="dealModal">
+        <div class="modal-content">
+            <div id="modalHeader" class="flex justify-between items-center mb-8 border-b pb-4">
+                <h3 class="serif text-2xl italic text-[#1B365D]">Asset Underwriting</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-black text-2xl">✕</button>
+            </div>
+            <form id="dealForm" onsubmit="handleFormSubmit(event)">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-input" required>
+                <label class="form-label">Property Address</label>
+                <input type="text" name="address" class="form-input" required>
+                <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs mt-4">Submit Deal for Review</button>
+            </form>
+            <div id="successMessage">
+                <div class="text-5xl mb-6 text-green-600">✓</div>
+                <h3 class="serif text-3xl italic text-[#1B365D] mb-4">Submission Received</h3>
+                <button onclick="closeModal()" class="bg-[#1B365D] text-white px-8 py-3 font-bold uppercase tracking-widest text-[10px]">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() { document.getElementById('dealModal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+        function closeModal() { document.getElementById('dealModal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+        function handleFormSubmit(event) { event.preventDefault(); document.getElementById('dealForm').style.display = 'none'; document.getElementById('successMessage').style.display = 'block'; }
+    </script>
 </body>
 </html>
