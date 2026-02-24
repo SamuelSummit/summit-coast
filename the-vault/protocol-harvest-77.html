@@ -13,6 +13,7 @@
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
         .phase-card { background: #111827; border: 1px solid #1e293b; padding: 40px; transition: 0.3s; }
         .active-phase { border-left: 4px solid #3b82f6; background: linear-gradient(to right, rgba(59, 130, 246, 0.05), transparent); }
+        .script-pre { text-wrap: wrap; word-break: break-word; }
     </style>
 </head>
 <body>
@@ -29,82 +30,98 @@
     <main class="max-w-6xl mx-auto px-6 py-16">
         
         <div class="mb-16">
-            <h1 class="serif text-4xl md:text-6xl italic mb-4">Phase 1 & 2: Sourcing & Underwriting</h1>
-            <p class="text-slate-500 text-xs uppercase tracking-[0.5em]">Forensic Equity Harvesting Protocol v1.0</p>
+            <h1 class="serif text-4xl md:text-6xl italic mb-4">The Vault Protocol.</h1>
+            <p class="text-slate-500 text-xs uppercase tracking-[0.5em]">Forensic Equity Harvesting Terminal v1.0.4</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
-            <div class="lg:col-span-2 space-y-12">
+            <div class="lg:col-span-2 space-y-16">
                 
                 <section id="phase1">
                     <div class="flex justify-between items-end mb-6">
                         <h2 class="serif text-2xl italic">01. The Harvest</h2>
-                        <span class="text-[10px] text-slate-500 uppercase tracking-widest">Duration: 12:45</span>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest">Sourcing Strategy</span>
                     </div>
                     <div class="video-container mb-6 shadow-2xl">
                         <iframe src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex flex-wrap gap-4">
                         <a href="#" class="bg-white/5 border border-white/10 px-6 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition">Download: The Wealth Map (PDF)</a>
                         <a href="#" class="bg-white/5 border border-white/10 px-6 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-white/10 transition">The Scraper Checklist</a>
                     </div>
                 </section>
 
-                <hr class="border-white/5">
-
-                <section id="phase2" class="pt-8">
+                <section id="phase2" class="pt-8 border-t border-white/5">
                     <div class="flex justify-between items-end mb-6">
-                        <h2 class="serif text-2xl italic text-blue-400">02. Forensic Underwriting</h2>
-                        <span class="text-[10px] text-slate-500 uppercase tracking-widest">Institutional AI Prompt</span>
+                        <h2 class="serif text-2xl italic text-blue-400">02. Forensic Underwrite</h2>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest">AI Stress-Test</span>
                     </div>
                     
-                    <p class="text-slate-400 text-sm mb-8 leading-relaxed font-light">Copy the prompt below and paste it into ChatGPT or Gemini. Once the AI is ready, input your harvested data (ARV, Purchase Price, Rehab) to receive an institutional stress-test.</p>
-
                     <div class="bg-[#0d1321] border border-white/10 shadow-2xl overflow-hidden rounded-sm">
                         <div class="bg-white/5 px-6 py-3 border-b border-white/10 flex justify-between items-center">
-                            <div class="flex gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div><div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div><div class="w-2.5 h-2.5 rounded-full bg-green-500/50"></div></div>
-                            <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-slate-500">Terminal Version 1.0.4</span>
+                            <span class="text-[9px] font-bold uppercase tracking-[0.3em] text-slate-500">Underwriting Prompt</span>
+                            <button onclick="copyPrompt()" class="bg-blue-600 hover:bg-blue-500 text-white text-[9px] font-bold uppercase tracking-widest py-1.5 px-4 transition-all">
+                                <span id="copyText">Copy Prompt</span>
+                            </button>
                         </div>
                         <div class="p-8">
-                            <div class="relative group">
-                                <pre id="aiPrompt" class="text-slate-300 font-mono text-xs leading-relaxed overflow-x-auto whitespace-pre-wrap p-6 bg-black/30 border border-white/5 italic">"Act as a Senior Institutional Underwriter for a private equity real estate firm. Your goal is to perform a Forensic Stress-Test on a potential investment property. You are skeptical, data-driven, and focused on principal protection.
+                            <pre id="aiPrompt" class="text-slate-300 font-mono text-xs leading-relaxed overflow-x-auto whitespace-pre-wrap p-6 bg-black/30 border border-white/5 italic">"Act as a Senior Institutional Underwriter for a private equity real estate firm. Your goal is to perform a Forensic Stress-Test on a potential investment property. I will provide you with: 1. ARV, 2. Purchase Price, 3. Rehab Costs.
 
-I will provide you with: 1. ARV, 2. Purchase Price, 3. Rehab Costs.
-
-Your Analysis Requirements:
+Analysis Requirements:
 1. The 70% Rule Check.
 2. The 'Blood in the Streets' Scenario: Apply a 10% market haircut and 20% rehab contingency.
 3. Cost of Capital Impact: Assume 12% interest for 9 months.
-4. The Forensic Verdict: Surgical Strike / Proceed with Caution / Abort.
+4. Final Verdict: Surgical Strike / Proceed with Caution / Abort."</pre>
+                        </div>
+                    </div>
+                </section>
 
-Please wait for me to provide the property data before beginning."</pre>
-                                <button onclick="copyPrompt()" class="absolute top-4 right-4 bg-blue-600 hover:bg-blue-500 text-white text-[9px] font-bold uppercase tracking-widest py-2 px-4 transition-all">
-                                    <span id="copyText">Copy Prompt</span>
-                                </button>
+                <section id="phase3" class="pt-8 border-t border-white/5">
+                    <div class="flex justify-between items-end mb-6">
+                        <h2 class="serif text-2xl italic text-emerald-400">03. The Strike</h2>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-widest">Negotiation Terminal</span>
+                    </div>
+
+                    <div class="bg-[#0d1321] border border-white/10 shadow-2xl overflow-hidden rounded-sm">
+                        <div class="bg-white/5 px-6 py-3 border-b border-white/10 flex justify-between items-center">
+                            <div class="flex gap-4">
+                                <button onclick="switchScript('digital')" id="btn-digital" class="text-[9px] font-bold uppercase tracking-widest text-blue-400 border-b border-blue-400 pb-1">Digital (Text/Email)</button>
+                                <button onclick="switchScript('live')" id="btn-live" class="text-[9px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition pb-1">Live (Phone/In-Person)</button>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div id="script-digital">
+                                <pre class="text-slate-300 font-mono text-xs leading-relaxed script-pre italic bg-black/30 p-6 border border-white/5">"Subject: Transaction Inquiry: [Property Address]
+
+My name is Samuel Salankey, Principal at Summit Coast Capital. We are looking to deploy capital in [Area] and are prepared to offer a principal-to-principal transaction: No Commissions, Certainty of Close, and an As-Is Purchase. Reply or call for a soft term sheet within 24 hours."</pre>
+                            </div>
+                            <div id="script-live" class="hidden">
+                                <pre class="text-slate-300 font-mono text-xs leading-relaxed script-pre italic bg-black/30 p-6 border border-white/5">"Intro: 'Hi [Name], I’m Samuel, a local asset manager. Your property stood out as a potential target for our current buy-box. We specialize in non-retail transactions with our own capital. If I can handle all closing costs and close on your timeline, would you be open to a direct offer?'"</pre>
                             </div>
                         </div>
                     </div>
                 </section>
+
             </div>
 
             <div class="space-y-6">
                 <div class="phase-card active-phase">
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-4 italic">Current Module</h4>
-                    <h3 class="serif text-xl italic mb-2">The Harvest & Underwrite</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Sourcing high-equity assets and stress-testing them for institutional viability.</p>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-4 italic">Operational Status</h4>
+                    <h3 class="serif text-xl italic mb-2">Protocol Active</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">You are currently in the Deployment Phase. Harvest, Underwrite, and Strike.</p>
                 </div>
 
                 <div class="phase-card opacity-40 grayscale">
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Phase 3 (Coming Soon)</h4>
-                    <h3 class="serif text-xl italic mb-2">The Surgical Strike</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed font-light">Negotiation scripts and contract execution for distressed assets.</p>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Phase 4 (Pending)</h4>
+                    <h3 class="serif text-xl italic mb-2">The Terminal</h3>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light">Closing the loop. Submitting deals for Summit Coast funding.</p>
                 </div>
 
                 <div class="p-8 border border-blue-500/20 bg-blue-500/5">
-                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-4 italic">Operational Support</h4>
-                    <p class="text-xs text-slate-400 mb-4 leading-relaxed font-light">Ready to fund a deal? Submit your underwriting results to the main terminal.</p>
-                    <a href="../index.html#dealModal" class="text-[9px] font-bold uppercase tracking-widest text-white underline underline-offset-4 hover:text-blue-400 transition">Submit to Underwriting →</a>
+                    <h4 class="text-[10px] font-bold uppercase tracking-widest text-blue-400 mb-4 italic">Capital Terminal</h4>
+                    <p class="text-xs text-slate-400 mb-4 leading-relaxed font-light">Have a deal that passed the Stress-Test? Submit for institutional funding.</p>
+                    <a href="../index.html#dealModal" class="text-[9px] font-bold uppercase tracking-widest text-white underline underline-offset-4 hover:text-blue-400 transition">Open Funding Terminal →</a>
                 </div>
             </div>
 
@@ -123,6 +140,25 @@ Please wait for me to provide the property data before beginning."</pre>
                 btnText.innerText = "Copied to Clipboard";
                 setTimeout(() => { btnText.innerText = "Copy Prompt"; }, 3000);
             });
+        }
+
+        function switchScript(type) {
+            const digital = document.getElementById('script-digital');
+            const live = document.getElementById('script-live');
+            const btnD = document.getElementById('btn-digital');
+            const btnL = document.getElementById('btn-live');
+
+            if (type === 'digital') {
+                digital.classList.remove('hidden');
+                live.classList.add('hidden');
+                btnD.className = "text-[9px] font-bold uppercase tracking-widest text-blue-400 border-b border-blue-400 pb-1";
+                btnL.className = "text-[9px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition pb-1";
+            } else {
+                digital.classList.add('hidden');
+                live.classList.remove('hidden');
+                btnL.className = "text-[9px] font-bold uppercase tracking-widest text-blue-400 border-b border-blue-400 pb-1";
+                btnD.className = "text-[9px] font-bold uppercase tracking-widest text-slate-500 hover:text-white transition pb-1";
+            }
         }
     </script>
 </body>
