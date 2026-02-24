@@ -19,10 +19,9 @@
             color: white; padding: 140px 24px; text-align: center;
         }
 
-        /* Modal Styling */
         #dealModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(10, 31, 68, 0.98); backdrop-filter: blur(10px); overflow-y: auto; }
         .modal-content { background: white; margin: 2% auto; padding: 40px; width: 95%; max-width: 650px; position: relative; border-radius: 2px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
-        .form-input { width: 100%; padding: 14px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; color: #1e293b; background: #f8fafc; border-radius: 4px; }
+        .form-input { width: 100%; padding: 14px; margin-bottom: 15px; border: 1px solid #e2e8f0; font-size: 14px; color: #1e293b; background: #f8fafc; border-radius: 4px; appearance: none; }
         .form-input:focus { outline: 2px solid #1B365D; border-color: transparent; background: #fff; }
         
         .loan-card { background: #f8fafc; border: 1px solid #e2e8f0; padding: 40px; transition: 0.3s; height: 100%; }
@@ -52,33 +51,21 @@
     </header>
 
     <section id="loan-programs" class="py-24 bg-white px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[#1B365D]">
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Fix & Flip</h3>
-                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Aggressive leverage for high-speed acquisitions and heavy renovations.</p>
-                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6">
-                    <li>• Up to 90% LTC / 75% ARV</li>
-                    <li>• 100% Rehab Funding</li>
-                    <li>• 12-Month Interest Only</li>
-                </ul>
+                <h3 class="serif text-2xl italic mb-4">Fix & Flip</h3>
+                <p class="text-xs text-slate-500 mb-6 lowercase">Leverage for acquisitions and renovations.</p>
+                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• Up to 90% LTC / 75% ARV</li><li>• 100% Rehab Funding</li><li>• 12-Month Interest Only</li></ul>
             </div>
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">DSCR (Rental)</h3>
-                <p class="text-xs text-slate-500 mb-6 leading-relaxed">No-income verification loans based strictly on the asset's cash flow.</p>
-                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6">
-                    <li>• No Tax Returns Required</li>
-                    <li>• 30-Year Fixed Rates</li>
-                    <li>• 1-4 Units & Portfolios</li>
-                </ul>
+                <h3 class="serif text-2xl italic mb-4">DSCR (Rental)</h3>
+                <p class="text-xs text-slate-500 mb-6 lowercase">No-income verification based on cash flow.</p>
+                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• No Tax Returns Required</li><li>• 30-Year Fixed Rates</li><li>• 1-4 Units</li></ul>
             </div>
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Bridge</h3>
-                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Short-term liquidity for opportunistic gap funding and quick closings.</p>
-                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6">
-                    <li>• Loans up to $10M</li>
-                    <li>• 7-10 Day Closings</li>
-                    <li>• Flexible Exit Strategies</li>
-                </ul>
+                <h3 class="serif text-2xl italic mb-4">Bridge</h3>
+                <p class="text-xs text-slate-500 mb-6 lowercase">Short-term liquidity for quick closings.</p>
+                <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• Loans up to $10M</li><li>• 7-10 Day Closings</li><li>• Flexible Exit</li></ul>
             </div>
         </div>
     </section>
@@ -95,27 +82,38 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">First Name</label>
-                        <input type="text" name="first_name" class="form-input" placeholder="Samuel" required>
+                        <input type="text" name="first_name" class="form-input" required>
                     </div>
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Last Name</label>
-                        <input type="text" name="last_name" class="form-input" placeholder="Salankey" required>
+                        <input type="text" name="last_name" class="form-input" required>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Email Address</label>
-                        <input type="email" name="email" class="form-input" placeholder="samuel@example.com" required>
+                        <input type="email" name="email" class="form-input" required>
                     </div>
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Phone Number</label>
-                        <input type="tel" name="phone" class="form-input" placeholder="727-000-0000" required>
+                        <input type="tel" name="phone" class="form-input" required>
                     </div>
                 </div>
 
+                <div class="mb-4">
+                    <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Loan Program</label>
+                    <select name="loan_type" class="form-input" required>
+                        <option value="" disabled selected>Select Program...</option>
+                        <option value="Fix & Flip">Fix & Flip</option>
+                        <option value="DSCR (Rental)">DSCR (Rental)</option>
+                        <option value="Bridge / Gap">Bridge / Gap</option>
+                        <option value="Multi-Family">Multi-Family</option>
+                    </select>
+                </div>
+
                 <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Property Address</label>
-                <input type="text" name="address" class="form-input" placeholder="Address, City, State, Zip" required>
+                <input type="text" name="address" class="form-input" required>
 
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
