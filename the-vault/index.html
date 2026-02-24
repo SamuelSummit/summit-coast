@@ -7,28 +7,92 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        body { background-color: #0a0f1d; color: #ffffff; font-family: 'Inter', sans-serif; }
+        body { background-color: #0a0f1d; color: #ffffff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
         .vault-hero { background: linear-gradient(rgba(10, 15, 29, 0.9), rgba(10, 15, 29, 0.95)), url('https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=1920'); background-size: cover; padding: 120px 24px; text-align: center; }
+        .price-card { background: #111827; border: 1px solid #1e293b; padding: 60px 40px; text-align: center; max-width: 500px; margin: -100px auto 0; position: relative; z-index: 10; }
+        
+        /* Table Styling */
+        .comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 40px; }
+        .comparison-table th { text-align: left; padding: 20px; border-bottom: 1px solid #1e293b; color: #60a5fa; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; }
+        .comparison-table td { padding: 20px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+        .guru-column { color: #64748b; font-style: italic; }
+        .vault-column { color: #ffffff; font-weight: 600; background: rgba(59, 130, 246, 0.03); }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 md:p-8 bg-[#0a0f1d] border-b border-white/10 flex justify-between items-center sticky top-0 z-50">
-        <a href="../index.html"><img src="https://i.postimg.cc/Dw58qHQk/LOGO.png" alt="SCC" class="h-12 md:h-20 w-auto object-contain brightness-200"></a>
-        <div class="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-500">
+    <nav class="p-6 md:p-8 bg-[#0a0f1d] border-b border-white/5 flex justify-between items-center sticky top-0 z-50">
+        <a href="../index.html"><img src="../LOGO.png" alt="SCC" class="h-12 md:h-16 brightness-200"></a>
+        <div class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-500">
             <a href="../index.html" class="hover:text-white transition">Exit Terminal</a>
         </div>
     </nav>
 
     <header class="vault-hero">
-        <h1 class="serif text-5xl md:text-8xl mb-8 italic font-bold text-white uppercase">The Vault Protocol.</h1>
-        <div class="max-w-lg mx-auto bg-[#111827] border border-white/10 p-12 text-center">
-            <p class="text-4xl font-black mb-6">$497</p>
-            <p class="text-slate-400 text-sm leading-loose mb-8">Access Phase 1-4: The Harvest, The Underwrite, The Strike, and The Exit.</p>
-            <a href="https://buy.stripe.com/your-link" class="block w-full bg-blue-600 text-white py-5 font-bold uppercase tracking-widest text-xs">Initialize Protocol</a>
+        <div class="max-w-4xl mx-auto">
+            <h1 class="serif text-5xl md:text-8xl mb-8 italic uppercase font-bold text-white">The Vault <br>Protocol.</h1>
+            <p class="text-slate-400 text-lg md:text-xl font-light mb-12 uppercase tracking-[0.3em] italic underline decoration-blue-600">Forensic Equity Harvesting</p>
         </div>
     </header>
+
+    <section class="px-8 pb-24">
+        <div class="price-card">
+            <h2 class="serif text-3xl italic mb-4">Phase 1-4 Access</h2>
+            <p class="text-5xl font-black mb-8">$497<span class="text-sm font-light text-slate-500 ml-2 uppercase tracking-widest text-xs italic">One-Time Fee</span></p>
+            <a href="https://buy.stripe.com/your-actual-link-here" class="block w-full bg-blue-600 text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-700 transition shadow-2xl mb-4">Initialize Protocol</a>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-32">
+            <div class="text-center mb-16">
+                <h3 class="serif text-4xl italic mb-4">Retail vs. Institutional</h3>
+                <p class="text-slate-500 text-xs uppercase tracking-widest">Why The Vault Protocol is the only tactical choice.</p>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Focus Area</th>
+                            <th>Typical "Guru" Course</th>
+                            <th class="vault-column">The Vault Protocol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Strategy</strong></td>
+                            <td class="guru-column">Wide-net "shotgun" marketing (Cold Calling)</td>
+                            <td class="vault-column">Forensic Sourcing (Surgical Data Scrapping)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analysis</strong></td>
+                            <td class="guru-column">Basic spreadsheets and "hope"</td>
+                            <td class="vault-column">AI Underwriting (60-Sec Stress Testing)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Negotiation</strong></td>
+                            <td class="guru-column">High-pressure "salesman" scripts</td>
+                            <td class="vault-column">The Strike (Principal-to-Principal logic)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Liquidity</strong></td>
+                            <td class="guru-column">"Go find a partner/hard money"</td>
+                            <td class="vault-column">Summit Coast Terminal (Direct Access to Capital)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Efficiency</strong></td>
+                            <td class="guru-column">40+ Hours of filler and "mindset" fluff</td>
+                            <td class="vault-column">Surgical: 4 High-Impact Operational Phases</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 border-t border-white/5 text-center">
+        <p class="text-[9px] tracking-[1.5em] uppercase text-slate-600 font-bold italic">Summit Coast Capital | The Vault</p>
+    </footer>
 
 </body>
 </html>
