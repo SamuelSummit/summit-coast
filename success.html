@@ -3,28 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submission Received | Summit Coast Capital</title>
+    <title>Transmission Confirmed | Summit Coast Capital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        body { background: #0a1f44; color: white; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; margin: 0; }
+        body { background-color: #ffffff; color: #1e293b; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .serif { font-family: 'Playfair Display', serif; }
+        .status-pulse {
+            width: 12px; height: 12px; background-color: #10b981; border-radius: 50%;
+            display: inline-block; margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
     </style>
 </head>
-<body>
-    <div class="max-w-2xl px-8">
-        <a href="index.html">
-            <img src="LOGO.png" alt="SCC" class="h-16 md:h-24 mx-auto mb-12 brightness-200 object-contain">
-        </a>
-        
-        <h1 class="serif text-5xl md:text-7xl italic mb-6 uppercase leading-tight">Transmission <br>Confirmed.</h1>
-        <p class="text-blue-300 text-sm md:text-base uppercase tracking-[0.4em] mb-12 font-light italic">"Forensic Underwriting in Progress"</p>
-        
-        <div class="space-y-4">
-            <a href="the-vault/index.html" class="inline-block bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition">Explore The Vault While You Wait</a>
-            <br>
-            <a href="index.html" class="inline-block text-white/50 text-[10px] uppercase tracking-widest hover:text-white transition mt-4">Return to Terminal</a>
+<body class="flex items-center justify-center min-h-screen bg-[#f8fafc]">
+
+    <div class="max-w-2xl w-full mx-4 text-center">
+        <div class="mb-12">
+            <img src="LOGO.png" alt="Summit Coast Capital" class="h-16 mx-auto mb-8">
         </div>
+
+        <div class="bg-white border border-slate-200 p-12 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#1B365D]"></div>
+            
+            <div class="flex items-center justify-center mb-6">
+                <div class="status-pulse"></div>
+                <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-emerald-600 italic">Underwriting in Progress</span>
+            </div>
+
+            <h1 class="serif text-4xl md:text-5xl italic text-[#1B365D] mb-6 leading-tight">Transmission Confirmed.</h1>
+            
+            <p class="text-slate-500 text-sm leading-relaxed mb-10 font-light max-w-md mx-auto italic">
+                Your asset data has been successfully uploaded to the Summit Coast terminal. Our forensic underwriting engine is currently analyzing the collateral.
+            </p>
+
+            <div class="border-t border-b border-slate-100 py-8 mb-10 text-left px-4">
+                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-[#1B365D] mb-4">What's Next:</h4>
+                <ul class="space-y-4 text-xs text-slate-600 italic">
+                    <li class="flex items-start">
+                        <span class="text-[#1B365D] mr-3 font-bold">01.</span> 
+                        <span>A Principal will review the initial forensic stress-test within 24 business hours.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#1B365D] mr-3 font-bold">02.</span> 
+                        <span>If the asset meets our liquidity thresholds, a soft Term Sheet will be generated.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="inline-block bg-[#1B365D] text-white px-10 py-4 font-bold uppercase tracking-widest text-[10px] hover:bg-blue-900 transition">
+                Return to Terminal
+            </a>
+        </div>
+
+        <footer class="mt-12">
+            <p class="text-[9px] tracking-[1.2em] uppercase text-slate-400 font-bold italic">Summit Coast Capital // 2026</p>
+        </footer>
     </div>
+
 </body>
 </html>
