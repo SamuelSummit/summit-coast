@@ -45,27 +45,50 @@
             <p class="text-white text-lg md:text-2xl font-light mb-12 uppercase tracking-[0.4em] italic">"We don't approve you—we approve the asset."</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <button onclick="openModal()" class="bg-white text-[#1B365D] px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-slate-100 transition shadow-lg">Submit Deal</button>
-                <a href="the-vault/index.html" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Access The Vault</a>
+                <a href="#onboard" class="border-2 border-white text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-[#1B365D] transition">Our Process</a>
             </div>
         </div>
     </header>
 
     <section id="loan-programs" class="py-24 bg-white px-8">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[#1B365D]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4">Fix & Flip</h3>
-                <p class="text-xs text-slate-500 mb-6 lowercase">Leverage for acquisitions and renovations.</p>
+                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Fix & Flip</h3>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Aggressive leverage for high-speed acquisitions and renovations.</p>
                 <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• Up to 90% LTC / 75% ARV</li><li>• 100% Rehab Funding</li><li>• 12-Month Interest Only</li></ul>
             </div>
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4">DSCR (Rental)</h3>
-                <p class="text-xs text-slate-500 mb-6 lowercase">No-income verification based on cash flow.</p>
+                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">DSCR (Rental)</h3>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">No-income verification loans based on the asset's cash flow.</p>
                 <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• No Tax Returns Required</li><li>• 30-Year Fixed Rates</li><li>• 1-4 Units</li></ul>
             </div>
             <div class="loan-card">
-                <h3 class="serif text-2xl italic mb-4">Bridge</h3>
-                <p class="text-xs text-slate-500 mb-6 lowercase">Short-term liquidity for quick closings.</p>
+                <h3 class="serif text-2xl italic mb-4 text-[#1B365D]">Bridge</h3>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Short-term liquidity for opportunistic gap funding and quick closings.</p>
                 <ul class="text-[10px] text-left space-y-2 uppercase font-bold tracking-widest text-slate-400 border-t pt-6"><li>• Loans up to $10M</li><li>• 7-10 Day Closings</li><li>• Flexible Exit</li></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="onboard" class="py-24 bg-[#f8fafc] px-8 border-t border-b">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="serif text-4xl md:text-5xl italic text-[#1B365D] mb-16">The Onboarding Protocol</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <span class="text-4xl font-light text-slate-300">01</span>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mt-4 mb-2">Asset Submission</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light lowercase">Submit your deal through our secure terminal for immediate forensic underwriting.</p>
+                </div>
+                <div>
+                    <span class="text-4xl font-light text-slate-300">02</span>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mt-4 mb-2">Partner Vetting</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light lowercase">Once the asset is approved, we verify your entity docs and track record for institutional clearance.</p>
+                </div>
+                <div>
+                    <span class="text-4xl font-light text-slate-300">03</span>
+                    <h4 class="font-bold uppercase tracking-widest text-xs mt-4 mb-2">Capital Deployment</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed font-light lowercase">Execution of the term sheet and funding within 7-10 business days.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -76,9 +99,7 @@
                 <h3 class="serif text-2xl italic text-[#1B365D]">Asset Underwriting Terminal</h3>
                 <button onclick="closeModal()" class="text-slate-400 text-2xl hover:text-red-500 transition">✕</button>
             </div>
-
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
-                
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">First Name</label>
@@ -89,7 +110,6 @@
                         <input type="text" name="last_name" class="form-input" required>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-2 gap-4">
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Email Address</label>
@@ -100,7 +120,6 @@
                         <input type="tel" name="phone" class="form-input" required>
                     </div>
                 </div>
-
                 <div class="mb-4">
                     <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Loan Program</label>
                     <select name="loan_type" class="form-input" required>
@@ -111,10 +130,8 @@
                         <option value="Multi-Family">Multi-Family</option>
                     </select>
                 </div>
-
                 <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Property Address</label>
                 <input type="text" name="address" class="form-input" required>
-
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div>
                         <label class="block text-[9px] font-bold uppercase mb-1 tracking-widest text-slate-500">Estimated ARV</label>
@@ -125,15 +142,15 @@
                         <input type="number" name="credit_score" class="form-input" placeholder="700">
                     </div>
                 </div>
-
                 <input type="hidden" name="_next" value="https://www.summitcoastcapital.com/success.html">
-                
-                <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-900 transition shadow-xl">
-                    Submit for Underwriting
-                </button>
+                <button type="submit" class="w-full bg-[#1B365D] text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-900 transition shadow-xl">Submit for Underwriting</button>
             </form>
         </div>
     </div>
+
+    <footer class="py-12 bg-white text-center border-t">
+        <p class="text-[9px] tracking-[1.5em] uppercase text-slate-400 font-bold italic">Summit Coast Capital | Tarpon Springs</p>
+    </footer>
 
     <script>
         function openModal() { document.getElementById('dealModal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
