@@ -20,18 +20,24 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* LOGO - CLICKABLE HOME */
-        .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; }
-        .logo-img { width: 420px; max-width: 85%; height: auto; transition: 0.3s; }
-        .logo-img:hover { opacity: 0.8; }
+        /* NAVIGATION BAR */
+        .nav-bar { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; padding: 20px; box-sizing: border-box; }
+        .back-home { text-decoration: none; color: var(--primary-blue); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .back-home:hover { color: var(--text-dark); }
+
+        /* LOGO */
+        .header-container { width: 100%; padding: 20px 0; display: flex; justify-content: center; background: transparent; }
+        .logo-img { width: 400px; max-width: 80%; height: auto; transition: 0.3s; }
 
         /* SALES HERO */
         .vault-hero {
             width: 100%; text-align: center; padding: 80px 20px;
             background: linear-gradient(rgba(0, 18, 32, 0.95), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center; color: white;
+            box-sizing: border-box;
         }
         .vault-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: 2px; text-transform: uppercase; font-weight: 900; }
+        .vault-hero p { font-size: 1.25rem; color: #bbb; max-width: 850px; margin: 20px auto; }
         
         .price-badge {
             display: inline-block; background: var(--gold); color: #000; padding: 12px 35px;
@@ -44,17 +50,10 @@
         .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; }
         .marketing-card h3 { color: var(--primary-blue); margin-top: 0; }
 
-        /* LIVE PREVIEW TICKER */
-        .live-preview {
-            background: #000814; color: #00ff00; font-family: 'Courier New', monospace; padding: 40px;
-            border-radius: 15px; border-left: 5px solid var(--primary-blue); margin: 40px 0;
-        }
-        .preview-line { padding: 8px 0; border-bottom: 1px solid #111; font-size: 0.95rem; }
-
         /* CHECKOUT BOX */
         .checkout-box {
             background: #f1f7ff; padding: 80px 40px; border-radius: 30px; border: 2px solid var(--primary-blue);
-            text-align: center; margin: 60px 0;
+            text-align: center; margin: 60px 0; box-sizing: border-box;
         }
         .buy-now-btn {
             display: inline-block; padding: 25px 70px; font-size: 1.6rem; font-weight: 900; color: #fff;
@@ -62,9 +61,22 @@
             text-transform: uppercase; letter-spacing: 2px;
             box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
         }
+
+        /* LEGAL FOOTER */
+        .legal-footer {
+            width: 100%; padding: 60px 20px; text-align: center; background: #fafafa;
+            border-top: 1px solid var(--border); color: #888; font-size: 0.75rem; line-height: 1.8;
+            box-sizing: border-box;
+        }
+        .disclaimer-text { max-width: 900px; margin: 0 auto; }
     </style>
 </head>
 <body>
+
+    <div class="nav-bar">
+        <a href="../index.html" class="back-home">← Back to Main Site</a>
+        <div style="font-size: 0.8rem; color: var(--gray-sub);">OFFICIAL TERMINAL ACCESS</div>
+    </div>
 
     <div class="header-container">
         <a href="../index.html"><img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img"></a>
@@ -72,36 +84,25 @@
 
     <div class="vault-hero">
         <h1>THE VAULT PROTOCOL</h1>
-        <p>Access the proprietary terminal used by the Principal to harvest, underwrite, and deploy capital.</p>
+        <p>Access the proprietary 16-year terminal used by the Principal to harvest, underwrite, and deploy capital into high-equity distressed assets.</p>
         <div class="price-badge">LIFETIME ACCESS: $497</div>
     </div>
 
     <section class="section">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Institutional Grade Intelligence</h2>
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">The Professional Advantage</h2>
         <div class="marketing-grid">
             <div class="marketing-card">
-                <h3>01. The Scraper Suite</h3>
-                <p>Harvest NED and COP data directly. Stop waiting for wholesalers and find the debt before the market does.</p>
+                <h3>01. Scraper Suite Logic</h3>
+                <p>Learn the exact methodology for harvesting Notice of Default (NED) and Certificate of Purchase (COP) data. Stop waiting for the market—find the debt first.</p>
             </div>
             <div class="marketing-card">
                 <h3>02. Forensic Underwriting</h3>
-                <p>Learn the Principal's "Market Haircut" math to calculate equity gaps with surgical precision.</p>
+                <p>Master the Principal's proprietary math. Calculate equity gaps and market haircuts with surgical precision to ensure a profitable strike.</p>
             </div>
             <div class="marketing-card">
-                <h3>03. Priority Funding</h3>
-                <p>Vault members get direct-track status for Summit Coast Capital deployment on approved assets.</p>
+                <h3>03. Priority Funding Track</h3>
+                <p>Vault members gain direct-track access to Summit Coast Capital. If your asset passes the protocol, we are ready to deploy capital.</p>
             </div>
-        </div>
-    </section>
-
-    
-
-    <section class="section">
-        <div class="live-preview">
-            <div style="color: #fff; margin-bottom: 15px; font-weight: bold; letter-spacing: 2px;">// SYSTEM STATUS: LIVE LEAD FEED //</div>
-            <div class="preview-line">> [SCRAPE SUCCESS] ADAMS COUNTY | 3362 W 109TH CIR | DEBT: $10,678</div>
-            <div class="preview-line">> [SCRAPE SUCCESS] LARIMER COUNTY | 8204 HALLETT CT | STATUS: COP ACTIVE</div>
-            <div style="margin-top: 15px; color: #444;">[LOG IN TO ACCESS FULL DATA TERMINAL]</div>
         </div>
     </section>
 
@@ -114,8 +115,12 @@
         </div>
     </section>
 
-    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; width: 100%;">
-        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
+    <footer class="legal-footer">
+        <div class="disclaimer-text">
+            <p><strong>NO REFUND POLICY:</strong> Due to the proprietary nature of the data harvesting protocols and intellectual property contained within The Vault Protocol, all sales are final. No refunds will be issued under any circumstances.</p>
+            <p><strong>LIMITATION OF LIABILITY:</strong> Summit Coast Capital and its principals provide educational materials and data harvesting logic for informational purposes only. Real estate investing involves significant risk. We do not guarantee profits or specific financial outcomes. Summit Coast Capital shall not be held liable for any financial losses, legal disputes, or investment decisions made by the user. Users are encouraged to perform their own due diligence and consult with legal and financial professionals before deploying capital.</p>
+            <p>© 2026 SUMMIT COAST CAPITAL | FLORIDA GULF COAST | COLORADO FRONT RANGE</p>
+        </div>
     </footer>
 
 </body>
