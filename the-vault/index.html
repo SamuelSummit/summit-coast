@@ -3,103 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault Protocol | Forensic Equity Harvesting</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Vault Protocol | Summit Coast Capital</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,700&display=swap');
-        body { background-color: #0a0f1d; color: #ffffff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .vault-hero { 
-            background: linear-gradient(rgba(10, 15, 29, 0.9), rgba(10, 15, 29, 0.95)), 
-                        url('https://images.unsplash.com/photo-1554224155-1696413565d3?auto=format&fit=crop&q=80&w=1920'); 
-            background-size: cover; padding: 100px 24px; text-align: center; 
+        :root {
+            --primary-blue: #007bff;
+            --light-bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --gray-sub: #555;
+            --border: #ececec;
+            --gold: #d4af37;
         }
-        .price-card { 
-            background: #111827; border: 1px solid #1e293b; padding: 60px 40px; text-align: center; 
-            max-width: 500px; margin: -80px auto 0; position: relative; z-index: 10; 
+
+        body {
+            margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark);
+            font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6;
+            display: flex; flex-direction: column; align-items: center;
         }
-        .comparison-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 40px; }
-        .comparison-table th { text-align: left; padding: 20px; border-bottom: 1px solid #1e293b; color: #60a5fa; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; }
-        .comparison-table td { padding: 20px; border-bottom: 1px solid #1e293b; vertical-align: top; }
-        .guru-column { color: #64748b; font-style: italic; opacity: 0.7; }
-        .vault-column { color: #ffffff; font-weight: 600; background: rgba(59, 130, 246, 0.05); border-left: 1px solid #1e293b; border-right: 1px solid #1e293b; }
+
+        /* LOGO - UPDATED & CENTERED */
+        .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; background: transparent; }
+        .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
+
+        /* SALES HERO */
+        .vault-hero {
+            width: 100%; text-align: center; padding: 80px 20px;
+            background: linear-gradient(rgba(0, 18, 32, 0.95), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center; color: white;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+        }
+        .vault-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: 2px; text-transform: uppercase; font-weight: 900; }
+        .vault-hero p { font-size: 1.25rem; color: #bbb; max-width: 850px; margin: 20px auto; line-height: 1.8; }
+        
+        .price-badge {
+            display: inline-block; background: var(--gold); color: #000; padding: 12px 35px;
+            font-weight: 900; border-radius: 5px; font-size: 1.6rem; margin-top: 25px;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        /* THE "BEEF" - PROGRAM CURRICULUM */
+        .section { max-width: 1100px; width: 92%; margin: 60px auto; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--text-dark); margin-bottom: 50px; }
+        
+        .marketing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .marketing-card { 
+            padding: 40px; border: 1px solid var(--border); border-radius: 20px; 
+            background: #fdfdfd; transition: 0.3s ease;
+        }
+        .marketing-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .marketing-card h3 { color: var(--primary-blue); font-size: 1.5rem; margin-top: 0; }
+        .marketing-card p { color: var(--gray-sub); font-size: 1rem; }
+
+        /* THE LIVE PREVIEW - SOCIAL PROOF */
+        .live-preview {
+            background: #000814; color: #00ff00; font-family: 'Courier New', monospace; padding: 40px;
+            border-radius: 15px; border-left: 5px solid var(--primary-blue); margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        .preview-line { padding: 8px 0; border-bottom: 1px solid #111; font-size: 0.95rem; }
+
+        /* CALL TO ACTION BOX */
+        .checkout-box {
+            background: #f1f7ff; padding: 80px 40px; border-radius: 30px; border: 2px solid var(--primary-blue);
+            text-align: center; margin: 60px 0;
+        }
+        .buy-now-btn {
+            display: inline-block; padding: 25px 70px; font-size: 1.6rem; font-weight: 900; color: #fff;
+            background: var(--primary-blue); border-radius: 50px; text-decoration: none;
+            text-transform: uppercase; letter-spacing: 2px;
+            box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
+        }
+        .buy-now-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        @media (max-width: 600px) { .logo-img { width: 320px; } .vault-hero h1 { font-size: 2.2rem; } }
     </style>
 </head>
 <body>
 
-    <nav class="p-6 md:p-8 bg-[#0a0f1d] border-b border-white/5 flex justify-between items-center sticky top-0 z-50">
-        <a href="../index.html">
-            <img src="../LOGO.png" alt="SCC" class="h-12 md:h-16 brightness-200 hover:opacity-80 transition">
-        </a>
-        
-        <div class="flex items-center gap-6">
-            <a href="../index.html" class="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-400 hover:text-white transition italic">
-                ← Exit Terminal
-            </a>
-        </div>
-    </nav>
+    <div class="header-container">
+        <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+    </div>
 
-    <header class="vault-hero">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="serif text-5xl md:text-8xl mb-8 italic uppercase font-bold text-white leading-tight">The Vault <br>Protocol.</h1>
-            <p class="text-slate-400 text-lg md:text-xl font-light mb-12 uppercase tracking-[0.3em] italic">Forensic Equity Harvesting & AI Underwriting</p>
-        </div>
-    </header>
+    <div class="vault-hero">
+        <h1>THE VAULT PROTOCOL</h1>
+        <p>This is not a "course." This is a high-speed data terminal and the exact 16-year playbook used by the Principal to harvest millions in distressed equity. Stop guessing and start striking.</p>
+        <div class="price-badge">LIFETIME ACCESS: $497</div>
+    </div>
 
-    <section class="px-8 pb-24">
-        <div class="price-card">
-            <h2 class="serif text-3xl italic mb-4">Phase 1-4 Access</h2>
-            <p class="text-5xl font-black mb-8">$497<span class="text-sm font-light text-slate-500 ml-2 uppercase tracking-widest text-xs italic">USD</span></p>
-            <a href="https://buy.stripe.com/your-actual-link-here" class="block w-full bg-blue-600 text-white py-5 font-bold uppercase tracking-widest text-xs hover:bg-blue-700 transition shadow-2xl mb-4">Initialize Protocol</a>
-            <p class="text-[9px] text-slate-500 uppercase tracking-widest italic">Encrypted Secure Transaction</p>
-        </div>
-
-        <div class="max-w-4xl mx-auto mt-32 bg-[#0d1321] p-8 md:p-12 border border-white/5 shadow-2xl">
-            <div class="text-center mb-12">
-                <h3 class="serif text-3xl md:text-5xl italic mb-4">Protocol vs. Guru</h3>
-                <p class="text-slate-500 text-[10px] uppercase tracking-[0.4em]">Why this is the only tactical choice for 2026.</p>
+    <section class="section">
+        <h2 class="section-title">Institutional Grade Intelligence</h2>
+        <div class="marketing-grid">
+            <div class="marketing-card">
+                <h3>01. The Scraper Suite</h3>
+                <p>Gain access to our proprietary logic for harvesting **Notice of Default (NED)** and **Certificate of Purchase (COP)** data. We don't wait for the MLS—we find the debt before the market even knows it exists.</p>
             </div>
-            
-            <div class="overflow-x-auto">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Focus Area</th>
-                            <th>The "Guru" Way</th>
-                            <th class="vault-column text-blue-400">The Vault Protocol</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Sourcing</strong></td>
-                            <td class="guru-column">Cold calling and direct mail (Low Yield)</td>
-                            <td class="vault-column">Forensic Data Scrapping (Institutional Precision)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Math</strong></td>
-                            <td class="guru-column">Basic spreadsheets and "Guesstimates"</td>
-                            <td class="vault-column">AI Underwriting (60-Sec Forensic Stress Test)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Negotiation</strong></td>
-                            <td class="guru-column">High-pressure sales & "rebuttal" scripts</td>
-                            <td class="vault-column">The Strike (Principal-to-Principal logic)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Liquidity</strong></td>
-                            <td class="guru-column">"Go find hard money on your own"</td>
-                            <td class="vault-column">Summit Coast Terminal (Direct Capital Access)</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="marketing-card">
+                <h3>02. Forensic Underwriting</h3>
+                <p>Learn the Principal's "Market Haircut" math. We show you how to stress-test an asset's equity gap so you can strike with a 100% confidence level in your exit strategy.</p>
+            </div>
+            <div class="marketing-card">
+                <h3>03. Guaranteed Funding Track</h3>
+                <p>Vault members are the only partners allowed into our **Priority Deployment Pipeline**. If your deal passes the Vault Protocol, Summit Coast Capital is ready to fund it.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-24 border-t border-white/5 text-center">
-        <a href="../index.html" class="text-[9px] tracking-[1.5em] uppercase text-slate-600 font-bold italic hover:text-slate-400 transition">
-            Summit Coast Capital | The Vault
-        </a>
+    
+
+    <section class="section">
+        <div class="live-preview">
+            <div style="color: #fff; margin-bottom: 15px; font-weight: bold; letter-spacing: 2px;">// SYSTEM STATUS: LIVE LEAD FEED //</div>
+            <div class="preview-line">> [SCRAPE SUCCESS] WESTMINSTER, CO | 3362 W 109TH CIR | EQUITY GRADE: PLATINUM</div>
+            <div class="preview-line">> [SCRAPE SUCCESS] BRIGHTON, CO | 557 N 45TH AVE | DEBT: $109,227 | STRIKE READY</div>
+            <div class="preview-line">> [SCRAPE SUCCESS] TARPON SPRINGS, FL | HARVESTING NEW LEADS...</div>
+            <div style="margin-top: 15px; color: #444;">[LOG IN TO ACCESS FULL DATA TERMINAL]</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="checkout-box">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Secure Your Seat in the Vault</h2>
+            <p style="color: var(--gray-sub); font-size: 1.3rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Get immediate access to the Phase 1-3 Training, the Live Scraper Logic, and the Forensic Underwriting AI.
+            </p>
+            <a href="#" class="buy-now-btn">GET ACCESS NOW - $497</a>
+            <p style="margin-top: 25px; font-size: 0.9rem; color: #888;">Secure Payment Processing | Direct Principal Support | Florida & Colorado Markets</p>
+        </div>
+    </section>
+
+    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; width: 100%;">
+        FLORIDA GULF COAST | COLORADO FRONT RANGE<br>
+        © 2026 SUMMIT COAST CAPITAL | PRINCIPAL: SAMUEL STEELE SALANKEY
     </footer>
 
 </body>
