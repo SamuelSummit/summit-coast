@@ -20,9 +20,34 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* LOGO - CENTERED */
-        .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; background: transparent; }
-        .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
+        /* NAVIGATION BAR */
+        .nav-bar {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .back-home {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .back-home:hover { color: var(--text-dark); }
+
+        /* LOGO - CENTERED & CLICKABLE */
+        .header-container { width: 100%; padding: 20px 0; display: flex; justify-content: center; background: transparent; }
+        .logo-img { width: 400px; max-width: 80%; height: auto; transition: 0.3s; }
+        .logo-img:hover { opacity: 0.8; }
 
         /* SALES HERO */
         .vault-hero {
@@ -44,14 +69,14 @@
         .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; }
         .marketing-card h3 { color: var(--primary-blue); margin-top: 0; }
 
-        /* THE LIVE TICKER PREVIEW */
+        /* LIVE PREVIEW */
         .live-preview {
             background: #000814; color: #00ff00; font-family: 'Courier New', monospace; padding: 40px;
             border-radius: 15px; border-left: 5px solid var(--primary-blue); margin: 40px 0;
         }
         .preview-line { padding: 8px 0; border-bottom: 1px solid #111; font-size: 0.95rem; }
 
-        /* CHECKOUT CALL TO ACTION */
+        /* CHECKOUT CTA */
         .checkout-box {
             background: #f1f7ff; padding: 80px 40px; border-radius: 30px; border: 2px solid var(--primary-blue);
             text-align: center; margin: 60px 0;
@@ -62,15 +87,21 @@
             text-transform: uppercase; letter-spacing: 2px;
             box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
         }
-        .buy-now-btn:hover { transform: scale(1.05); }
 
-        @media (max-width: 600px) { .logo-img { width: 320px; } }
+        @media (max-width: 600px) { .logo-img { width: 300px; } }
     </style>
 </head>
 <body>
 
+    <div class="nav-bar">
+        <a href="../index.html" class="back-home">← Back to Main Site</a>
+        <div style="font-size: 0.8rem; color: var(--gray-sub);">OFFICIAL TERMINAL ACCESS</div>
+    </div>
+
     <div class="header-container">
-        <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        <a href="../index.html">
+            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        </a>
     </div>
 
     <div class="vault-hero">
@@ -84,11 +115,11 @@
         <div class="marketing-grid">
             <div class="marketing-card">
                 <h3>01. Live Scraper Logic</h3>
-                <p>Learn how to harvest Notice of Default (NED) and Certificate of Purchase (COP) data directly from the source. No more waiting for outdated wholesaler lists.</p>
+                <p>Harvest NED and COP data directly from the source. No more waiting for outdated wholesaler lists.</p>
             </div>
             <div class="marketing-card">
                 <h3>02. Forensic Underwriting</h3>
-                <p>Stress-test assets with the Principal's proprietary math. Calculate market haircuts and equity gaps with surgical precision.</p>
+                <p>Stress-test assets with the Principal's proprietary math. Calculate market haircuts with surgical precision.</p>
             </div>
             <div class="marketing-card">
                 <h3>03. Priority Funding Line</h3>
@@ -97,12 +128,13 @@
         </div>
     </section>
 
+    
+
     <section class="section">
         <div class="live-preview">
             <div style="color: #fff; margin-bottom: 15px; font-weight: bold; letter-spacing: 2px;">// SYSTEM STATUS: LIVE LEAD FEED //</div>
             <div class="preview-line">> [SCRAPE SUCCESS] ADAMS COUNTY | 3362 W 109TH CIR | DEBT: $10,678</div>
             <div class="preview-line">> [SCRAPE SUCCESS] LARIMER COUNTY | 8204 HALLETT CT | STATUS: COP ACTIVE</div>
-            <div class="preview-line">> [SCRAPE SUCCESS] PUEBLO COUNTY | HARVESTING NEW LEADS...</div>
             <div style="margin-top: 15px; color: #444;">[LOG IN TO ACCESS FULL DATA TERMINAL]</div>
         </div>
     </section>
