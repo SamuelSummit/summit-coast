@@ -25,75 +25,52 @@
             align-items: center;
         }
 
-        /* LOGO - CENTERED & TRANSPARENT */
-        .header-container {
-            width: 100%;
-            padding: 40px 0 20px 0;
-            display: flex;
-            justify-content: center;
-        }
+        /* HEADER & LOGO */
+        .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; }
+        .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
 
-        .logo-img {
-            width: 420px;
-            max-width: 85%;
-            height: auto;
-            background: transparent !important;
-        }
-
-        /* HERO - CENTERED TAGLINE */
+        /* HERO */
         .hero {
-            width: 100%;
-            text-align: center;
-            padding: 60px 20px;
+            width: 100%; text-align: center; padding: 60px 20px;
             background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
+            background-size: cover; background-position: center;
         }
-
         h1 { font-size: clamp(2rem, 7vw, 4rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1.1rem; color: var(--gray-sub); margin: 15px 0 30px 0; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; }
 
+        /* BUTTONS */
         .vault-btn {
-            display: inline-block;
-            padding: 18px 50px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #fff;
-            background: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-            border-radius: 50px;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(0,123,255,0.2);
+            display: inline-block; padding: 18px 50px; font-size: 1.2rem; font-weight: bold; color: #fff;
+            background: var(--primary-blue); border: 2px solid var(--primary-blue); border-radius: 50px;
+            text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2);
         }
-
         .vault-btn:hover { background: transparent; color: var(--primary-blue); }
 
-        /* LOAN PROGRAMS - THE CORE DATA */
+        /* LAYOUT */
         .section { max-width: 1100px; width: 92%; margin: 40px auto; padding: 40px 0; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: var(--text-dark); }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
         .card {
-            background: #fff;
-            padding: 35px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            border-top: 5px solid var(--primary-blue);
-            transition: 0.3s;
+            background: #fff; padding: 35px; border-radius: 12px; border: 1px solid var(--border);
+            border-top: 5px solid var(--primary-blue); transition: 0.3s;
         }
-        .card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
         .card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
         .card ul { padding-left: 20px; color: var(--gray-sub); font-size: 0.95rem; }
+
+        /* VAULT MARKETING SECTION */
+        .vault-marketing {
+            background: #f1f7ff; border-radius: 30px; padding: 60px 40px; border: 1px solid #d0e3ff;
+            text-align: center; margin-top: 20px;
+        }
 
         /* FORM */
         .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 20px; border: 1px solid var(--border); }
         input, textarea { width: 100%; padding: 15px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 20px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 15px; }
 
-        @media (max-width: 600px) { h1 { font-size: 2.2rem; } .card { padding: 25px; } }
+        @media (max-width: 600px) { h1 { font-size: 2.2rem; } .vault-marketing { padding: 40px 20px; } }
     </style>
 </head>
 <body>
@@ -117,7 +94,6 @@
                     <li>Up to 90% LTC / 75% ARV</li>
                     <li>12-Month Terms + Extension Options</li>
                     <li>Fast Funding for Distressed Assets</li>
-                    <li>No Pre-Payment Penalty</li>
                 </ul>
             </div>
             <div class="card">
@@ -125,36 +101,16 @@
                 <ul>
                     <li>30-Year Fixed Rates</li>
                     <li>No Tax Returns Required</li>
-                    <li>Based on Property Cash Flow (DSCR)</li>
-                    <li>Available for 1-4 Units & Portfolios</li>
+                    <li>Based on Property Cash Flow</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Bridge & Commercial</h3>
                 <ul>
-                    <li>Stabilization Capital</li>
+                    <li>Stabilization Capital & REO Acquisition</li>
                     <li>Rapid Closing (7-10 Days)</li>
-                    <li>Foreclosure Bailouts & REO Acquisition</li>
-                    <li>Flexible Exit Strategies</li>
+                    <li>Foreclosure Bailouts</li>
                 </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" style="background: #f9f9f9; padding: 60px 20px; border-radius: 30px;">
-        <h2 class="section-title">The Onboarding Protocol</h2>
-        <div class="grid">
-            <div style="text-align: center; padding: 20px;">
-                <h4 style="color: var(--primary-blue); font-size: 1.5rem;">01. Asset Submission</h4>
-                <p>Submit your high-equity lead. We focus on the numbers, not the credit score.</p>
-            </div>
-            <div style="text-align: center; padding: 20px;">
-                <h4 style="color: var(--primary-blue); font-size: 1.5rem;">02. Forensic Underwrite</h4>
-                <p>16 years of expertise applied to stress-test your deal's equity gap.</p>
-            </div>
-            <div style="text-align: center; padding: 20px;">
-                <h4 style="color: var(--primary-blue); font-size: 1.5rem;">03. Capital Deployment</h4>
-                <p>Once the asset is approved, we initiate rapid funding to close the deal.</p>
             </div>
         </div>
     </section>
@@ -169,13 +125,32 @@
                 </div>
                 <input type="email" placeholder="Email Address" required>
                 <input type="text" placeholder="Property Address" required>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <input type="number" placeholder="Estimated ARV">
-                    <input type="number" placeholder="Loan Amount Needed">
-                </div>
-                <textarea placeholder="Describe the asset and your exit strategy..." rows="5"></textarea>
                 <button type="submit" class="submit-btn">SEND TO PRINCIPAL</button>
             </form>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="vault-marketing">
+            <h2 style="color: var(--primary-blue); font-size: 2.2rem;">What is The Vault?</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 20px auto; color: var(--gray-sub);">
+                The Vault is our proprietary <strong>Deal-Flow Terminal</strong>. It’s where we provide you with the tools, data scrapers, and 16 years of foreclosure expertise to find the high-equity assets we want to fund.
+            </p>
+            <div class="grid" style="margin: 40px 0;">
+                <div style="text-align: center;">
+                    <h4 style="margin-bottom: 10px; color: var(--primary-blue);">Live Lead Scrapers</h4>
+                    <p style="font-size: 0.9rem;">Automated harvesting of Notice of Default and REO data.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="margin-bottom: 10px; color: var(--primary-blue);">The Underwriting AI</h4>
+                    <p style="font-size: 0.9rem;">Stress-test your equity gaps using the Principal's logic.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="margin-bottom: 10px; color: var(--primary-blue);">Proof of Funds</h4>
+                    <p style="font-size: 0.9rem;">Get prioritized access to Summit Coast Capital deployment.</p>
+                </div>
+            </div>
+            <a href="protocol-harvest-77.html" class="vault-btn" style="background: #1a1a1a; border-color: #1a1a1a;">ACCESS THE PROTOCOL</a>
         </div>
     </section>
 
