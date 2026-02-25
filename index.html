@@ -7,112 +7,145 @@
     <style>
         :root {
             --primary-blue: #007bff;
-            --dark-bg: #050505;
-            --glass-bg: rgba(255, 255, 255, 0.05);
-            --text-gray: #ccc;
+            --light-bg: #ffffff;
+            --text-dark: #1a1a1a;
+            --gray-sub: #666;
         }
 
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: #ffffff;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* HEADER & LOGO - CENTERED & TRANSPARENT */
         .header-container {
             width: 100%;
-            padding: 40px 0;
+            padding: 30px 0;
             display: flex;
             justify-content: center;
-        }
-
-        .logo-img {
-            width: 380px;
-            max-width: 85%;
-            height: auto;
             background: transparent;
         }
 
-        /* HERO - MOBILE CENTERED */
+        .logo-img {
+            width: 400px;
+            max-width: 90%;
+            height: auto;
+            /* Ensures no background color is forced on the image */
+            background: transparent !important; 
+        }
+
+        /* HERO - CENTERED WHITE THEME */
         .hero {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 80px 20px;
-            background: linear-gradient(rgba(5,5,5,0.85), rgba(5,5,5,0.85)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
+            border-bottom: 1px solid #eee;
         }
 
-        h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); letter-spacing: 3px; margin: 0; font-weight: 800; }
-        .accent { color: var(--primary-blue); }
-        .tagline { font-size: 1.2rem; color: var(--text-gray); margin: 20px 0; text-transform: uppercase; letter-spacing: 2px; }
+        h1 { 
+            font-size: clamp(2.2rem, 8vw, 4.5rem); 
+            letter-spacing: 2px; 
+            margin: 0; 
+            font-weight: 800;
+            color: var(--text-dark);
+        }
 
-        /* BUTTONS */
-        .btn-group { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
-        
+        .accent { color: var(--primary-blue); }
+        .tagline { 
+            font-size: 1.2rem; 
+            color: var(--gray-sub); 
+            margin: 20px 0; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        /* VAULT BUTTON */
         .vault-btn {
-            padding: 15px 35px;
-            font-size: 1.1rem;
+            display: inline-block;
+            margin: 20px 0;
+            padding: 16px 45px;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #fff;
             background: var(--primary-blue);
             border: 2px solid var(--primary-blue);
             border-radius: 50px;
             text-decoration: none;
-            transition: 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
         }
 
-        .vault-btn:hover { background: transparent; }
+        .vault-btn:hover {
+            background: transparent;
+            color: var(--primary-blue);
+            box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
+        }
 
-        /* SECTIONS */
-        .section { max-width: 1000px; margin: 40px auto; padding: 60px 20px; border-radius: 20px; }
+        /* ONBOARDING SECTION */
+        .section { max-width: 1100px; width: 90%; margin: 40px auto; padding: 60px 0; }
         
-        .onboarding-steps {
+        .onboarding-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin-top: 40px;
         }
 
         .step-card {
-            background: var(--glass-bg);
-            padding: 30px;
+            background: #f8f9fa;
+            padding: 40px;
             border-radius: 15px;
-            border-top: 4px solid var(--primary-blue);
+            border-bottom: 5px solid var(--primary-blue);
             text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        /* FORM STYLING */
-        .deal-form { background: var(--glass-bg); padding: 40px; border-radius: 20px; border: 1px solid #222; }
-        
-        input, select, textarea {
-            width: 100%; padding: 14px; margin: 12px 0; background: #111; border: 1px solid #333; color: white; border-radius: 8px; box-sizing: border-box;
+        .step-card:hover { transform: translateY(-10px); }
+
+        /* DEAL FORM - CLEAN & BRIGHT */
+        .form-container {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+
+        input, textarea {
+            width: 100%; padding: 15px; margin: 12px 0; background: #fdfdfd; border: 1px solid #ddd; color: #333; border-radius: 8px; box-sizing: border-box; font-size: 1rem;
         }
 
         .submit-btn {
             background: var(--primary-blue);
             color: white;
             border: none;
-            padding: 18px;
-            font-size: 1.1rem;
+            padding: 20px;
+            font-size: 1.2rem;
             font-weight: bold;
             border-radius: 8px;
             cursor: pointer;
             width: 100%;
             margin-top: 20px;
-            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .submit-btn:hover { background: #0056b3; }
-
-        @media (max-width: 600px) { h1 { font-size: 2.5rem; } }
+        @media (max-width: 600px) { h1 { font-size: 2.4rem; } .logo-img { width: 300px; } }
     </style>
 </head>
 <body>
@@ -124,35 +157,33 @@
     <div class="hero">
         <h1>CAPITAL<span class="accent">.</span> REDEFINED<span class="accent">.</span></h1>
         <p class="tagline">WE DON'T APPROVE YOU &mdash; WE APPROVE THE ASSET</p>
-        <div class="btn-group">
-            <a href="protocol-harvest-77.html" class="vault-btn">ENTER THE VAULT</a>
-        </div>
+        <a href="protocol-harvest-77.html" class="vault-btn">ENTER THE VAULT</a>
     </div>
 
     <section class="section">
-        <h2 style="text-align: center; color: var(--primary-blue); font-size: 2.5rem; margin-bottom: 10px;">The Onboarding Protocol</h2>
-        <p style="text-align: center; color: var(--text-gray);">Our 3-Phase Deployment Strategy</p>
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">The Onboarding Protocol</h2>
+        <p style="text-align: center; color: var(--gray-sub); letter-spacing: 1px;">A Professional Path to Capital Deployment</p>
         
-        <div class="onboarding-steps">
+        <div class="onboarding-grid">
             <div class="step-card">
                 <h3 style="color: var(--primary-blue);">1. Asset Submission</h3>
-                <p>Submit your high-equity distressed lead through the Terminal for initial vetting.</p>
+                <p>Submit your high-equity lead. We focus on the numbers, the location, and the exit strategy.</p>
             </div>
             <div class="step-card">
-                <h3 style="color: var(--primary-blue);">2. Partner Vetting</h3>
-                <p>Our team performs the Forensic Underwrite to stress-test your numbers.</p>
+                <h3 style="color: var(--primary-blue);">2. Principal Vetting</h3>
+                <p>16 years of foreclosure expertise applied to your deal for a deep Forensic Underwrite.</p>
             </div>
             <div class="step-card">
-                <h3 style="color: var(--primary-blue);">3. Capital Deployment</h3>
-                <p>Once cleared, we deploy the capital needed to secure and stabilize the asset.</p>
+                <h3 style="color: var(--primary-blue);">3. Funding Secured</h3>
+                <p>Once the asset is approved, we move to rapid capital deployment and closing.</p>
             </div>
         </div>
     </section>
 
-    <div class="section">
-        <div class="deal-form">
-            <h2 style="color: var(--primary-blue); text-align: center;">Submit Your Deal</h2>
-            <p style="text-align: center; margin-bottom: 30px;">Direct from the Principal: Leverage 16 years of foreclosure expertise.</p>
+    <section class="section">
+        <div class="form-container">
+            <h2 style="text-align: center; color: var(--primary-blue);">Submit Your Deal</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Direct access to capital for Florida and Colorado real estate assets.</p>
             <form action="#">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="text" placeholder="First Name" required>
@@ -162,18 +193,18 @@
                 <input type="text" placeholder="Property Address" required>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="number" placeholder="Estimated ARV">
-                    <input type="number" placeholder="Loan Amount Needed">
+                    <input type="number" placeholder="Requested Loan Amount">
                 </div>
-                <textarea placeholder="Project Overview..." rows="4"></textarea>
-                <button type="submit" class="submit-btn">GET FUNDED</button>
+                <textarea placeholder="Describe the opportunity..." rows="5"></textarea>
+                <button type="submit" class="submit-btn">SEND TO PRINCIPAL</button>
             </form>
         </div>
-    </div>
+    </section>
 
-    <div style="text-align: center; padding: 60px 20px; color: #666; font-size: 0.9rem;">
-        TARPIN SPRINGS, FL | ARVADA, CO<br>
+    <footer style="padding: 60px 20px; text-align: center; color: var(--gray-sub); font-size: 0.9rem; border-top: 1px solid #eee; width: 100%;">
+        TARPON SPRINGS, FL | ARVADA, CO<br>
         © 2026 SUMMIT COAST CAPITAL
-    </div>
+    </footer>
 
 </body>
 </html>
