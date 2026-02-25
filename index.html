@@ -13,7 +13,7 @@
             --border: #ececec;
         }
 
-        html { scroll-behavior: smooth; } /* Smooth scroll for the button */
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark);
@@ -27,11 +27,11 @@
 
         /* HERO */
         .hero {
-            width: 100%; text-align: center; padding: 60px 20px;
+            width: 100%; text-align: center; padding: 80px 20px;
             background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
         }
-        h1 { font-size: clamp(2rem, 7vw, 4rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
+        h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1.1rem; color: var(--gray-sub); margin: 15px 0 30px 0; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; }
 
@@ -45,33 +45,37 @@
 
         /* SECTIONS */
         .section { max-width: 1100px; width: 92%; margin: 40px auto; padding: 40px 0; }
-        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: var(--text-dark); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 20px; color: var(--text-dark); }
+        .section-sub { text-align: center; color: var(--gray-sub); margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         
         .card {
-            background: #fff; padding: 35px; border-radius: 12px; border: 1px solid var(--border);
+            background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border);
             border-top: 5px solid var(--primary-blue);
         }
+        .card h3 { color: var(--primary-blue); margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .card ul { padding-left: 20px; color: var(--gray-sub); font-size: 0.95rem; line-height: 2; }
 
-        /* PRINCIPAL SECTION */
+        /* PRINCIPAL BOX */
         .principal-box {
-            display: flex; align-items: center; gap: 40px; padding: 60px 40px; background: #fafafa; border-radius: 20px; border: 1px solid #eee;
+            display: flex; align-items: center; gap: 50px; padding: 60px; background: #fafafa; border-radius: 24px; border: 1px solid #eee;
         }
 
-        /* VAULT BOX - HIGH TECH BACKGROUND */
+        /* VAULT BOX - HIGH TECH SAFE BACKGROUND */
         .vault-marketing {
-            background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(0, 20, 40, 0.9), rgba(0, 20, 40, 0.9)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
-            border-radius: 30px; padding: 80px 40px; border: 1px solid #001f3f;
-            text-align: center; margin-top: 20px; color: white;
+            border-radius: 30px; padding: 100px 50px; border: 1px solid #001f3f;
+            text-align: center; color: white;
         }
 
         /* FORM */
-        .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 20px; border: 1px solid var(--border); }
-        input, textarea, select { width: 100%; padding: 15px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 20px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 15px; }
+        .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; }
 
-        @media (max-width: 768px) { .principal-box { flex-direction: column; text-align: center; } }
+        @media (max-width: 768px) { .principal-box { flex-direction: column; text-align: center; padding: 40px 20px; } }
     </style>
 </head>
 <body>
@@ -82,32 +86,41 @@
 
     <div class="hero">
         <h1>CAPITAL<span class="accent">.</span> REDEFINED<span class="accent">.</span></h1>
-        <p class="tagline">The Principal's Asset-Based Lending Protocol</p>
+        <p class="tagline">WE DON'T APPROVE YOU &mdash; WE APPROVE THE ASSET</p>
         <a href="#deal-submission" class="submit-deal-btn">SUBMIT YOUR DEAL</a>
     </div>
 
     <section class="section">
-        <h2 class="section-title">Loan Programs</h2>
+        <h2 class="section-title">Institutional Loan Programs</h2>
+        <p class="section-sub">Direct Capital for FL & CO Investors</p>
         <div class="grid">
             <div class="card">
-                <h3>Fix & Flip</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
-                    <li>Up to 90% LTC / 75% ARV</li>
-                    <li>Fast Funding for Distressed Assets</li>
+                <h3>Fix & Flip / Bridge</h3>
+                <ul>
+                    <li><strong>LTV/LTC:</strong> Up to 90% Purchase / 100% Rehab</li>
+                    <li><strong>Terms:</strong> 12 - 24 Months</li>
+                    <li><strong>Speed:</strong> 5 - 7 Day Closings</li>
+                    <li><strong>Assets:</strong> Non-Owner Occupied SFR, 2-4 Unit</li>
+                    <li><strong>Focus:</strong> Foreclosures, REOs, and Short Sales</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>DSCR Rentals</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
-                    <li>30-Year Fixed Rates</li>
-                    <li>No Tax Returns Required</li>
+                <h3>DSCR / Long-Term Rental</h3>
+                <ul>
+                    <li><strong>Rates:</strong> Competitive 30-Year Fixed</li>
+                    <li><strong>Qualification:</strong> No DTI / No Tax Returns</li>
+                    <li><strong>Criteria:</strong> Property DSCR 1.00x+</li>
+                    <li><strong>LTV:</strong> Up to 80% LTV for Purchases</li>
+                    <li><strong>Flexibility:</strong> Close in LLC or Personal Name</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Bridge & Commercial</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
-                    <li>Foreclosure Bailouts</li>
-                    <li>Rapid Closing (7-10 Days)</li>
+                <h3>Commercial & Value-Add</h3>
+                <ul>
+                    <li><strong>Multi-Family:</strong> 5+ Units & Mixed Use</li>
+                    <li><strong>Bridge:</strong> Stabilization & Gap Funding</li>
+                    <li><strong>Foreclosure Bailouts:</strong> Rapid Equity Preservation</li>
+                    <li><strong>Exit:</strong> No Pre-Payment Penalty on Bridge</li>
                 </ul>
             </div>
         </div>
@@ -116,51 +129,75 @@
     <section class="section">
         <div class="principal-box">
             <div class="principal-text">
-                <h2 style="color: var(--primary-blue); margin-top: 0;">Direct Access to the Principal</h2>
-                <p style="font-size: 1.1rem;">With over <strong>16 years of experience</strong>, Samuel Steele Salankey stress-tests every asset using a proprietary <strong>Forensic Underwrite</strong>.</p>
-                <div style="font-family: 'Brush Script MT', cursive; font-size: 1.5rem; color: var(--primary-blue);">Samuel Steele Salankey</div>
+                <h2 style="color: var(--primary-blue); margin-top: 0; font-size: 2.5rem;">Principal Insight</h2>
+                <p style="font-size: 1.2rem; color: #444;"><strong>Samuel Steele Salankey | 16-Year Real Estate Professional</strong></p>
+                <p style="color: var(--gray-sub);">
+                    With a career spanning over 16 years specializing in the foreclosure and distressed asset markets, Samuel has navigated thousands of deals across the Colorado Front Range and the Florida Gulf Coast. He doesn't just fund deals; he understands the mechanics of the "Forensic Underwrite."
+                </p>
+                <p style="color: var(--gray-sub);">
+                    From managing complex rental portfolios in Arvada to identifying high-equity "Strike" opportunities in Tarpon Springs, Samuel's methodology is built on data-driven asset approval. When you submit a deal to Summit Coast Capital, it goes directly to the Principal for review—not an algorithm.
+                </p>
+                <div style="font-family: 'Brush Script MT', cursive; font-size: 2rem; color: var(--primary-blue); margin-top: 30px;">Samuel Steele Salankey</div>
             </div>
         </div>
     </section>
 
     <section id="deal-submission" class="section">
         <div class="form-wrap">
-            <h2 style="text-align: center; margin-bottom: 30px;">Direct Asset Submission</h2>
+            <h2 style="text-align: center; margin-bottom: 10px;">Asset Intake Form</h2>
+            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Direct Review by Samuel Salankey</p>
             <form action="#">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="text" placeholder="First Name" required>
                     <input type="text" placeholder="Last Name" required>
                 </div>
-                <input type="email" placeholder="Email Address" required>
+                <input type="email" placeholder="Professional Email Address" required>
                 <input type="text" placeholder="Property Address" required>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <input type="number" placeholder="Purchase Price ($)" required>
                     <input type="number" placeholder="Estimated ARV ($)" required>
-                    <input type="number" placeholder="Purchase Price / Payoff ($)" required>
                 </div>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                    <input type="number" placeholder="Rehab Budget ($)">
-                    <input type="number" placeholder="Requested Loan Amount ($)" required>
+                    <input type="number" placeholder="Estimated Rehab Cost ($)">
+                    <input type="number" placeholder="Loan Amount Requested ($)" required>
                 </div>
                 
-                <textarea placeholder="Describe the opportunity and your exit strategy..." rows="5"></textarea>
-                <button type="submit" class="submit-btn">SEND TO PRINCIPAL FOR REVIEW</button>
+                <textarea placeholder="Describe the equity gap and exit strategy..." rows="5"></textarea>
+                <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
     </section>
 
     <section class="section">
         <div class="vault-marketing">
-            <h2 style="color: white; font-size: 2.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">The Vault Protocol</h2>
-            <p style="font-size: 1.25rem; max-width: 800px; margin: 20px auto; color: #ddd;">
-                Access the proprietary Deal-Flow Terminal. Learn the harvesting and underwriting strategies used by the Principal to find high-equity assets.
+            <h2 style="color: white; font-size: 3rem; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">THE VAULT PROTOCOL</h2>
+            <p style="font-size: 1.3rem; max-width: 850px; margin: 20px auto; color: #eee; text-shadow: 0 2px 5px rgba(0,0,0,0.5);">
+                The Insider Playbook for Professional Real Estate "Harvesters."
             </p>
-            <a href="protocol-harvest-77.html" class="vault-btn" style="background: white; color: var(--primary-blue); border-color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold;">ACCESS THE PLAYBOOK</a>
+            
+            <div class="grid" style="margin: 50px 0; text-align: left;">
+                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h4 style="color: #007bff; margin-top: 0;">Phase 1: The Harvest</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Automation and scrapers for high-equity Notice of Default (NED) and Certificate of Purchase (COP) data.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h4 style="color: #007bff; margin-top: 0;">Phase 2: Forensic Underwrite</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">The math of the Strike. How to calculate true equity gaps and avoid "haircut" market risks.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+                    <h4 style="color: #007bff; margin-top: 0;">Phase 3: Deployment</h4>
+                    <p style="font-size: 0.9rem; color: #ccc;">Prioritized capital access from Summit Coast Capital to fund your approved assets.</p>
+                </div>
+            </div>
+
+            <a href="protocol-harvest-77.html" class="vault-btn" style="background: white; color: var(--primary-blue); border-color: white; padding: 20px 60px;">ACCESS THE TERMINAL</a>
         </div>
     </section>
 
-    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.9rem;">
-        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
+    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; width: 100%;">
+        FLORIDA GULF COAST | COLORADO FRONT RANGE<br>
+        © 2026 SUMMIT COAST CAPITAL | PRINCIPAL: SAMUEL STEELE SALANKEY
     </footer>
 
 </body>
