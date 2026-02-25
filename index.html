@@ -21,7 +21,7 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* HEADER & LOGO */
+        /* LOGO & HEADER */
         .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; background: transparent; }
         .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
 
@@ -39,17 +39,18 @@
             display: inline-block; padding: 18px 50px; font-size: 1.2rem; font-weight: bold; color: #fff;
             background: var(--primary-blue); border: 2px solid var(--primary-blue); border-radius: 50px;
             text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2);
-            cursor: pointer;
         }
 
         /* LOAN PROGRAMS */
         .section { max-width: 1100px; width: 92%; margin: 40px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); }
+        .card h3 { color: var(--primary-blue); margin-top: 0; }
+        .card p { font-size: 0.95rem; color: var(--gray-sub); }
 
         /* FORM WRAPPER */
         .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-        input, textarea { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
+        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
         /* THE VAULT BOX - HIGH TECH SAFE BACKGROUND */
@@ -85,7 +86,6 @@
             text-transform: uppercase;
             box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
         }
-        .vault-btn-premium:hover { transform: translateY(-5px); background: #0056b3; }
     </style>
 </head>
 <body>
@@ -101,27 +101,30 @@
     </div>
 
     <section class="section">
-        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Institutional Loan Programs</h2>
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Direct Lending Programs</h2>
         <div class="grid">
             <div class="card">
                 <h3>Fix & Flip</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
-                    <li>Up to 90% Purchase / 100% Rehab</li>
-                    <li>5-7 Day Closings on Distressed Assets</li>
+                <p>Designed for the "Strike." We fund up to 90% of purchase and 100% of rehab. Perfect for high-equity foreclosures where speed is the only advantage.</p>
+                <ul style="padding-left: 20px; color: var(--gray-sub); font-size: 0.9rem;">
+                    <li>5-7 Day Fast Closings</li>
+                    <li>No Junk Fees or Pre-pay Penalties</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>DSCR Rental</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
+                <p>Build your legacy. We approve loans based on the property’s cash flow (Debt Service Coverage Ratio), not your personal DTI or tax returns.</p>
+                <ul style="padding-left: 20px; color: var(--gray-sub); font-size: 0.9rem;">
                     <li>30-Year Fixed Rates</li>
-                    <li>No Tax Returns or DTI Required</li>
+                    <li>Close in your LLC or Personal Name</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Bridge Capital</h3>
-                <ul style="padding-left: 20px; color: var(--gray-sub);">
-                    <li>Foreclosure Bailout Capital</li>
-                    <li>REO & Short Sale Acquisition</li>
+                <h3>Bridge & Bailout</h3>
+                <p>Rescue your equity. We provide rapid capital for foreclosure bailouts, short sale acquisitions, and commercial stabilization plays.</p>
+                <ul style="padding-left: 20px; color: var(--gray-sub); font-size: 0.9rem;">
+                    <li>Interest-Only Payments Available</li>
+                    <li>Asset-Based Underwriting</li>
                 </ul>
             </div>
         </div>
@@ -138,6 +141,23 @@
                 </div>
                 
                 <input type="email" name="email" placeholder="Professional Email" required>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <select name="loan_type" required>
+                        <option value="" disabled selected>Select Loan Type</option>
+                        <option value="FixFlip">Fix & Flip</option>
+                        <option value="DSCR">DSCR Rental</option>
+                        <option value="Bridge">Bridge / Bailout</option>
+                    </select>
+                    <select name="credit_estimate" required>
+                        <option value="" disabled selected>Estimated Credit Score</option>
+                        <option value="740+">740+</option>
+                        <option value="700-739">700-739</option>
+                        <option value="650-699">650-699</option>
+                        <option value="Under650">Under 650</option>
+                    </select>
+                </div>
+
                 <input type="text" name="address" placeholder="Property Address" required>
                 
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
@@ -156,25 +176,25 @@
         <div class="vault-container">
             <h2 style="font-size: 3.2rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
             <p style="font-size: 1.3rem; color: #ddd; max-width: 850px; margin: 20px auto;">
-                <strong>Harvest. Underwrite. Deploy.</strong> Access the proprietary terminal used by the Principal to identify high-equity assets.
+                <strong>Harvest. Underwrite. Deploy.</strong> Access the proprietary terminal used by the Principal to identify high-equity assets before the competition.
             </p>
 
             <div class="curriculum-grid">
                 <div class="curriculum-item">
                     <h4>Phase 1: The Harvest</h4>
-                    <p>Live scrapers for NED and COP data. Automating the discovery of distressed equity.</p>
+                    <p>Live scrapers for NED and COP data. Automating the discovery of distressed equity in FL and CO.</p>
                 </div>
                 <div class="curriculum-item">
                     <h4>Phase 2: Forensic Underwrite</h4>
-                    <p>Mastering the "Equity Gap" math and stress-testing assets for a strike.</p>
+                    <p>Mastering the "Equity Gap" math and stress-testing assets for a strike using 16 years of foreclosure logic.</p>
                 </div>
                 <div class="curriculum-item">
                     <h4>Phase 3: Priority Funding</h4>
-                    <p>Direct track to capital. Vault members receive expedited review and deployment.</p>
+                    <p>Direct track to capital. Vault members receive expedited review and deployment on all approved deals.</p>
                 </div>
             </div>
 
-            <a href="vault-index.html" class="vault-btn-premium">ACCESS THE PLAYBOOK</a>
+            <a href="protocol-harvest-77.html" class="vault-btn-premium">ACCESS THE PLAYBOOK</a>
         </div>
     </section>
 
