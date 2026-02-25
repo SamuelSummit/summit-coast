@@ -21,21 +21,22 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* HEADER & LOGO - CENTERED & TRANSPARENT */
+        /* HEADER & LOGO - CENTERED */
         .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; background: transparent; }
         .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
 
-        /* HERO SECTION */
+        /* HERO - RESTORED MODERN COASTAL HOME */
         .hero {
-            width: 100%; text-align: center; padding: 80px 20px;
-            background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');
+            width: 100%; text-align: center; padding: 100px 20px;
+            /* Modern coastal home background with dark overlay for text pop */
+            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
         }
         h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1.1rem; color: var(--gray-sub); margin: 15px 0 30px 0; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; }
 
-        /* SUBMIT DEAL BUTTON AT TOP */
+        /* HERO BUTTON */
         .cta-btn {
             display: inline-block; padding: 18px 50px; font-size: 1.2rem; font-weight: bold; color: #fff;
             background: var(--primary-blue); border: 2px solid var(--primary-blue); border-radius: 50px;
@@ -51,7 +52,7 @@
 
         /* FORM */
         .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1rem; }
+        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
         /* THE VAULT BOX - HIGH TECH SAFE BACKGROUND */
@@ -74,7 +75,6 @@
             margin-top: 30px; transition: 0.3s; text-transform: uppercase;
             box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
         }
-        .vault-btn-premium:hover { transform: translateY(-5px); background: #0056b3; }
     </style>
 </head>
 <body>
@@ -94,15 +94,15 @@
         <div class="grid">
             <div class="card">
                 <h3>Fix & Flip</h3>
-                <p>90% Purchase / 100% Rehab Funding. Fast 5-7 day closings for professional investors targeting high-equity foreclosures.</p>
+                <p>90% Purchase / 100% Rehab funding. 5-7 day closings for high-equity foreclosures where speed is the only advantage.</p>
             </div>
             <div class="card">
                 <h3>DSCR Rental</h3>
-                <p>30-Year Fixed Rates. No DTI or personal tax returns needed—we fund based on the property's cash flow (DSCR).</p>
+                <p>30-year fixed rates based on property cash flow. No DTI or personal tax return requirements.</p>
             </div>
             <div class="card">
                 <h3>Bridge & Bailout</h3>
-                <p>Rapid capital for foreclosure bailouts, REO acquisitions, and stabilization plays. Asset-based underwriting for speed.</p>
+                <p>Rapid deployment for foreclosure bailouts, REO acquisitions, and stabilization plays. Asset-based underwriting.</p>
             </div>
         </div>
     </section>
@@ -110,12 +110,15 @@
     <section id="deal-submission" class="section">
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 30px;">Direct Asset Intake</h2>
+            
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
                 </div>
+                
                 <input type="email" name="email" placeholder="Professional Email" required>
+                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <select name="loan_type" required>
                         <option value="" disabled selected>Select Loan Type</option>
@@ -131,18 +134,22 @@
                         <option value="Under650">Under 650</option>
                     </select>
                 </div>
+
                 <input type="text" name="address" placeholder="Property Address" required>
+                
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
                     <input type="number" name="loan_request" placeholder="Requested Loan ($)" required>
                 </div>
+
                 <textarea name="situation_story" placeholder="Tell us the story behind this asset. What is the current situation and exit strategy?" rows="5" required></textarea>
+                
                 <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
     </section>
 
-    <section id="vault-protocol" class="section">
+    <section class="section">
         <div class="vault-container">
             <h2 style="font-size: 3.2rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
             <p style="font-size: 1.3rem; color: #ddd; max-width: 850px; margin: 20px auto;">
@@ -164,7 +171,7 @@
                 </div>
             </div>
 
-            <a href="http://www.summitcoastcapital.com/the-vault/" class="vault-btn-premium">ENTER THE VAULT</a>
+            <a href="http://www.summitcoastcapital.com/the-vault/" class="vault-btn-premium">ACCESS THE PLAYBOOK</a>
         </div>
     </section>
 
