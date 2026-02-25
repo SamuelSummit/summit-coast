@@ -20,33 +20,9 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* NAVIGATION BAR */
-        .nav-bar {
-            width: 100%;
-            max-width: 1100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .back-home {
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            transition: 0.3s;
-        }
-        .back-home:hover { color: var(--text-dark); }
-
-        /* LOGO - CENTERED & CLICKABLE */
-        .header-container { width: 100%; padding: 20px 0; display: flex; justify-content: center; background: transparent; }
-        .logo-img { width: 400px; max-width: 80%; height: auto; transition: 0.3s; }
+        /* LOGO - CLICKABLE HOME */
+        .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; }
+        .logo-img { width: 420px; max-width: 85%; height: auto; transition: 0.3s; }
         .logo-img:hover { opacity: 0.8; }
 
         /* SALES HERO */
@@ -56,27 +32,26 @@
             background-size: cover; background-position: center; color: white;
         }
         .vault-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: 2px; text-transform: uppercase; font-weight: 900; }
-        .vault-hero p { font-size: 1.25rem; color: #bbb; max-width: 850px; margin: 20px auto; }
         
         .price-badge {
             display: inline-block; background: var(--gold); color: #000; padding: 12px 35px;
             font-weight: 900; border-radius: 5px; font-size: 1.6rem; margin-top: 25px;
         }
 
-        /* PROGRAM CURRICULUM */
+        /* MARKETING SECTIONS */
         .section { max-width: 1100px; width: 92%; margin: 60px auto; }
         .marketing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; }
         .marketing-card h3 { color: var(--primary-blue); margin-top: 0; }
 
-        /* LIVE PREVIEW */
+        /* LIVE PREVIEW TICKER */
         .live-preview {
             background: #000814; color: #00ff00; font-family: 'Courier New', monospace; padding: 40px;
             border-radius: 15px; border-left: 5px solid var(--primary-blue); margin: 40px 0;
         }
         .preview-line { padding: 8px 0; border-bottom: 1px solid #111; font-size: 0.95rem; }
 
-        /* CHECKOUT CTA */
+        /* CHECKOUT BOX */
         .checkout-box {
             background: #f1f7ff; padding: 80px 40px; border-radius: 30px; border: 2px solid var(--primary-blue);
             text-align: center; margin: 60px 0;
@@ -87,43 +62,34 @@
             text-transform: uppercase; letter-spacing: 2px;
             box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
         }
-
-        @media (max-width: 600px) { .logo-img { width: 300px; } }
     </style>
 </head>
 <body>
 
-    <div class="nav-bar">
-        <a href="../index.html" class="back-home">← Back to Main Site</a>
-        <div style="font-size: 0.8rem; color: var(--gray-sub);">OFFICIAL TERMINAL ACCESS</div>
-    </div>
-
     <div class="header-container">
-        <a href="../index.html">
-            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
-        </a>
+        <a href="../index.html"><img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img"></a>
     </div>
 
     <div class="vault-hero">
         <h1>THE VAULT PROTOCOL</h1>
-        <p>Access the proprietary 16-year terminal used by the Principal to harvest, underwrite, and deploy capital into high-equity distressed assets.</p>
+        <p>Access the proprietary terminal used by the Principal to harvest, underwrite, and deploy capital.</p>
         <div class="price-badge">LIFETIME ACCESS: $497</div>
     </div>
 
     <section class="section">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">The Professional Advantage</h2>
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">Institutional Grade Intelligence</h2>
         <div class="marketing-grid">
             <div class="marketing-card">
-                <h3>01. Live Scraper Logic</h3>
-                <p>Harvest NED and COP data directly from the source. No more waiting for outdated wholesaler lists.</p>
+                <h3>01. The Scraper Suite</h3>
+                <p>Harvest NED and COP data directly. Stop waiting for wholesalers and find the debt before the market does.</p>
             </div>
             <div class="marketing-card">
                 <h3>02. Forensic Underwriting</h3>
-                <p>Stress-test assets with the Principal's proprietary math. Calculate market haircuts with surgical precision.</p>
+                <p>Learn the Principal's "Market Haircut" math to calculate equity gaps with surgical precision.</p>
             </div>
             <div class="marketing-card">
-                <h3>03. Priority Funding Line</h3>
-                <p>Vault members receive direct access to Summit Coast Capital. When you find an asset that fits the protocol, we fund it.</p>
+                <h3>03. Priority Funding</h3>
+                <p>Vault members get direct-track status for Summit Coast Capital deployment on approved assets.</p>
             </div>
         </div>
     </section>
@@ -145,14 +111,11 @@
             <p style="color: var(--gray-sub); font-size: 1.3rem; margin-bottom: 40px;">Immediate access to the Training Terminal and Scraper Logic.</p>
             
             <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="buy-now-btn">GET ACCESS NOW - $497</a>
-            
-            <p style="margin-top: 25px; font-size: 0.9rem; color: #888;">Payments secured via Stripe. One-time fee for lifetime access.</p>
         </div>
     </section>
 
     <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; width: 100%;">
-        FLORIDA GULF COAST | COLORADO FRONT RANGE<br>
-        © 2026 SUMMIT COAST CAPITAL | PRINCIPAL: SAMUEL STEELE SALANKEY
+        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
     </footer>
 
 </body>
