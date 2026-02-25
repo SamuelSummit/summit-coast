@@ -21,14 +21,13 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* HEADER & LOGO - CENTERED */
+        /* HEADER & LOGO */
         .header-container { width: 100%; padding: 40px 0 20px 0; display: flex; justify-content: center; background: transparent; }
         .logo-img { width: 420px; max-width: 85%; height: auto; background: transparent !important; }
 
-        /* HERO - RESTORED MODERN COASTAL HOME */
+        /* HERO - MODERN COASTAL HOME */
         .hero {
             width: 100%; text-align: center; padding: 100px 20px;
-            /* Modern coastal home background with dark overlay for text pop */
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
         }
@@ -36,14 +35,11 @@
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1.1rem; color: var(--gray-sub); margin: 15px 0 30px 0; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; }
 
-        /* HERO BUTTON */
         .cta-btn {
             display: inline-block; padding: 18px 50px; font-size: 1.2rem; font-weight: bold; color: #fff;
             background: var(--primary-blue); border: 2px solid var(--primary-blue); border-radius: 50px;
             text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2);
-            cursor: pointer;
         }
-        .cta-btn:hover { background: transparent; color: var(--primary-blue); }
 
         /* SECTIONS */
         .section { max-width: 1100px; width: 92%; margin: 40px auto; padding: 20px 0; }
@@ -53,14 +49,13 @@
         /* FORM */
         .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
         input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; }
 
-        /* THE VAULT BOX - HIGH TECH SAFE BACKGROUND */
+        /* VAULT BOX */
         .vault-container {
             width: 100%;
             background: linear-gradient(rgba(0, 18, 32, 0.9), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
+            background-size: cover; background-position: center;
             border-radius: 30px; padding: 100px 50px; color: white; text-align: center;
             box-shadow: 0 25px 50px rgba(0,0,0,0.4); margin-top: 40px; box-sizing: border-box;
         }
@@ -73,7 +68,6 @@
             display: inline-block; background: var(--primary-blue); color: white; padding: 22px 60px;
             font-size: 1.4rem; font-weight: 800; text-decoration: none; border-radius: 12px;
             margin-top: 30px; transition: 0.3s; text-transform: uppercase;
-            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
         }
     </style>
 </head>
@@ -102,7 +96,7 @@
             </div>
             <div class="card">
                 <h3>Bridge & Bailout</h3>
-                <p>Rapid deployment for foreclosure bailouts, REO acquisitions, and stabilization plays. Asset-based underwriting.</p>
+                <p>Rapid deployment for foreclosure bailouts, REO acquisitions, and stabilization plays.</p>
             </div>
         </div>
     </section>
@@ -111,7 +105,7 @@
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 30px;">Direct Asset Intake</h2>
             
-            <form action="https://formspree.io/f/xbdaqkjv" method="POST">
+            <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
@@ -178,6 +172,16 @@
     <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; width: 100%;">
         FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
     </footer>
+
+    <script>
+        const form = document.getElementById('deal-form');
+        form.addEventListener('submit', function(e) {
+            // Give Formspree half a second to grab the data before we wipe the screen
+            setTimeout(() => {
+                form.reset();
+            }, 500);
+        });
+    </script>
 
 </body>
 </html>
