@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summit Coast Capital | Peak to Coast Funding</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; }
+        /* CORE RESET */
+        body, html { margin: 0; padding: 0; min-height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-        /* THE RESTORED FLORIDA MODERN BACKGROUND */
-        .main-background {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('modern-palm-house.jpg'); /* Make sure this matches your file name */
+        /* HERO BACKGROUND: Modern House & Palms */
+        .main-wrapper {
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        url('modern-palm-house.jpg'); /* Ensure this filename matches your image */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -19,120 +20,160 @@
             flex-direction: column;
         }
 
+        /* HEADER & NAVIGATION */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
             background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
+        .logo img { height: 55px; width: auto; }
+        
         .contact-btn {
-            background: #002D62;
+            background-color: #002D62; /* Summit Navy */
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            font-size: 0.9rem;
         }
 
-        /* HERO TEXT - YOUR SLOGAN */
-        .hero-text {
+        /* HERO SLOGAN AREA */
+        .hero-content {
             text-align: center;
             color: white;
-            padding: 60px 20px 20px 20px;
+            padding: 80px 20px 40px;
+        }
+        .hero-content h1 { 
+            font-size: 3rem; 
+            margin-bottom: 10px; 
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+        }
+        .hero-content p { 
+            font-size: 1.5rem; 
+            font-style: italic; 
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .hero-text h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero-text p { font-size: 1.5rem; font-style: italic; }
-
-        /* THE VAULT BOXES - CENTERED ON MOBILE */
+        /* THE VAULT BOXES - MOBILE CENTERED */
+        .vault-section {
+            padding-bottom: 60px;
+        }
         .vault-grid {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: center; /* Centers boxes on all screens */
             gap: 25px;
-            padding: 40px 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .vault-box {
             background: rgba(255, 255, 255, 0.98);
             color: #333;
-            padding: 30px;
+            padding: 35px 25px;
             width: 100%;
-            max-width: 320px;
-            border-radius: 15px;
+            max-width: 320px; /* Uniform width */
+            border-radius: 12px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.3);
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease;
         }
+        .vault-box:hover { transform: translateY(-5px); }
+        .vault-box h3 { color: #002D62; font-size: 1.4rem; margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        .vault-box p { font-size: 1rem; line-height: 1.5; color: #555; margin: 20px 0; }
 
-        .vault-box h3 { color: #002D62; font-size: 1.5rem; margin-top: 0; border-bottom: 2px solid #f4f4f4; padding-bottom: 10px; }
-
-        /* STRIPE DATA COLLECTION BUTTONS */
-        .stripe-pay-btn {
-            background: #002D62;
+        /* PROGRAM DETAILS BUTTONS */
+        .details-btn {
+            background-color: #002D62;
             color: white;
-            padding: 15px;
+            padding: 14px;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: bold;
-            margin-top: 20px;
-            display: block;
             text-transform: uppercase;
+            font-size: 0.85rem;
             letter-spacing: 1px;
         }
 
-        .details-link {
-            color: #666;
-            text-decoration: underline;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            display: inline-block;
+        /* DATA COLLECTION TAB (Fixed to Bottom or Centered below) */
+        .data-tab-wrapper {
+            text-align: center;
+            padding: 40px 20px;
         }
+        .data-collection-tab {
+            background: #6772E5; /* Stripe Style Purple */
+            color: white;
+            padding: 18px 45px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            box-shadow: 0 5px 20px rgba(103, 114, 229, 0.4);
+            transition: all 0.3s;
+        }
+        .data-collection-tab:hover { background: #5469d4; transform: scale(1.05); }
 
+        /* MOBILE OVERRIDES */
         @media (max-width: 768px) {
-            .hero-text h1 { font-size: 2rem; }
-            .vault-box { max-width: 85%; }
-            .main-background { background-attachment: scroll; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 1.2rem; }
+            .vault-box { max-width: 85%; margin: 0 auto; }
+            .main-wrapper { background-attachment: scroll; } /* Smooth mobile scroll */
         }
     </style>
 </head>
 <body>
 
-<div class="main-background">
+<div class="main-wrapper">
     <header>
-        <img src="logo.png" alt="Summit Coast Capital" style="height: 55px;">
+        <div class="logo">
+            <img src="logo.png" alt="Summit Coast Capital">
+        </div>
         <a href="mailto:funding@summitcoastcapital.com?subject=General%20Question" class="contact-btn">Contact Us</a>
     </header>
 
-    <div class="hero-text">
+    <div class="hero-content">
         <h1>THE VAULT: PRINCIPAL PROTOCOLS</h1>
         <p>"We approve the asset, not the individual."</p>
     </div>
 
-    <section class="vault-grid">
-        <div class="vault-box">
-            <h3>DSCR PROGRAM</h3>
-            <p>Asset-based funding for long-term rentals. No DTI check.</p>
-            <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="stripe-pay-btn">Purchase Access</a>
-            <a href="dscr.html" class="details-link">Full Program Details</a>
+    <section class="vault-section">
+        <div class="vault-grid">
+            <div class="vault-box">
+                <h3>DSCR PROGRAM</h3>
+                <p>Asset-based funding for long-term rentals. No personal income or DTI check required.</p>
+                <a href="dscr.html" class="details-btn">Program Details</a>
+            </div>
+
+            <div class="vault-box">
+                <h3>FIX & FLIP</h3>
+                <p>90% Purchase / 100% Rehab funding. 5-day closings to help you win the deal.</p>
+                <a href="fix-and-flip.html" class="details-btn">Program Details</a>
+            </div>
+
+            <div class="vault-box">
+                <h3>BRIDGE LOANS</h3>
+                <p>Short-term gap funding for rapid acquisition and property stabilization.</p>
+                <a href="bridge.html" class="details-btn">Program Details</a>
+            </div>
         </div>
 
-        <div class="vault-box">
-            <h3>FIX & FLIP</h3>
-            <p>90% Purchase / 100% Rehab. 5-Day Closings.</p>
-            <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="stripe-pay-btn">Purchase Access</a>
-            <a href="fix-and-flip.html" class="details-link">Full Program Details</a>
-        </div>
-
-        <div class="vault-box">
-            <h3>BRIDGE LOANS</h3>
-            <p>Gap funding for rapid CO & FL acquisition.</p>
-            <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="stripe-pay-btn">Purchase Access</a>
-            <a href="bridge.html" class="details-link">Full Program Details</a>
+        <div class="data-tab-wrapper">
+            <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="data-collection-tab">
+                SECURE ACCESS & SUBMIT DATA
+            </a>
         </div>
     </section>
 </div>
