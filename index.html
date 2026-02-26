@@ -3,224 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit Coast Capital | Capital. Redefined.</title>
+    
+    <title>Summit Coast Capital | Direct Private Lending FL & CO</title>
+    <meta name="description" content="Principal-led asset-based lending for real estate investors. We don't approve the individual—we approve the asset. 5-7 day closings on Fix & Flip and DSCR loans in Florida and Colorado.">
+    <meta name="keywords" content="Hard Money Lender Florida, Private Capital Colorado, Fix and Flip Loans, DSCR Rental Loans, Foreclosure Bailout">
+
     <style>
-        :root {
-            --primary-blue: #007bff;
-            --slate-blue: #002D62;
-            --light-bg: #ffffff;
-            --text-dark: #1a1a1a;
-            --gray-sub: #555;
-            --border: #ececec;
+        :root { 
+            --primary: #007bff; 
+            --navy: #001220; 
+            --white: #ffffff; 
+            --glass: rgba(255, 255, 255, 0.1);
         }
 
-        html { scroll-behavior: smooth; }
-
-        body {
-            margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark);
-            font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6;
-            display: flex; flex-direction: column; align-items: center;
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            background: var(--navy); 
+            color: var(--white); 
+            scroll-behavior: smooth;
         }
 
-        /* SLEEK SINGLE-LINE HEADER */
-        .header-container { 
+        /* HERO SECTION WITH MODERN HOME BACKGROUND */
+        .hero { 
+            min-height: 100vh; 
+            background: linear-gradient(rgba(0,18,32,0.6), rgba(0,18,32,0.7)), url('modern-palm-house.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            padding: 60px 20px;
+        }
+
+        .header { 
+            position: absolute; 
+            top: 0; 
             width: 100%; 
-            padding: 12px 5%; 
+            padding: 30px 5%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            box-sizing: border-box;
+            box-sizing: border-box; 
         }
-        .logo-img { width: 220px; height: auto; }
-        .nav-contact { 
+
+        .logo { height: 60px; }
+
+        .nav-link { 
+            color: white; 
             text-decoration: none; 
-            color: var(--primary-blue); 
             font-weight: bold; 
-            border: 1.5px solid var(--primary-blue); 
-            padding: 8px 20px; 
-            border-radius: 50px; 
-            font-size: 0.85rem; 
-            transition: 0.3s; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            border: 1px solid white;
+            padding: 10px 20px;
+            transition: 0.3s;
         }
-        .nav-contact:hover { background: var(--primary-blue); color: #fff; }
 
-        /* HERO - MODERN COASTAL HOME */
-        .hero {
-            width: 100%; text-align: center; padding: 100px 20px;
-            background: linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('modern-palm-house.jpg');
-            background-size: cover; background-position: center;
+        .nav-link:hover { background: white; color: var(--navy); }
+
+        h1 { 
+            font-size: clamp(2.5rem, 10vw, 5rem); 
+            margin: 0; 
+            text-transform: uppercase; 
+            letter-spacing: 6px; 
+            font-weight: 900;
+        }
+
+        .tagline { 
+            font-size: 1.4rem; 
+            margin: 20px 0 40px 0; 
+            letter-spacing: 3px; 
+            color: #d1d1d1;
+            text-transform: uppercase;
+        }
+
+        /* LOAN PROGRAM GRID */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            max-width: 1200px; 
+            width: 100%; 
+        }
+
+        .card { 
+            background: var(--glass); 
+            backdrop-filter: blur(15px); 
+            padding: 40px; 
+            border-radius: 0px; 
+            border: 1px solid rgba(255,255,255,0.2); 
+            text-decoration: none; 
+            color: white; 
+            transition: 0.4s; 
+        }
+
+        .card:hover { 
+            background: var(--primary); 
+            transform: translateY(-10px); 
+            border-color: var(--primary); 
+        }
+
+        .card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+
+        /* DEAL INTAKE FORM */
+        .form-container { 
+            background: rgba(0,0,0,0.5); 
+            padding: 50px; 
+            margin-top: 80px; 
+            max-width: 800px; 
+            width: 100%; 
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        input, select, textarea { 
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0; 
+            background: rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.2); 
+            color: white; 
             box-sizing: border-box;
         }
-        h1 { font-size: clamp(1.8rem, 6vw, 3.8rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
-        .accent { color: var(--primary-blue); }
-        .tagline { font-size: 1rem; color: var(--gray-sub); margin: 10px 0 25px 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
-        .cta-btn { 
-            display: inline-block; padding: 15px 40px; font-size: 1.1rem; font-weight: bold; color: #fff; 
-            background: var(--primary-blue); border: 2px solid var(--primary-blue); border-radius: 50px; 
-            text-decoration: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2); 
-        }
 
-        /* PROGRAM GRID */
-        .section { max-width: 1100px; width: 92%; margin: 50px auto; text-align: center; }
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; margin-top: 30px; }
-        .card { 
-            background: #fff; padding: 30px 20px; border-radius: 12px; border: 1px solid var(--border); 
-            border-top: 5px solid var(--primary-blue); width: 100%; max-width: 300px; 
-            display: flex; flex-direction: column; justify-content: space-between; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
-        }
-        .loan-link-btn { 
-            margin-top: 15px; padding: 10px; border: 2px solid var(--primary-blue); 
-            color: var(--primary-blue); text-decoration: none; border-radius: 6px; 
-            font-weight: bold; font-size: 0.85rem; transition: 0.3s; 
-        }
-        .loan-link-btn:hover { background: var(--primary-blue); color: #fff; }
-
-        /* DIRECT ASSET INTAKE FORM */
-        .form-wrap { 
-            background: #fdfdfd; padding: 45px; border-radius: 20px; border: 1px solid var(--border); 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.03); text-align: left; margin-top: 40px;
-        }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        input, textarea, select { 
-            width: 100%; padding: 14px; margin: 8px 0; background: #fff; 
-            border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 0.95rem;
-        }
         .submit-btn { 
-            background: var(--primary-blue); color: white; border: none; padding: 18px; 
-            font-size: 1rem; font-weight: bold; border-radius: 6px; cursor: pointer; 
-            width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px;
+            background: var(--primary); 
+            color: white; 
+            font-weight: bold; 
+            border: none; 
+            padding: 20px; 
+            width: 100%; 
+            cursor: pointer; 
+            text-transform: uppercase; 
+            letter-spacing: 2px;
+            margin-top: 20px;
         }
 
-        /* VAULT CONTAINER */
-        .vault-container {
-            width: 100%;
-            background: linear-gradient(rgba(0, 18, 32, 0.9), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center;
-            border-radius: 20px; padding: 60px 30px; color: white; text-align: center; margin-top: 30px; box-sizing: border-box;
-        }
-        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 30px 0; text-align: left; }
-        .curriculum-item { background: rgba(255,255,255,0.06); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
-        .curriculum-item h4 { color: var(--primary-blue); margin-top: 0; font-size: 1rem; text-transform: uppercase; }
-        .vault-btn-premium { 
-            display: inline-block; background: var(--primary-blue); color: white; padding: 18px 50px; 
-            font-size: 1.2rem; font-weight: 800; text-decoration: none; border-radius: 10px; 
-            margin-top: 20px; transition: 0.3s; text-transform: uppercase; 
+        .vault-link {
+            margin-top: 60px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
-        @media (max-width: 768px) {
-            .header-container { padding: 12px 20px; }
-            .logo-img { width: 180px; }
-            .form-grid { grid-template-columns: 1fr; }
-            .hero { padding: 80px 20px; }
-        }
     </style>
 </head>
 <body>
 
-    <div class="header-container">
-        <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
-        <a href="mailto:samuel@summitcoastcapital.com?subject=General%20Question" class="nav-contact">CONTACT SAMUEL</a>
+    <div class="header">
+        <img src="LOGO.png" alt="Summit Coast Capital" class="logo">
+        <a href="mailto:samuel@summitcoastcapital.com" class="nav-link">Contact Samuel</a>
     </div>
 
-    <div class="hero">
-        <h1>CAPITAL<span class="accent">.</span> REDEFINED<span class="accent">.</span></h1>
-        <p class="tagline">WE DON'T APPROVE YOU &mdash; WE APPROVE THE ASSET</p>
-        <a href="#deal-submission" class="cta-btn">SUBMIT YOUR DEAL</a>
-    </div>
+    <section class="hero">
+        <h1>Capital. Redefined.</h1>
+        <p class="tagline">Asset-Based Logic for the Modern Investor</p>
 
-    <section class="section">
-        <h2 style="font-size: 2rem; color: var(--slate-blue);">Direct Lending Programs</h2>
         <div class="grid">
-            <div class="card">
-                <div>
-                    <h3>Fix & Flip</h3>
-                    <p style="font-size: 0.9rem;">90% Purchase / 100% Rehab funding. 5-7 day closings for high-equity foreclosures.</p>
-                </div>
-                <a href="fix-and-flip.html" class="loan-link-btn">PROGRAM DETAILS</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>DSCR Rental</h3>
-                    <p style="font-size: 0.9rem;">30-year fixed rates based on property cash flow. No DTI or tax return requirements.</p>
-                </div>
-                <a href="dscr.html" class="loan-link-btn">PROGRAM DETAILS</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3>Bridge & Bailout</h3>
-                    <p style="font-size: 0.9rem;">Rapid deployment for foreclosure bailouts, REO acquisitions, and property stabilization.</p>
-                </div>
-                <a href="bridge.html" class="loan-link-btn">PROGRAM DETAILS</a>
-            </div>
+            <a href="fix-and-flip.html" class="card">
+                <h3>FIX & FLIP</h3>
+                <p>90% LTC / 100% Rehab funding. 5-day closings for FL and CO acquisitions.</p>
+            </a>
+            <a href="dscr.html" class="card">
+                <h3>DSCR RENTAL</h3>
+                <p>30-Year Fixed. No DTI / No Tax Returns. We fund the cash flow.</p>
+            </a>
+            <a href="bridge.html" class="card">
+                <h3>BRIDGE & BAILOUT</h3>
+                <p>Foreclosure rescue and rapid stabilization capital. Principal-to-Principal.</p>
+            </a>
         </div>
-    </section>
 
-    <section id="deal-submission" class="section">
-        <div class="form-wrap">
-            <h2 style="text-align: center; color: var(--slate-blue); margin-bottom: 5px;">Direct Asset Intake</h2>
-            <p style="text-align: center; color: var(--gray-sub); font-size: 0.9rem; margin-bottom: 30px;">Initiate your Forensic Underwrite. Principal review within 24-48 hours.</p>
-            
+        <div class="form-container" id="intake">
+            <h2 style="margin-top:0;">Direct Asset Intake</h2>
+            <p style="color: #ccc;">Submit your scenario for a 24-hour Forensic Underwrite.</p>
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
-                <input type="hidden" name="_subject" value="URGENT: New Deal Intake">
-                
-                <div class="form-grid">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                </div>
-                
-                <input type="email" name="email" placeholder="Professional Email" required>
-                
-                <div class="form-grid">
-                    <select name="loan_type" required>
-                        <option value="" disabled selected>Select Loan Type</option>
-                        <option value="FixFlip">Fix & Flip</option>
-                        <option value="DSCR">DSCR Rental</option>
-                        <option value="Bridge">Bridge / Bailout</option>
-                    </select>
-                    <select name="credit_estimate" required>
-                        <option value="" disabled selected>Estimated Credit Score</option>
-                        <option value="740+">740+</option>
-                        <option value="700-739">700-739</option>
-                        <option value="650-699">650-699</option>
-                        <option value="Under650">Under 650</option>
-                    </select>
-                </div>
-
-                <input type="text" name="address" placeholder="Property Address" required>
-                
-                <div class="form-grid">
-                    <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
-                    <input type="number" name="loan_request" placeholder="Requested Loan ($)" required>
-                </div>
-
-                <textarea name="situation_story" placeholder="Tell us the story behind this asset. What is the current situation and exit strategy?" rows="5" required></textarea>
-                
-                <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="property_address" placeholder="Property Address (FL or CO)" required>
+                <select name="loan_type">
+                    <option value="FixFlip">Fix & Flip</option>
+                    <option value="DSCR">DSCR Rental</option>
+                    <option value="Bridge">Bridge / Bailout</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Describe the deal, the equity, and your exit strategy..."></textarea>
+                <button type="submit" class="submit-btn">Initiate Underwrite</button>
             </form>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="vault-container">
-            <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
-            <div class="curriculum-grid">
-                <div class="curriculum-item"><h4>Phase 1: The Harvest</h4><p>Automated scrapers for distressed equity in FL and CO.</p></div>
-                <div class="curriculum-item"><h4>Phase 2: Underwrite</h4><p>Mastering the "Equity Gap" math using 16 years of logic.</p></div>
-                <div class="curriculum-item"><h4>Phase 3: Funding</h4><p>Direct track to capital with expedited principal review.</p></div>
-            </div>
-            <a href="https://summitcoastcapital.com/the-vault/" class="vault-btn-premium">ACCESS THE PLAYBOOK</a>
-        </div>
+        <a href="the-vault.html" class="vault-link">Enter The Vault Protocol →</a>
     </section>
-
-    <footer style="padding: 40px 0; color: #999; font-size: 0.8rem; text-align: center;">
-        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
-    </footer>
 
 </body>
 </html>
