@@ -21,15 +21,33 @@
         }
 
         /* NAVIGATION BAR */
-        .nav-bar { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; padding: 20px; box-sizing: border-box; }
-        .back-home { text-decoration: none; color: var(--primary-blue); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-bar {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .back-home {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
         .back-home:hover { color: var(--text-dark); }
 
-        /* LOGO */
+        /* LOGO - CENTERED & CLICKABLE */
         .header-container { width: 100%; padding: 20px 0; display: flex; justify-content: center; background: transparent; }
         .logo-img { width: 400px; max-width: 80%; height: auto; transition: 0.3s; }
+        .logo-img:hover { opacity: 0.8; }
 
-        /* SALES HERO */
+        /* SALES HERO - THE SAFE BACKGROUND */
         .vault-hero {
             width: 100%; text-align: center; padding: 80px 20px;
             background: linear-gradient(rgba(0, 18, 32, 0.95), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
@@ -42,13 +60,15 @@
         .price-badge {
             display: inline-block; background: var(--gold); color: #000; padding: 12px 35px;
             font-weight: 900; border-radius: 5px; font-size: 1.6rem; margin-top: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
         /* MARKETING SECTIONS */
         .section { max-width: 1100px; width: 92%; margin: 60px auto; }
         .marketing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; }
-        .marketing-card h3 { color: var(--primary-blue); margin-top: 0; }
+        .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; transition: 0.3s; }
+        .marketing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .marketing-card h3 { color: var(--primary-blue); margin-top: 0; font-size: 1.4rem; text-transform: uppercase; }
 
         /* CHECKOUT BOX */
         .checkout-box {
@@ -61,8 +81,9 @@
             text-transform: uppercase; letter-spacing: 2px;
             box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
         }
+        .buy-now-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
 
-        /* LEGAL FOOTER */
+        /* LEGAL FOOTER - THE SHIELD */
         .legal-footer {
             width: 100%; padding: 60px 20px; text-align: center; background: #fafafa;
             border-top: 1px solid var(--border); color: #888; font-size: 0.75rem; line-height: 1.8;
@@ -75,11 +96,13 @@
 
     <div class="nav-bar">
         <a href="../index.html" class="back-home">← Back to Main Site</a>
-        <div style="font-size: 0.8rem; color: var(--gray-sub);">OFFICIAL TERMINAL ACCESS</div>
+        <div style="font-size: 0.8rem; color: var(--gray-sub); font-weight: bold; letter-spacing: 1px;">OFFICIAL TERMINAL ACCESS</div>
     </div>
 
     <div class="header-container">
-        <a href="../index.html"><img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img"></a>
+        <a href="../index.html">
+            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        </a>
     </div>
 
     <div class="vault-hero">
@@ -89,7 +112,7 @@
     </div>
 
     <section class="section">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">The Professional Advantage</h2>
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; font-weight: 900;">Institutional Grade Intelligence</h2>
         <div class="marketing-grid">
             <div class="marketing-card">
                 <h3>01. Scraper Suite Logic</h3>
@@ -97,11 +120,11 @@
             </div>
             <div class="marketing-card">
                 <h3>02. Forensic Underwriting</h3>
-                <p>Master the Principal's proprietary math. Calculate equity gaps and market haircuts with surgical precision to ensure a profitable strike.</p>
+                <p>Master the Principal's proprietary math. Calculate equity gaps and market haircuts with surgical precision to ensure a profitable strike on every asset.</p>
             </div>
             <div class="marketing-card">
                 <h3>03. Priority Funding Track</h3>
-                <p>Vault members gain direct-track access to Summit Coast Capital. If your asset passes the protocol, we are ready to deploy capital.</p>
+                <p>Vault members gain direct-track status for Summit Coast Capital. If your asset passes the protocol, we are ready to deploy capital to fuel your flip.</p>
             </div>
         </div>
     </section>
@@ -112,13 +135,17 @@
             <p style="color: var(--gray-sub); font-size: 1.3rem; margin-bottom: 40px;">Immediate access to the Training Terminal and Scraper Logic.</p>
             
             <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="buy-now-btn">GET ACCESS NOW - $497</a>
+            
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #666; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+                By clicking "Get Access Now," you agree to our <strong>No-Refund Policy</strong>. Access to proprietary data harvesting protocols is granted immediately; therefore, <strong>all sales are final.</strong>
+            </p>
         </div>
     </section>
 
     <footer class="legal-footer">
         <div class="disclaimer-text">
             <p><strong>NO REFUND POLICY:</strong> Due to the proprietary nature of the data harvesting protocols and intellectual property contained within The Vault Protocol, all sales are final. No refunds will be issued under any circumstances.</p>
-            <p><strong>LIMITATION OF LIABILITY:</strong> Summit Coast Capital and its principals provide educational materials and data harvesting logic for informational purposes only. Real estate investing involves significant risk. We do not guarantee profits or specific financial outcomes. Summit Coast Capital shall not be held liable for any financial losses, legal disputes, or investment decisions made by the user. Users are encouraged to perform their own due diligence and consult with legal and financial professionals before deploying capital.</p>
+            <p><strong>LIMITATION OF LIABILITY:</strong> Summit Coast Capital and its principals provide educational materials and data harvesting logic for informational purposes only. Real estate investing involves significant risk. Summit Coast Capital shall not be held liable for any financial losses or investment decisions made by the user. Users are encouraged to perform their own due diligence before deploying capital.</p>
             <p>© 2026 SUMMIT COAST CAPITAL | FLORIDA GULF COAST | COLORADO FRONT RANGE</p>
         </div>
     </footer>
