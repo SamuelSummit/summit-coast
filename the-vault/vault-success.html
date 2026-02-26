@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Requested | The Vault Protocol</title>
+    <style>
+        :root {
+            --primary-blue: #007bff;
+            --slate-blue: #002D62;
+            --light-bg: #f8f9fa;
+            --text-dark: #1a1a1a;
+        }
+
+        body {
+            margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark);
+            font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 100vh; text-align: center;
+        }
+
+        .success-wrap { 
+            max-width: 600px; width: 90%; background: #fff; padding: 60px 40px; 
+            border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+            border-top: 8px solid var(--primary-blue);
+        }
+
+        .check-icon {
+            font-size: 50px; color: var(--primary-blue); margin-bottom: 20px;
+        }
+
+        h1 { color: var(--slate-blue); font-size: 2.2rem; margin-bottom: 10px; text-transform: uppercase; }
+        p { color: #555; font-size: 1.1rem; margin-bottom: 30px; }
+
+        .next-steps {
+            text-align: left; background: #fdfdfd; padding: 25px; border-radius: 12px;
+            border: 1px solid #eee; margin-bottom: 30px;
+        }
+        .next-steps h4 { margin-top: 0; color: var(--slate-blue); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .next-steps ul { padding-left: 20px; margin-bottom: 0; }
+        .next-steps li { margin-bottom: 10px; font-size: 0.95rem; }
+
+        .back-btn {
+            display: inline-block; padding: 15px 35px; background: var(--slate-blue);
+            color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold;
+            transition: 0.3s;
+        }
+        .back-btn:hover { background: var(--primary-blue); transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <div class="success-wrap">
+        <div class="check-icon">✓</div>
+        <h1>Protocol Initiated</h1>
+        <p>Your request for Early Access to <strong>The Vault</strong> has been received, Samuel.</p>
+
+        <div class="next-steps">
+            <h4>What Happens Next:</h4>
+            <ul>
+                <li><strong>Validation:</strong> Your professional email is now in the queue for the 2026 Phase 1 Beta release.</li>
+                <li><strong>Priority Status:</strong> You will be among the first notified when the FL and CO Distressed Asset Scrapers go live.</li>
+                <li><strong>Direct Line:</strong> If you have an urgent deal scenario requiring immediate principal review, do not wait—use the "Submit Your Deal" form on the home terminal.</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-btn">Return to Terminal</a>
+        
+        <p style="font-size: 0.8rem; color: #999; margin-top: 40px;">
+            Principal-to-Principal Communication | Summit Coast Capital
+        </p>
+    </div>
+
+</body>
+</html>
