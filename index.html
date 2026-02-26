@@ -3,112 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Summit Coast Capital | Direct Private Lending FL & CO</title>
-    <meta name="description" content="Principal-led asset-based lending for real estate investors. We don't approve the individual—we approve the asset. 5-7 day closings on Fix & Flip and DSCR loans in Florida and Colorado.">
+    <meta name="description" content="Principal-led asset-based lending for real estate investors. 5-7 day closings on Fix & Flip and DSCR loans. Access The Vault Protocol.">
     
     <style>
-        :root {
-            --primary-blue: #007bff;
-            --light-bg: #ffffff;
-            --text-dark: #1a1a1a;
-            --gray-sub: #555;
-            --border: #ececec;
-        }
-
+        :root { --primary-blue: #007bff; --light-bg: #ffffff; --text-dark: #1a1a1a; --gray-sub: #555; --border: #ececec; }
         html { scroll-behavior: smooth; }
+        body { margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; display: flex; flex-direction: column; align-items: center; }
 
-        body {
-            margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark);
-            font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6;
-            display: flex; flex-direction: column; align-items: center;
-        }
+        /* REFINED HEADER */
+        .header-container { width: 100%; padding: 15px 0; display: flex; justify-content: center; background: #fff; border-bottom: 1px solid var(--border); }
+        .logo-img { width: 280px; max-width: 80%; height: auto; }
 
-        /* SMALLER REFINED HEADER */
-        .header-container { 
-            width: 100%; 
-            padding: 15px 0; /* Reduced padding */
-            display: flex; 
-            justify-content: center; 
-            background: #fff; 
-            border-bottom: 1px solid var(--border);
-        }
-        .logo-img { 
-            width: 280px; /* Smaller Logo size */
-            max-width: 80%; 
-            height: auto; 
-        }
-
-        /* HERO - MODERN PALM HOUSE */
+        /* HERO - USING LIVE WEB LINK FOR INSTANT LOADING */
         .hero {
-            width: 100%; text-align: center; padding: 80px 20px;
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('modern-palm-house.jpg');
+            width: 100%; text-align: center; padding: 80px 20px; box-sizing: border-box;
+            background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
         }
         h1 { font-size: clamp(2rem, 6vw, 4rem); letter-spacing: 2px; margin: 0; font-weight: 800; text-transform: uppercase; }
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1rem; color: var(--gray-sub); margin: 10px 0 25px 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 600; }
 
-        .cta-btn-hero {
-            display: inline-block; padding: 15px 40px; font-size: 1.1rem; font-weight: bold; color: #fff;
-            background: var(--primary-blue); border-radius: 50px;
-            text-decoration: none; transition: 0.3s; box-shadow: 0 8px 15px rgba(0,123,255,0.2);
-        }
+        .cta-btn-hero { display: inline-block; padding: 15px 40px; font-size: 1.1rem; font-weight: bold; color: #fff; background: var(--primary-blue); border-radius: 50px; text-decoration: none; transition: 0.3s; box-shadow: 0 8px 15px rgba(0,123,255,0.2); }
 
-        /* SECTIONS */
+        /* LOAN CARDS */
         .section { max-width: 1100px; width: 92%; margin: 30px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        
-        /* UPDATED LOAN CARDS WITH BUTTONS */
-        .card { 
-            background: #fff; 
-            padding: 40px; 
-            border-radius: 12px; 
-            border: 1px solid var(--border); 
-            border-top: 5px solid var(--primary-blue);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; }
+        .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
+        .loan-btn:hover { background: var(--primary-blue); color: #fff; }
+
+        /* THE VAULT - USING LIVE WEB LINK */
+        .vault-container {
+            width: 100%; margin-top: 60px; padding: 100px 50px; color: white; text-align: center; border-radius: 30px; box-sizing: border-box;
+            background: linear-gradient(rgba(0, 18, 32, 0.9), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center; box-shadow: 0 25px 50px rgba(0,0,0,0.4);
         }
-        .card h3 { margin-top: 0; font-size: 1.6rem; }
-        
-        .loan-btn {
-            margin-top: 20px;
-            padding: 12px 20px;
-            background: transparent;
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            border-radius: 6px;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-        .loan-btn:hover {
-            background: var(--primary-blue);
-            color: #fff;
-        }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; text-align: left; }
+        .curriculum-item { background: rgba(255,255,255,0.08); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.15); }
+        .curriculum-item h4 { color: var(--primary-blue); margin-top: 0; font-size: 1.1rem; text-transform: uppercase; }
+        .vault-btn-premium { display: inline-block; background: var(--primary-blue); color: white; padding: 22px 60px; font-size: 1.4rem; font-weight: 800; text-decoration: none; border-radius: 12px; margin-top: 30px; transition: 0.3s; text-transform: uppercase; }
 
         /* FORM */
         .form-wrap { background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; background: #fff; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        input, textarea, select { width: 100%; padding: 16px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: bold; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; }
-
-        /* VAULT BOX */
-        .vault-container {
-            width: 100%;
-            background: linear-gradient(rgba(0, 18, 32, 0.9), rgba(0, 18, 32, 0.95)), url('modern-palm-house.jpg');
-            background-size: cover; background-position: center;
-            border-radius: 30px; padding: 80px 40px; color: white; text-align: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.4); margin-top: 40px; box-sizing: border-box;
-        }
-        .vault-btn-premium {
-            display: inline-block; background: var(--primary-blue); color: white; padding: 20px 50px;
-            font-size: 1.2rem; font-weight: 800; text-decoration: none; border-radius: 12px;
-            margin-top: 30px; transition: 0.3s; text-transform: uppercase;
-        }
     </style>
 </head>
 <body>
@@ -179,7 +119,7 @@
                     <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
                     <input type="number" name="loan_request" placeholder="Requested Loan ($)" required>
                 </div>
-                <textarea name="situation_story" placeholder="Tell us the story behind this asset..." rows="5" required></textarea>
+                <textarea name="situation_story" placeholder="Tell us the story behind this asset. What is the current situation and exit strategy?" rows="5" required></textarea>
                 <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
@@ -187,13 +127,33 @@
 
     <section class="section">
         <div class="vault-container">
-            <h2 style="font-size: 2.8rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
-            <p style="font-size: 1.2rem; color: #ddd; max-width: 850px; margin: 20px auto;">
-                Access the proprietary terminal used by the Principal to identify high-equity assets.
+            <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
+            <p style="font-size: 1.3rem; color: #ddd; max-width: 850px; margin: 20px auto;">
+                <strong>Harvest. Underwrite. Deploy.</strong> Access the proprietary terminal used by the Principal to identify high-equity assets before the competition.
             </p>
+
+            <div class="curriculum-grid">
+                <div class="curriculum-item">
+                    <h4>Phase 1: The Harvest</h4>
+                    <p>Live scrapers for NED and COP data. Automating discovery of distressed equity in FL and CO.</p>
+                </div>
+                <div class="curriculum-item">
+                    <h4>Phase 2: Forensic Underwrite</h4>
+                    <p>Mastering the "Equity Gap" math and stress-testing assets for a strike using 16 years of logic.</p>
+                </div>
+                <div class="curriculum-item">
+                    <h4>Phase 3: Priority Funding</h4>
+                    <p>Direct track to capital. Vault members receive expedited review and deployment on all approved deals.</p>
+                </div>
+            </div>
+
             <a href="https://samuelsummit.github.io/summit-coast/the-vault/" class="vault-btn-premium">ACCESS THE PLAYBOOK</a>
         </div>
     </section>
+
+    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem;">
+        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
+    </footer>
 
 </body>
 </html>
