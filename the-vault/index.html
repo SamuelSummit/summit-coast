@@ -7,11 +7,10 @@
     <style>
         :root {
             --primary-blue: #007bff;
-            --light-bg: #ffffff;
+            --slate-blue: #002D62;
+            --light-bg: #f8f9fa;
             --text-dark: #1a1a1a;
-            --gray-sub: #555;
-            --border: #ececec;
-            --gold: #d4af37;
+            --gray-sub: #666;
         }
 
         body {
@@ -20,134 +19,109 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
-        /* NAVIGATION BAR */
-        .nav-bar {
-            width: 100%;
-            max-width: 1100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
+        /* HEADER */
+        .header-container { width: 100%; padding: 25px 0; display: flex; justify-content: center; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo-img { width: 300px; max-width: 80%; height: auto; }
+
+        /* VAULT MAIN CONTAINER - LIGHT & AIRY */
+        .vault-wrap { 
+            max-width: 1050px; width: 92%; margin: 60px auto; text-align: center; 
+            padding: 60px 40px; border-radius: 24px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border: 1px solid #fff;
         }
 
-        .back-home {
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: bold;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-        .back-home:hover { color: var(--text-dark); }
+        h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: var(--slate-blue); margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .status-badge { display: inline-block; padding: 6px 18px; background: #e7f3ff; color: var(--primary-blue); border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; }
 
-        /* LOGO - CENTERED & CLICKABLE */
-        .header-container { width: 100%; padding: 20px 0; display: flex; justify-content: center; background: transparent; }
-        .logo-img { width: 400px; max-width: 80%; height: auto; transition: 0.3s; }
-        .logo-img:hover { opacity: 0.8; }
+        .tagline { font-size: 1.25rem; color: var(--gray-sub); max-width: 750px; margin: 20px auto; }
 
-        /* SALES HERO - THE SAFE BACKGROUND */
-        .vault-hero {
-            width: 100%; text-align: center; padding: 80px 20px;
-            background: linear-gradient(rgba(0, 18, 32, 0.95), rgba(0, 18, 32, 0.95)), url('https://images.unsplash.com/photo-1518458028785-8fbcd101deb9?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center; color: white;
-            box-sizing: border-box;
+        /* GRID */
+        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 50px 0; text-align: left; }
+        .curriculum-item { background: #fff; padding: 35px; border-radius: 15px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .curriculum-item h4 { color: var(--primary-blue); margin-top: 0; font-size: 1.15rem; text-transform: uppercase; margin-bottom: 12px; }
+        .curriculum-item p { font-size: 1rem; color: #555; margin: 0; }
+
+        /* WAITLIST FORM - BOLD & CLEAN */
+        .waitlist-form-wrap {
+            max-width: 550px; margin: 40px auto; background: var(--slate-blue); padding: 50px 40px; 
+            border-radius: 20px; color: #fff; text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 45, 98, 0.2);
         }
-        .vault-hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: 2px; text-transform: uppercase; font-weight: 900; }
-        .vault-hero p { font-size: 1.25rem; color: #bbb; max-width: 850px; margin: 20px auto; }
+        .waitlist-form-wrap h3 { margin-top: 0; font-size: 1.8rem; color: #fff; }
         
-        .price-badge {
-            display: inline-block; background: var(--gold); color: #000; padding: 12px 35px;
-            font-weight: 900; border-radius: 5px; font-size: 1.6rem; margin-top: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        input[type="email"] { 
+            width: 100%; padding: 18px; margin: 20px 0; background: #fff; border: none; 
+            border-radius: 8px; box-sizing: border-box; font-size: 1.1rem; text-align: center;
         }
 
-        /* MARKETING SECTIONS */
-        .section { max-width: 1100px; width: 92%; margin: 60px auto; }
-        .marketing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .marketing-card { padding: 40px; border: 1px solid var(--border); border-radius: 20px; background: #fdfdfd; transition: 0.3s; }
-        .marketing-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .marketing-card h3 { color: var(--primary-blue); margin-top: 0; font-size: 1.4rem; text-transform: uppercase; }
+        .notify-btn { 
+            background: var(--primary-blue); color: white; border: none; padding: 22px; 
+            font-size: 1.2rem; font-weight: 800; border-radius: 8px; cursor: pointer; 
+            width: 100%; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;
+        }
+        .notify-btn:hover { background: #0069d9; transform: scale(1.02); }
 
-        /* CHECKOUT BOX */
-        .checkout-box {
-            background: #f1f7ff; padding: 80px 40px; border-radius: 30px; border: 2px solid var(--primary-blue);
-            text-align: center; margin: 60px 0; box-sizing: border-box;
-        }
-        .buy-now-btn {
-            display: inline-block; padding: 25px 70px; font-size: 1.6rem; font-weight: 900; color: #fff;
-            background: var(--primary-blue); border-radius: 50px; text-decoration: none;
-            text-transform: uppercase; letter-spacing: 2px;
-            box-shadow: 0 15px 35px rgba(0,123,255,0.4); transition: 0.3s;
-        }
-        .buy-now-btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+        .back-link { color: var(--gray-sub); text-decoration: none; font-size: 1rem; margin-top: 30px; display: inline-block; font-weight: 600; }
+        .back-link:hover { color: var(--slate-blue); }
 
-        /* LEGAL FOOTER - THE SHIELD */
-        .legal-footer {
-            width: 100%; padding: 60px 20px; text-align: center; background: #fafafa;
-            border-top: 1px solid var(--border); color: #888; font-size: 0.75rem; line-height: 1.8;
-            box-sizing: border-box;
+        @media (max-width: 768px) {
+            .vault-wrap { padding: 40px 20px; }
+            .waitlist-form-wrap { padding: 35px 25px; }
         }
-        .disclaimer-text { max-width: 900px; margin: 0 auto; }
     </style>
 </head>
 <body>
 
-    <div class="nav-bar">
-        <a href="../index.html" class="back-home">← Back to Main Site</a>
-        <div style="font-size: 0.8rem; color: var(--gray-sub); font-weight: bold; letter-spacing: 1px;">OFFICIAL TERMINAL ACCESS</div>
-    </div>
-
     <div class="header-container">
-        <a href="../index.html">
-            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        <a href="index.html">
+            <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
         </a>
     </div>
 
-    <div class="vault-hero">
-        <h1>THE VAULT PROTOCOL</h1>
-        <p>Access the proprietary 16-year terminal used by the Principal to harvest, underwrite, and deploy capital into high-equity distressed assets.</p>
-        <div class="price-badge">LIFETIME ACCESS: $497</div>
+    <div class="vault-wrap">
+        <span class="status-badge">Phase 1: Beta Access</span>
+        <h1>The Vault Protocol</h1>
+        <p class="tagline">
+            Condensing 16 years of foreclosure logic into a strike-ready protocol. 
+            <strong>The Harvest Scrapers</strong> for Florida & Colorado are currently in limited beta.
+        </p>
+
+        <div class="curriculum-grid">
+            <div class="curriculum-item">
+                <h4>1. The Harvest</h4>
+                <p>Advanced data scrapers identifying NED and COP assets before they hit the retail market.</p>
+            </div>
+            <div class="curriculum-item">
+                <h4>2. Forensic Underwrite</h4>
+                <p>The math of the "Equity Gap." Learn to stress-test assets for maximum strike certainty.</p>
+            </div>
+            <div class="curriculum-item">
+                <h4>3. Priority Funding</h4>
+                <p>Vault members gain direct access to the Principal for expedited funding on all approved deals.</p>
+            </div>
+        </div>
+
+        <div class="waitlist-form-wrap">
+            <h3>Request Early Access</h3>
+            <p style="font-size: 1rem; color: #b0c4de; margin-bottom: 10px;">
+                Be first in line when the scrapers go live.
+            </p>
+            
+            <form action="https://formspree.io/f/xbdaqkjv" method="POST">
+                <input type="hidden" name="_subject" value="New Vault Protocol Waitlist Signup">
+                <input type="email" name="email" placeholder="Enter Professional Email" required>
+                <button type="submit" class="notify-btn">Join the Waitlist</button>
+            </form>
+        </div>
+
+        <a href="index.html" class="back-link">← Return to Main Terminal</a>
     </div>
 
-    <section class="section">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; font-weight: 900;">Institutional Grade Intelligence</h2>
-        <div class="marketing-grid">
-            <div class="marketing-card">
-                <h3>01. Scraper Suite Logic</h3>
-                <p>Learn the exact methodology for harvesting Notice of Default (NED) and Certificate of Purchase (COP) data. Stop waiting for the market—find the debt first.</p>
-            </div>
-            <div class="marketing-card">
-                <h3>02. Forensic Underwriting</h3>
-                <p>Master the Principal's proprietary math. Calculate equity gaps and market haircuts with surgical precision to ensure a profitable strike on every asset.</p>
-            </div>
-            <div class="marketing-card">
-                <h3>03. Priority Funding Track</h3>
-                <p>Vault members gain direct-track status for Summit Coast Capital. If your asset passes the protocol, we are ready to deploy capital to fuel your flip.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="checkout-box">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Unlock the Protocol</h2>
-            <p style="color: var(--gray-sub); font-size: 1.3rem; margin-bottom: 40px;">Immediate access to the Training Terminal and Scraper Logic.</p>
-            
-            <a href="https://buy.stripe.com/test_bJe14pei78MC5ft5w6b7y01" class="buy-now-btn">GET ACCESS NOW - $497</a>
-            
-            <p style="margin-top: 25px; font-size: 0.85rem; color: #666; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.4;">
-                By clicking "Get Access Now," you agree to our <strong>No-Refund Policy</strong>. Access to proprietary data harvesting protocols is granted immediately; therefore, <strong>all sales are final.</strong>
-            </p>
-        </div>
-    </section>
-
-    <footer class="legal-footer">
-        <div class="disclaimer-text">
-            <p><strong>NO REFUND POLICY:</strong> Due to the proprietary nature of the data harvesting protocols and intellectual property contained within The Vault Protocol, all sales are final. No refunds will be issued under any circumstances.</p>
-            <p><strong>LIMITATION OF LIABILITY:</strong> Summit Coast Capital and its principals provide educational materials and data harvesting logic for informational purposes only. Real estate investing involves significant risk. Summit Coast Capital shall not be held liable for any financial losses or investment decisions made by the user. Users are encouraged to perform their own due diligence before deploying capital.</p>
-            <p>© 2026 SUMMIT COAST CAPITAL | FLORIDA GULF COAST | COLORADO FRONT RANGE</p>
-        </div>
+    <footer style="padding: 60px 20px; text-align: center; color: #aaa; font-size: 0.9rem; width: 100%;">
+        FLORIDA GULF COAST | COLORADO FRONT RANGE | © 2026 SUMMIT COAST CAPITAL
     </footer>
 
 </body>
