@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summit Coast Capital | Direct Private Lending FL & CO</title>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root { 
             --primary-blue: #007bff; 
@@ -17,7 +19,7 @@
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
 
-        /* AHL INSPIRED UTILITY BAR */
+        /* UTILITY BAR - UPDATED PHONE */
         .utility-bar {
             width: 100%;
             background: var(--navy);
@@ -30,7 +32,7 @@
             box-sizing: border-box;
             letter-spacing: 1px;
         }
-        .utility-bar a { color: white; text-decoration: none; margin-left: 20px; transition: 0.3s; }
+        .utility-bar a { color: white; text-decoration: none; margin-left: 20px; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
         .utility-bar a:hover { color: var(--primary-blue); }
 
         /* REFINED HEADER */
@@ -59,9 +61,11 @@
             font-weight: bold; 
             font-size: 0.85rem;
             text-transform: uppercase;
+            transition: 0.3s;
         }
+        .contact-btn:hover { background: var(--navy); }
 
-        /* HERO & REST OF SITE */
+        /* HERO */
         .hero {
             width: 100%; text-align: center; padding: 100px 20px; box-sizing: border-box;
             background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
@@ -71,6 +75,9 @@
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1rem; color: var(--gray-sub); margin: 10px 0 25px 0; text-transform: uppercase; letter-spacing: 4px; font-weight: 600; }
 
+        .cta-btn-hero { display: inline-block; padding: 15px 40px; font-size: 1.1rem; font-weight: bold; color: #fff; background: var(--primary-blue); border-radius: 50px; text-decoration: none; transition: 0.3s; box-shadow: 0 8px 15px rgba(0,123,255,0.2); }
+
+        /* TRUST BAR */
         .trust-bar {
             width: 100%; background: var(--navy); color: white; padding: 30px 20px;
             display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -79,11 +86,13 @@
         .trust-item h3 { margin: 0; color: var(--primary-blue); font-size: 1.8rem; }
         .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
 
+        /* GRID */
         .section { max-width: 1100px; width: 92%; margin: 40px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; }
         .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
-        
+        .loan-btn:hover { background: var(--primary-blue); color: #fff; }
+
         /* THE VAULT */
         .vault-container {
             width: 100%; padding: 100px 50px; color: white; text-align: center; border-radius: 30px; box-sizing: border-box;
@@ -97,7 +106,7 @@
         /* ABOUT */
         .about-section { background: #f8f9fa; padding: 80px 20px; width: 100%; display: flex; justify-content: center; box-sizing: border-box; }
         .about-content { max-width: 1100px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
-        .signature { font-family: 'Brush Script MT', cursive; font-size: 2rem; color: var(--primary-blue); margin-top: 10px; }
+        .signature { font-family: 'Brush Script MT', cursive; font-size: 2.5rem; color: var(--primary-blue); margin-top: 10px; }
 
         @media (max-width: 768px) {
             .nav-right { display: none; }
@@ -108,8 +117,8 @@
 <body>
 
     <div class="utility-bar">
-        <a href="tel:7275551234">Direct: (727) 555-1234</a>
-        <a href="mailto:samuel@summitcoastcapital.com">Email Samuel</a>
+        <a href="tel:7204221571"><i class="fa-solid fa-phone"></i> Direct: (720) 422-1571</a>
+        <a href="mailto:samuel@summitcoastcapital.com"><i class="fa-solid fa-envelope"></i> Email Samuel</a>
     </div>
 
     <div class="header-container">
@@ -153,11 +162,12 @@
     </section>
 
     <section id="deal-submission" class="section">
-        <div style="background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border);">
-            <h2 style="text-align: center; margin-bottom: 30px;">Direct Asset Intake</h2>
+        <div style="background: #fdfdfd; padding: 50px; border-radius: 24px; border: 1px solid var(--border); box-shadow: 0 10px 40px rgba(0,0,0,0.03);">
+            <h2 style="text-align: center; margin-bottom: 10px;">Direct Asset Intake</h2>
+            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 30px;">Initiate your forensic underwrite below.</p>
             <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
-                <input type="text" name="address" placeholder="Property Address" required style="width:100%; padding:15px; margin:10px 0; border-radius:8px; border:1px solid #ddd;">
-                <button type="submit" style="background:var(--primary-blue); color:white; border:none; padding:20px; width:100%; font-weight:bold; border-radius:8px; cursor:pointer;">INITIATE FORENSIC UNDERWRITE</button>
+                <input type="text" name="address" placeholder="Property Address" required style="width:100%; padding:18px; margin:10px 0; border-radius:8px; border:1px solid #ddd; box-sizing: border-box; font-size: 1rem;">
+                <button type="submit" style="background:var(--primary-blue); color:white; border:none; padding:22px; width:100%; font-weight:bold; border-radius:8px; cursor:pointer; text-transform: uppercase; font-size: 1.1rem; margin-top: 10px;">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
     </section>
@@ -178,7 +188,7 @@
     <section class="about-section">
         <div class="about-content">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Samuel" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Samuel Salankey" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
             </div>
             <div class="about-text">
                 <h2>The Principal Behind the Logic</h2>
@@ -188,8 +198,10 @@
         </div>
     </section>
 
-    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee;">
-        TAR PON SPRINGS, FL | ARVADA, CO | © 2026 SUMMIT COAST CAPITAL
+    <footer style="padding: 60px 20px; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; background: white;">
+        <p>TARPON SPRINGS, FL | ARVADA, CO</p>
+        <p>Direct: (720) 422-1571 | Email: samuel@summitcoastcapital.com</p>
+        <p>© 2026 SUMMIT COAST CAPITAL</p>
     </footer>
 
 </body>
