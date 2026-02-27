@@ -40,7 +40,7 @@
             border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase;
         }
 
-        /* HERO - AGGRESSIVE MARKETING */
+        /* HERO */
         .hero {
             width: 100%; text-align: center; padding: 120px 20px; box-sizing: border-box;
             background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
@@ -60,41 +60,37 @@
         .trust-item h3 { margin: 0; color: var(--primary-blue); font-size: 2rem; font-weight: 800; }
         .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
 
-        /* VAULT - THE "HOOK" MARKETING */
-        .vault-section { padding: 100px 5%; background: #f0f2f5; width: 100%; box-sizing: border-box; }
-        .vault-container {
-            max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; box-sizing: border-box;
-            background: linear-gradient(135deg, rgba(0, 18, 32, 0.98), rgba(0, 40, 70, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
-        }
-        .vault-header h2 { font-size: 3.5rem; font-weight: 900; margin: 0; letter-spacing: -1px; text-transform: uppercase; }
-        .vault-header p { font-size: 1.3rem; color: #b0c4de; max-width: 800px; margin: 20px auto 50px; line-height: 1.6; }
-        
-        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; text-align: left; }
-        .curriculum-item { background: rgba(255,255,255,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
-        .curriculum-item:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
-        .curriculum-item i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
-        .curriculum-item h4 { color: white; margin: 0 0 15px 0; font-size: 1.25rem; text-transform: uppercase; letter-spacing: 1px; }
-        .curriculum-item p { color: #ccc; font-size: 0.95rem; margin: 0; line-height: 1.5; }
+        /* PROGRAM CARDS (SELL THE LOANS) */
+        .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { margin-top: 0; font-weight: 800; text-transform: uppercase; }
+        .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
+        .loan-btn:hover { background: var(--primary-blue); color: #fff; }
 
-        /* INTAKE FORM */
-        .form-wrap { background: #fff; padding: 60px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
+        /* INTAKE FORM (NOW SECOND POSITION) */
+        .form-section { background: #f8f9fa; padding: 100px 5%; width: 100%; box-sizing: border-box; border-top: 1px solid var(--border); }
+        .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 60px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; transition: 0.3s; letter-spacing: 1px; }
         .submit-btn:hover { background: #0056b3; transform: scale(1.01); }
 
-        /* ABOUT */
-        .about-section { background: #fff; padding: 100px 5%; width: 100%; display: flex; justify-content: center; box-sizing: border-box; }
-        .about-content { max-width: 1100px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
-        .about-text h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 25px; font-weight: 800; }
-        .signature { font-family: 'Brush Script MT', cursive; font-size: 3rem; color: var(--primary-blue); margin-top: 25px; }
+        /* VAULT (NOW THIRD POSITION) */
+        .vault-section { padding: 100px 5%; background: #ffffff; width: 100%; box-sizing: border-box; }
+        .vault-container {
+            max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; box-sizing: border-box;
+            background: linear-gradient(135deg, rgba(0, 18, 32, 0.98), rgba(0, 40, 70, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px; text-align: left; }
+        .curriculum-item { background: rgba(255,255,255,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .curriculum-item i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
+        .curriculum-item h4 { color: white; margin: 0 0 15px 0; font-size: 1.25rem; text-transform: uppercase; }
 
         @media (max-width: 768px) {
             .nav-right { display: none; }
             .form-grid { grid-template-columns: 1fr; }
-            .about-content { grid-template-columns: 1fr; text-align: center; }
-            .vault-header h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -127,39 +123,28 @@
         <div class="trust-item"><h3>FL & CO</h3><p>Deep Market Expertise</p></div>
     </div>
 
-    <section id="vault" class="vault-section">
-        <div class="vault-container">
-            <div class="vault-header">
-                <h2>The Vault Protocol</h2>
-                <p>Don't just borrow capital. Use the same forensic terminal the Principal uses to find, underwrite, and fund high-equity assets before they ever hit the MLS.</p>
+    <section class="section">
+        <h2 style="text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 50px; text-transform: uppercase;">Direct Lending Programs</h2>
+        <div class="grid">
+            <div class="card">
+                <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding. Rapid closings for high-equity acquisitions in Florida and Colorado.</p></div>
+                <a href="fix-and-flip.html" class="loan-btn">View Program</a>
             </div>
-            
-            <div class="curriculum-grid">
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-satellite-dish"></i>
-                    <h4>Phase 1: The Harvest</h4>
-                    <p>Access our proprietary scrapers for NED (Notice of Election & Demand) and COP (Certificate of Purchase) data. We automate the discovery of distressed equity in Florida and Colorado so you can strike first.</p>
-                </div>
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-microscope"></i>
-                    <h4>Phase 2: Forensic Underwrite</h4>
-                    <p>Learn to calculate the "Equity Gap" using 16 years of foreclosure logic. We stress-test every asset against real-world exit strategies to ensure your profit is protected from day one.</p>
-                </div>
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-vault"></i>
-                    <h4>Phase 3: Priority Funding</h4>
-                    <p>Move to the front of the line. Vault members receive direct-track underwriting, expedited appraisals, and priority capital deployment for time-sensitive bailout scenarios.</p>
-                </div>
+            <div class="card">
+                <div><h3>DSCR Rental</h3><p>30-year fixed rates based on property cash flow. No DTI or tax verification required to scale your portfolio.</p></div>
+                <a href="dscr.html" class="loan-btn">View Program</a>
             </div>
-            
-            <a href="https://samuelsummit.github.io/summit-coast/the-vault/" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; letter-spacing:2px;">ENTER THE VAULT</a>
+            <div class="card">
+                <div><h3>Bridge & Bailout</h3><p>Principal-led emergency capital for foreclosure rescues, REO acquisitions, and property stabilization.</p></div>
+                <a href="bridge.html" class="loan-btn">View Program</a>
+            </div>
         </div>
     </section>
 
-    <section id="deal-submission" class="section">
+    <section id="deal-submission" class="form-section">
         <div class="form-wrap">
-            <h2 style="text-align: center; margin-bottom: 10px; font-weight: 800; font-size: 2rem;">Asset Underwriting Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Submit your deal details for a Principal-led forensic review.</p>
+            <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: 2.2rem;">Asset Underwriting Terminal</h2>
+            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px; font-size: 1.1rem;">Submit your scenario for a 24-hour Forensic Underwrite by the Principal.</p>
             <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
@@ -192,16 +177,42 @@
         </div>
     </section>
 
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Samuel Salankey" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+    <section id="vault" class="vault-section">
+        <div class="vault-container">
+            <div class="vault-header">
+                <h2 style="font-size: 3.2rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
+                <p style="font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 20px auto;">Don't just borrow capital. Access the same forensic terminal the Principal uses to find Distressed Equity before the competition.</p>
             </div>
-            <div class="about-text">
-                <h2>The Principal Behind the Logic</h2>
-                <p>Real estate isn't a spreadsheet; it’s an asset class built on local truth. With over <strong>16 years of experience</strong> navigating the Colorado Front Range—specializing in foreclosures and high-equity REO properties—I’ve built a career on identifying the "Equity Gap" where others only see a bank denial.</p>
-                <p>Now operating from <strong>Tarpon Springs, Florida</strong>, I bring that same forensic underwriting logic to the Gulf Coast. Whether we are looking at a fix-and-flip in Arvada or a rental portfolio in Pinellas County, you aren't talking to a call center or a junior analyst. You are talking directly to the Principal.</p>
-                <div class="signature">Samuel Salankey</div>
+            
+            <div class="curriculum-grid">
+                <div class="curriculum-item">
+                    <i class="fa-solid fa-satellite-dish"></i>
+                    <h4>Phase 1: The Harvest</h4>
+                    <p>Proprietary scrapers for NED and COP data. Automated discovery of high-equity assets in FL & CO.</p>
+                </div>
+                <div class="curriculum-item">
+                    <i class="fa-solid fa-microscope"></i>
+                    <h4>Phase 2: Forensic Underwrite</h4>
+                    <p>Stress-testing assets against real-world exit strategies using 16 years of foreclosure logic.</p>
+                </div>
+                <div class="curriculum-item">
+                    <i class="fa-solid fa-vault"></i>
+                    <h4>Phase 3: Priority Funding</h4>
+                    <p>Expedited underwriting and priority capital deployment for time-sensitive bailout scenarios.</p>
+                </div>
+            </div>
+            <a href="https://samuelsummit.github.io/summit-coast/the-vault/" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; letter-spacing:2px;">ENTER THE VAULT</a>
+        </div>
+    </section>
+
+    <section class="about-section" style="background:#fff; padding:100px 5%;">
+        <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1.5fr; gap:60px; align-items:center;">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Samuel Salankey" style="width:100%; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.1);">
+            <div>
+                <h2 style="font-size:2.5rem; font-weight:800; margin-bottom:25px;">The Principal Behind the Logic</h2>
+                <p>With over 16 years navigating the Colorado Front Range—specializing in foreclosures and high-equity REO properties—I’ve built a career on identifying the "Equity Gap" where others see a bank denial.</p>
+                <p>Now in Tarpon Springs, I bring that same forensic underwriting to the Gulf Coast. You aren't talking to a call center; you are talking to the Principal.</p>
+                <div style="font-family:'Brush Script MT', cursive; font-size:3rem; color:var(--primary-blue); margin-top:25px;">Samuel Salankey</div>
             </div>
         </div>
     </section>
@@ -209,7 +220,7 @@
     <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; background: white;">
         <p style="color: var(--navy); font-weight: 700; letter-spacing: 2px;">TARPON SPRINGS, FL | ARVADA, CO</p>
         <p>Direct: (720) 422-1571 | samuel@summitcoastcapital.com</p>
-        <p style="margin-top: 20px;">© 2026 SUMMIT COAST CAPITAL. WE APPROVE THE ASSET, NOT THE INDIVIDUAL.</p>
+        <p>© 2026 SUMMIT COAST CAPITAL</p>
     </footer>
 
 </body>
