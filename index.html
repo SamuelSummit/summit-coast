@@ -64,7 +64,6 @@
         .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; }
         .loan-btn:hover { background: var(--primary-blue); color: #fff; }
 
@@ -83,7 +82,6 @@
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; outline-color: var(--primary-blue); }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; transition: 0.3s; }
-        .submit-btn:hover { background: var(--navy); }
 
         /* THE VAULT - SYNCED DARK TERMINAL DESIGN */
         .vault-section { padding: 100px 5%; background: #ffffff; width: 100%; box-sizing: border-box; }
@@ -103,7 +101,6 @@
         @media (max-width: 768px) {
             .nav-right, .utility-bar { display: none; }
             .form-grid, .compare-row, .about-content { grid-template-columns: 1fr; }
-            .compare-cell { border-bottom: 1px solid var(--border); }
         }
     </style>
 </head>
@@ -172,7 +169,7 @@
             </div>
             <div class="compare-row">
                 <div class="compare-cell feature-label">Underwriting</div>
-                <div class="compare-cell">Tax Returns / DTI / FICO</div>
+                <div class="compare-cell">Tax Returns / DTI</div>
                 <div class="compare-cell scc-col">Forensic Asset Logic</div>
             </div>
             <div class="compare-row">
@@ -228,8 +225,20 @@
         <div class="vault-box">
             <div class="v-badge"><i class="fa-solid fa-lock"></i> Secured Data Terminal</div>
             <h2 style="font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; margin: 0; text-transform: uppercase; line-height: 1;">The Vault Protocol<span style="color:var(--primary-blue);">.</span></h2>
+            
+            <div style="margin-top: 25px;">
+                <div style="font-size: 3rem; font-weight: 900; color: #fff; margin-bottom: 5px;">$497</div>
+                <span style="font-size: 1rem; color: #007bff; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Secure Your Access</span>
+            </div>
+
             <p style="font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 30px auto 40px;">Access proprietary scrapers and forensic logic to identify Distressed Equity before the general public. We provide the intel—you bring the deal.</p>
-            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.3);">Enter The Terminal</a>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.3);">Reserve My Access</a>
+                <a href="the-vault/index.html" style="display:inline-block; background:transparent; color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; border: 2px solid rgba(255,255,255,0.3);">View Terminal Intel</a>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #999; margin-top: 25px;">*Only 10 slots remaining for Phase 1 Beta. Access is manually vetted by the Principal.</p>
         </div>
     </section>
 
@@ -239,13 +248,12 @@
             <div>
                 <h2 style="text-transform: uppercase; font-weight: 900; font-size: 2rem;">The Principal Edge</h2>
                 <p>Real estate isn't a spreadsheet; it’s an asset class built on local truth. With over <strong>16 years of experience</strong> in Colorado and Florida, I identify the "Equity Gap" where big banks only see risk.</p>
-                <p>When you call Summit Coast Capital, you don't talk to a loan officer—you talk to me. We underwrite the asset, fund the logic, and close on your timeline.</p>
                 <div class="signature">Samuel Salankey</div>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; background: #fafafa;">
+    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee;">
         <p>TARPON SPRINGS, FL | ARVADA, CO | (720) 422-1571</p>
         <p>© 2026 SUMMIT COAST CAPITAL</p>
     </footer>
