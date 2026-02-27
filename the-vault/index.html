@@ -30,7 +30,9 @@
             width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
             background: rgba(0,18,32,0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; backdrop-filter: blur(10px);
         }
-        .logo-img { width: 220px; height: auto; filter: brightness(0) invert(1); }
+        /* Logo sizing */
+        .logo-img { width: 220px; height: auto; filter: brightness(0) invert(1); display: block; }
+
         .nav-link { text-decoration: none; color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; border: 1px solid var(--primary-blue); padding: 8px 15px; border-radius: 4px; }
 
         /* HERO */
@@ -51,7 +53,7 @@
         .v-card h3 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 1.2rem; color: #fff; }
         .v-card p { color: #b0c4de; font-size: 0.95rem; line-height: 1.6; }
 
-        /* INTAKE SECTION - $497 PRICE ONLY */
+        /* FORM SECTION */
         .form-section { background: #fff; color: var(--text-dark); padding: 100px 5%; width: 100%; box-sizing: border-box; text-align: center; }
         .form-wrap { max-width: 600px; margin: 0 auto; padding: 60px 40px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #eee; }
         .price-tag { font-size: 3rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
@@ -59,7 +61,6 @@
         
         input { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2); }
-        .submit-btn:hover { background: var(--navy); transform: scale(1.02); }
 
         @media (max-width: 768px) { .header-container .nav-right { display: none; } .vault-grid { margin-top: 20px; } }
     </style>
@@ -72,18 +73,18 @@
     </div>
 
     <div class="header-container">
-        <a href="../">
-            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img" onerror="this.src='/LOGO.png';">
+        <a href="https://samuelsummit.github.io/summit-coast/">
+            <img src="https://samuelsummit.github.io/summit-coast/LOGO.png" alt="Summit Coast Capital" class="logo-img">
         </a>
         <div class="nav-right">
-            <a href="../#deal-submission" class="nav-link">Back to Terminal</a>
+            <a href="https://samuelsummit.github.io/summit-coast/#deal-submission" class="nav-link">Back to Terminal</a>
         </div>
     </div>
 
     <section class="vault-hero">
         <div class="status-badge">Phase 1 Beta Live</div>
         <h1>The Vault Protocol<span style="color:var(--primary-blue);">.</span></h1>
-        <p class="hero-sub">The proprietary data engine built on 16 years of foreclosure logic. We provide the raw intel and the underwriting scrapers—you identify the asset and bring the deal to us for priority funding.</p>
+        <p class="hero-sub">The proprietary data engine built on 16 years of foreclosure logic. We provide the raw intel and the underwriting tools—you identify the asset and bring the deal to us for priority funding.</p>
     </section>
 
     <div class="vault-grid">
