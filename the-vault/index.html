@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault Protocol | Distressed Equity Data | Summit Coast Capital</title>
+    <title>The Vault Protocol | Summit Coast Capital</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -25,7 +25,7 @@
         }
         .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
 
-        /* HEADER - FLUSH TOP */
+        /* HEADER - LOGO FIX */
         .header-container { 
             width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
             background: rgba(0,18,32,0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; backdrop-filter: blur(10px);
@@ -33,7 +33,7 @@
         .logo-img { width: 220px; height: auto; filter: brightness(0) invert(1); }
         .nav-link { text-decoration: none; color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; border: 1px solid var(--primary-blue); padding: 8px 15px; border-radius: 4px; }
 
-        /* VAULT HERO - NO GAPS */
+        /* HERO */
         .vault-hero {
             width: 100%; text-align: center; padding: 100px 5% 150px; box-sizing: border-box;
             background: linear-gradient(135deg, rgba(0, 18, 32, 0.92), rgba(0, 40, 70, 0.85)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
@@ -44,18 +44,18 @@
         h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); letter-spacing: -1px; margin: 0; font-weight: 900; text-transform: uppercase; line-height: 1; }
         .hero-sub { font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 25px auto 40px; font-weight: 400; }
 
-        /* GRID - THEY FIND THE DEAL */
+        /* CARDS */
         .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: -80px auto 80px; padding: 0 5%; }
         .v-card { background: rgba(255,255,255,0.07); backdrop-filter: blur(30px); padding: 40px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s; }
         .v-card i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
         .v-card h3 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 1.2rem; color: #fff; }
         .v-card p { color: #b0c4de; font-size: 0.95rem; line-height: 1.6; }
 
-        /* PURCHASE SECTION - $497 RESTORED */
+        /* INTAKE SECTION - $497 PRICE ONLY */
         .form-section { background: #fff; color: var(--text-dark); padding: 100px 5%; width: 100%; box-sizing: border-box; text-align: center; }
         .form-wrap { max-width: 600px; margin: 0 auto; padding: 60px 40px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #eee; }
         .price-tag { font-size: 3rem; font-weight: 900; color: var(--navy); margin-bottom: 10px; }
-        .price-sub { font-size: 1.1rem; color: var(--primary-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 30px; display: block; }
+        .price-sub { font-size: 1.1rem; color: var(--primary-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 30px; display: block; letter-spacing: 1px; }
         
         input { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,123,255,0.2); }
@@ -72,16 +72,16 @@
     </div>
 
     <div class="header-container">
-        <a href="https://samuelsummit.github.io/summit-coast/">
-            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        <a href="../">
+            <img src="../LOGO.png" alt="Summit Coast Capital" class="logo-img" onerror="this.src='/LOGO.png';">
         </a>
         <div class="nav-right">
-            <a href="https://samuelsummit.github.io/summit-coast/#deal-submission" class="nav-link">Back to Terminal</a>
+            <a href="../#deal-submission" class="nav-link">Back to Terminal</a>
         </div>
     </div>
 
     <section class="vault-hero">
-        <div class="status-badge"><i class="fa-solid fa-bolt"></i> Phase 1 Beta Live</div>
+        <div class="status-badge">Phase 1 Beta Live</div>
         <h1>The Vault Protocol<span style="color:var(--primary-blue);">.</span></h1>
         <p class="hero-sub">The proprietary data engine built on 16 years of foreclosure logic. We provide the raw intel and the underwriting scrapers—you identify the asset and bring the deal to us for priority funding.</p>
     </section>
@@ -108,9 +108,9 @@
         <div class="form-wrap">
             <h2 style="margin-top: 0; font-weight: 900; text-transform: uppercase; font-size: 1.8rem;">Beta Access Protocol</h2>
             <div class="price-tag">$497</div>
-            <span class="price-sub">LIFETIME LOGIC ACCESS</span>
+            <span class="price-sub">Secure Your Access</span>
             
-            <p style="color: var(--gray-sub); margin-bottom: 30px;">Includes proprietary scrapers, the Foreclosure Underwriting Playbook, and Priority Funding track in FL & CO.</p>
+            <p style="color: var(--gray-sub); margin-bottom: 30px;">Enter your details below to receive the Beta Onboarding sequence and the Forensic Underwriting Playbook.</p>
             
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <input type="text" name="full_name" placeholder="Full Name" required>
