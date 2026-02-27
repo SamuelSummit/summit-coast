@@ -49,7 +49,7 @@
         h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); letter-spacing: -1px; margin: 0; font-weight: 900; line-height: 1.1; }
         .accent { color: var(--primary-blue); }
         .tagline { font-size: 1.2rem; color: var(--navy); margin: 20px 0 30px 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
-        .cta-btn-hero { display: inline-block; padding: 18px 45px; font-size: 1.1rem; font-weight: 800; color: #fff; background: var(--primary-blue); border-radius: 4px; text-decoration: none; transition: 0.3s; text-transform: uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.2); }
+        .cta-btn-hero { display: inline-block; padding: 18px 45px; font-size: 1.1rem; font-weight: 800; color: #fff; background: var(--primary-blue); border-radius: 4px; text-decoration: none; transition: 0.3s; text-transform: uppercase; }
 
         /* TRUST BAR */
         .trust-bar {
@@ -58,39 +58,47 @@
             gap: 20px; text-align: center; box-sizing: border-box;
         }
         .trust-item h3 { margin: 0; color: var(--primary-blue); font-size: 2rem; font-weight: 800; }
-        .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
+        .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* PROGRAM CARDS (SELL THE LOANS) */
+        /* PROGRAMS GRID */
         .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; }
-        .card h3 { margin-top: 0; font-weight: 800; text-transform: uppercase; }
-        .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
+        .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; }
         .loan-btn:hover { background: var(--primary-blue); color: #fff; }
 
-        /* INTAKE FORM (NOW SECOND POSITION) */
-        .form-section { background: #f8f9fa; padding: 100px 5%; width: 100%; box-sizing: border-box; border-top: 1px solid var(--border); }
+        /* COMPARISON TABLE */
+        .compare-container { max-width: 1100px; margin: 40px auto; background: #fdfdfd; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; }
+        .compare-row { display: grid; grid-template-columns: 2fr 3fr 3fr; border-bottom: 1px solid var(--border); }
+        .compare-cell { padding: 20px; font-size: 0.95rem; }
+        .feature-label { font-weight: 700; background: #f8f9fa; border-right: 1px solid var(--border); text-transform: uppercase; font-size: 0.8rem; }
+        .scc-col { font-weight: 700; color: var(--primary-blue); background: rgba(0,123,255,0.03); }
+        .header-row { background: var(--navy); color: #fff; font-weight: 800; text-transform: uppercase; }
+        .header-row .feature-label { background: var(--navy); border-right: 1px solid rgba(255,255,255,0.1); }
+
+        /* INTAKE FORM */
+        .form-section { background: #f8f9fa; padding: 100px 5%; width: 100%; box-sizing: border-box; }
         .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 60px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; transition: 0.3s; letter-spacing: 1px; }
-        .submit-btn:hover { background: #0056b3; transform: scale(1.01); }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; }
 
-        /* VAULT (NOW THIRD POSITION) */
+        /* THE VAULT */
         .vault-section { padding: 100px 5%; background: #ffffff; width: 100%; box-sizing: border-box; }
         .vault-container {
             max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; box-sizing: border-box;
             background: linear-gradient(135deg, rgba(0, 18, 32, 0.98), rgba(0, 40, 70, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center; box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            background-size: cover; background-position: center;
         }
-        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px; text-align: left; }
-        .curriculum-item { background: rgba(255,255,255,0.05); padding: 35px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); }
-        .curriculum-item i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
-        .curriculum-item h4 { color: white; margin: 0 0 15px 0; font-size: 1.25rem; text-transform: uppercase; }
+
+        /* ABOUT */
+        .about-section { background: #fff; padding: 100px 5%; width: 100%; display: flex; justify-content: center; box-sizing: border-box; }
+        .about-content { max-width: 1100px; display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
+        .signature { font-family: 'Brush Script MT', cursive; font-size: 3rem; color: var(--primary-blue); margin-top: 25px; }
 
         @media (max-width: 768px) {
             .nav-right { display: none; }
-            .form-grid { grid-template-columns: 1fr; }
+            .form-grid, .compare-row, .about-content { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -102,10 +110,12 @@
     </div>
 
     <div class="header-container">
-        <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        <a href="https://samuelsummit.github.io/summit-coast/">
+            <img src="https://samuelsummit.github.io/summit-coast/LOGO.png" alt="Summit Coast Capital" class="logo-img">
+        </a>
         <div class="nav-right">
             <a href="#deal-submission" class="nav-link">Submit Deal</a>
-            <a href="#vault" class="nav-link">The Vault</a>
+            <a href="the-vault/index.html" class="nav-link">The Vault</a>
             <a href="mailto:samuel@summitcoastcapital.com" class="contact-btn">Get Funding</a>
         </div>
     </div>
@@ -139,12 +149,35 @@
                 <a href="bridge.html" class="loan-btn">View Program</a>
             </div>
         </div>
+
+        <div class="compare-container">
+            <div class="compare-row header-row">
+                <div class="compare-cell feature-label">Deal Metrics</div>
+                <div class="compare-cell">Big Banks / Institutional</div>
+                <div class="compare-cell scc-col">Summit Coast Capital</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell feature-label">Closing Speed</div>
+                <div class="compare-cell">30–45 Days</div>
+                <div class="compare-cell scc-col">5–7 Days</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell feature-label">Flip Leverage</div>
+                <div class="compare-cell">75% Purchase / 50% Rehab</div>
+                <div class="compare-cell scc-col">90% Purchase / 100% Rehab</div>
+            </div>
+            <div class="compare-row">
+                <div class="compare-cell feature-label">Contact</div>
+                <div class="compare-cell">Call Center / Loan Officer</div>
+                <div class="compare-cell scc-col">Direct to Principal</div>
+            </div>
+        </div>
     </section>
 
     <section id="deal-submission" class="form-section">
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: 2.2rem;">Asset Underwriting Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px; font-size: 1.1rem;">Submit your scenario for a 24-hour Forensic Underwrite by the Principal.</p>
+            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Submit your scenario for a 24-hour Forensic Underwrite.</p>
             <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
@@ -171,7 +204,7 @@
                     <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
                     <input type="number" name="loan_request" placeholder="Requested Loan ($)" required>
                 </div>
-                <textarea name="situation_story" placeholder="The Story: What is the current status of the asset and your exit strategy?" rows="5" required></textarea>
+                <textarea name="situation_story" placeholder="What is the story behind this asset?" rows="5" required></textarea>
                 <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
@@ -179,47 +212,25 @@
 
     <section id="vault" class="vault-section">
         <div class="vault-container">
-            <div class="vault-header">
-                <h2 style="font-size: 3.2rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
-                <p style="font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 20px auto;">Don't just borrow capital. Access the same forensic terminal the Principal uses to find Distressed Equity before the competition.</p>
-            </div>
-            
-            <div class="curriculum-grid">
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-satellite-dish"></i>
-                    <h4>Phase 1: The Harvest</h4>
-                    <p>Proprietary scrapers for NED and COP data. Automated discovery of high-equity assets in FL & CO.</p>
-                </div>
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-microscope"></i>
-                    <h4>Phase 2: Forensic Underwrite</h4>
-                    <p>Stress-testing assets against real-world exit strategies using 16 years of foreclosure logic.</p>
-                </div>
-                <div class="curriculum-item">
-                    <i class="fa-solid fa-vault"></i>
-                    <h4>Phase 3: Priority Funding</h4>
-                    <p>Expedited underwriting and priority capital deployment for time-sensitive bailout scenarios.</p>
-                </div>
-            </div>
-            <a href="https://samuelsummit.github.io/summit-coast/the-vault/" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; letter-spacing:2px;">ENTER THE VAULT</a>
+            <h2 style="font-size: 3.2rem; font-weight: 900; margin: 0; text-transform: uppercase;">The Vault Protocol</h2>
+            <p style="font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 20px auto;">Access the same forensic terminal the Principal uses to find Distressed Equity before the competition.</p>
+            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 55px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase;">ENTER THE VAULT</a>
         </div>
     </section>
 
-    <section class="about-section" style="background:#fff; padding:100px 5%;">
-        <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1.5fr; gap:60px; align-items:center;">
+    <section class="about-section">
+        <div class="about-content">
             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Samuel Salankey" style="width:100%; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.1);">
             <div>
-                <h2 style="font-size:2.5rem; font-weight:800; margin-bottom:25px;">The Principal Behind the Logic</h2>
-                <p>With over 16 years navigating the Colorado Front Range—specializing in foreclosures and high-equity REO properties—I’ve built a career on identifying the "Equity Gap" where others see a bank denial.</p>
-                <p>Now in Tarpon Springs, I bring that same forensic underwriting to the Gulf Coast. You aren't talking to a call center; you are talking to the Principal.</p>
-                <div style="font-family:'Brush Script MT', cursive; font-size:3rem; color:var(--primary-blue); margin-top:25px;">Samuel Salankey</div>
+                <h2>The Principal Behind the Logic</h2>
+                <p>Real estate isn't a spreadsheet; it’s an asset class built on local truth. With over <strong>16 years of experience</strong> in Colorado and now Florida, I identify the "Equity Gap" where others see bank denials.</p>
+                <div class="signature">Samuel Salankey</div>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; background: white;">
-        <p style="color: var(--navy); font-weight: 700; letter-spacing: 2px;">TARPON SPRINGS, FL | ARVADA, CO</p>
-        <p>Direct: (720) 422-1571 | samuel@summitcoastcapital.com</p>
+    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee;">
+        <p>TARPON SPRINGS, FL | ARVADA, CO | (720) 422-1571</p>
         <p>© 2026 SUMMIT COAST CAPITAL</p>
     </footer>
 
