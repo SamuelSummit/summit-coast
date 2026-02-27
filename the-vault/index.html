@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Vault Protocol | Distressed Equity Data | Summit Coast Capital</title>
+    <title>The Vault Protocol | Summit Coast Capital</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -15,52 +15,49 @@
             --text-dark: #1a1a1a; 
             --border: rgba(255,255,255,0.15); 
         }
-        html { scroll-behavior: smooth; }
-        body { margin: 0; padding: 0; background-color: var(--navy); color: #fff; font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+        html, body { margin: 0; padding: 0; background-color: var(--navy); color: #fff; font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; overflow-x: hidden; }
 
         /* UTILITY BAR */
         .utility-bar {
-            width: 100%; background: rgba(0,0,0,0.3); color: white; padding: 8px 5%;
+            width: 100%; background: #000; color: white; padding: 8px 5%;
             display: flex; justify-content: flex-end; font-size: 0.8rem; font-weight: 600;
             box-sizing: border-box; letter-spacing: 1px;
         }
         .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
 
-        /* REFINED HEADER (TRANS-DARK) */
+        /* HEADER - FIXED TOP NO GAP */
         .header-container { 
             width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
-            background: rgba(0,18,32,0.9); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; backdrop-filter: blur(10px);
+            background: rgba(0,18,32,0.95); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; backdrop-filter: blur(10px);
         }
         .logo-img { width: 220px; height: auto; filter: brightness(0) invert(1); }
-        .nav-link { text-decoration: none; color: #fff; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
+        .nav-link { text-decoration: none; color: #fff; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; border: 1px solid var(--primary-blue); padding: 8px 15px; border-radius: 4px; }
 
-        /* HERO - VAULT EXCLUSIVE */
+        /* VAULT HERO - ZERO TOP MARGIN TO REMOVE WHITE SPOT */
         .vault-hero {
-            width: 100%; text-align: center; padding: 120px 20px; box-sizing: border-box;
-            background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center; border-bottom: 1px solid var(--border);
+            width: 100%; text-align: center; padding: 100px 5% 150px; box-sizing: border-box;
+            background: linear-gradient(135deg, rgba(0, 18, 32, 0.9), rgba(0, 40, 70, 0.8)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center; margin-top: 0;
         }
-        .status-badge { display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid var(--primary-blue); border-radius: 50px; color: var(--primary-blue); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 2px; }
+        .status-badge { display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid var(--primary-blue); border-radius: 50px; color: var(--primary-blue); font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 2px; }
         
-        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); letter-spacing: -1px; margin: 0; font-weight: 900; text-transform: uppercase; }
-        .hero-sub { font-size: 1.2rem; color: #b0c4de; max-width: 700px; margin: 20px auto 40px; }
+        h1 { font-size: clamp(2rem, 8vw, 4rem); letter-spacing: -1px; margin: 0; font-weight: 900; text-transform: uppercase; line-height: 1; }
+        .hero-sub { font-size: 1.2rem; color: #b0c4de; max-width: 800px; margin: 25px auto 40px; font-weight: 400; }
 
-        /* CONTENT GRID */
-        .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: -50px auto 100px; padding: 0 5%; }
-        .v-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(20px); padding: 40px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s; }
-        .v-card:hover { border-color: var(--primary-blue); background: rgba(255,255,255,0.08); }
-        .v-card i { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 25px; display: block; }
-        .v-card h3 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-        .v-card p { color: #ccc; font-size: 0.95rem; }
+        /* CORRECTED CARDS - "THEY FIND IT" LOGIC */
+        .vault-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1200px; margin: -80px auto 80px; padding: 0 5%; }
+        .v-card { background: rgba(255,255,255,0.07); backdrop-filter: blur(30px); padding: 40px; border-radius: 12px; border: 1px solid var(--border); transition: 0.3s; }
+        .v-card i { font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px; display: block; }
+        .v-card h3 { text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; font-size: 1.2rem; color: #fff; }
+        .v-card p { color: #b0c4de; font-size: 0.95rem; line-height: 1.6; }
 
-        /* WAITLIST FORM */
-        .form-section { max-width: 600px; margin: 0 auto 100px; text-align: center; padding: 0 5%; }
-        .form-wrap { background: rgba(255,255,255,1); color: var(--text-dark); padding: 50px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        /* FORM SECTION */
+        .form-section { background: #fff; color: var(--text-dark); padding: 100px 5%; width: 100%; box-sizing: border-box; text-align: center; }
+        .form-wrap { max-width: 600px; margin: 0 auto; padding: 50px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #eee; }
         input { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .submit-btn:hover { background: #0056b3; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 15px; text-transform: uppercase; transition: 0.3s; }
 
-        @media (max-width: 768px) { .header-container .nav-right { display: none; } }
+        @media (max-width: 768px) { .header-container .nav-right { display: none; } .vault-grid { margin-top: 20px; } }
     </style>
 </head>
 <body>
@@ -78,44 +75,43 @@
     </div>
 
     <section class="vault-hero">
-        <div class="status-badge"><i class="fa-solid fa-circle-dot"></i> Phase 1 Beta Live</div>
+        <div class="status-badge">Phase 1 Beta Live</div>
         <h1>The Vault Protocol<span style="color:var(--primary-blue);">.</span></h1>
-        <p class="hero-sub">The proprietary data engine built on 16 years of foreclosure logic. We find the equity. You fund the deal.</p>
-        <a href="#join" class="submit-btn" style="max-width: 300px; display: inline-block; text-decoration: none;">Request Beta Access</a>
+        <p class="hero-sub">The tools you need to identify high-equity distressed assets. Use our proprietary foreclosure logic to find the gap, then bring the deal to us for priority funding.</p>
     </section>
 
     <div class="vault-grid">
         <div class="v-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>NED Scrapers</h3>
-            <p>Live automation of Notice of Election & Demand filings across Colorado Front Range. Identify distress 14 days before the general public.</p>
+            <i class="fa-solid fa-satellite-dish"></i>
+            <h3>Automated Discovery</h3>
+            <p>Access live NED and COP data scrapers. We provide the raw intel—you use your local expertise to identify the winning scenario.</p>
         </div>
         <div class="v-card">
-            <i class="fa-solid fa-magnifying-glass-chart"></i>
-            <h3>Equity Gap Math</h3>
-            <p>Automated forensic underwriting that calculates the spread between debt, ARV, and repair costs instantly.</p>
+            <i class="fa-solid fa-calculator"></i>
+            <h3>Principal Logic</h3>
+            <p>Apply 16 years of foreclosure math to your discoveries. Calculate the "Equity Gap" exactly how we underwrite it as a Principal.</p>
         </div>
         <div class="v-card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Priority Funding</h3>
-            <p>Vault members move to the front of the intake queue. 24-hour principal review on all identified assets.</p>
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Direct Funding</h3>
+            <p>Once you find a deal that fits the Vault profile, submit it through this terminal for 24-hour priority underwriting and deployment.</p>
         </div>
     </div>
 
-    <section id="join" class="form-section">
+    <section class="form-section">
         <div class="form-wrap">
-            <h2 style="margin-top: 0; font-weight: 900;">Join the Waitlist</h2>
-            <p style="color: var(--gray-sub); margin-bottom: 30px;">Access is currently limited to active partners in FL & CO.</p>
+            <h2 style="margin-top: 0; font-weight: 900; text-transform: uppercase;">Request Access</h2>
+            <p style="color: var(--gray-sub); margin-bottom: 30px;">Access to our data terminal is currently limited to active investors in Florida and Colorado.</p>
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <input type="text" name="full_name" placeholder="Full Name" required>
                 <input type="email" name="email" placeholder="Professional Email" required>
-                <input type="text" name="market" placeholder="Primary Market (e.g. Pinellas County / Arvada)" required>
-                <button type="submit" class="submit-btn">Request Access</button>
+                <input type="text" name="market" placeholder="Your Primary Market (FL or CO)" required>
+                <button type="submit" class="submit-btn">Request Logic Access</button>
             </form>
         </div>
     </section>
 
-    <footer style="padding: 60px 5%; text-align: center; color: #555; font-size: 0.8rem; border-top: 1px solid var(--border);">
+    <footer style="padding: 60px 5%; text-align: center; color: #b0c4de; font-size: 0.8rem;">
         PROPRIETARY DATA | SUMMIT COAST CAPITAL | © 2026
     </footer>
 
