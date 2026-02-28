@@ -111,7 +111,6 @@
     </style>
 </head>
 <body>
-
     <nav>
         <div class="logo"><span>Summit</span> Coast Capital</div>
         <ul>
@@ -191,14 +190,13 @@
             const msg = document.getElementById('resultMessage');
 
             if(!addr) { alert("Please provide an address."); return; }
-
+            
             btn.innerText = "Underwriting...";
             btn.disabled = true;
             msg.innerText = "Consulting the Vault...";
-            msg.style.color = var(--primary-blue);
+            msg.style.color = "#007bff";
 
             try {
-                // Point this to your Replit URL after publishing
                 const response = await fetch('/analyze', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
@@ -211,7 +209,7 @@
                     msg.style.color = "#28a745";
                 } else {
                     msg.innerText = "Analysis Complete: Property does not meet 30% Equity threshold.";
-                    msg.style.color = var(--accent-red);
+                    msg.style.color = "#ff4d4d";
                 }
             } catch (e) {
                 msg.innerText = "System Error. Please try again or contact a principal.";
