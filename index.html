@@ -5,144 +5,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summit Coast Capital | Forensic Real Estate Underwriting</title>
     <style>
-        /* BRAND COLORS & BASE STYLES */
+        /* BRAND COLOR PALETTE */
+        :root {
+            --navy: #001220;
+            --navy-light: #001c30;
+            --primary-blue: #007bff;
+            --accent-red: #ff4d4d;
+            --text-gray: #e0e0e0;
+        }
+
         html { scroll-behavior: smooth; }
         body { 
             margin: 0; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #001220; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--navy); 
             color: white; 
+            line-height: 1.6;
         }
 
         /* NAVIGATION */
         nav {
-            background-color: #001220;
-            padding: 20px;
+            background-color: var(--navy);
+            padding: 15px 5%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid #007bff;
+            border-bottom: 1px solid var(--primary-blue);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
-        .logo span { color: #007bff; }
-        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
-        nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        nav a:hover { color: #007bff; }
+        .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: 1px; text-transform: uppercase; }
+        .logo span { color: var(--primary-blue); }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav a { color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--primary-blue); }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
-            padding: 100px 20px;
+            padding: 120px 20px;
             text-align: center;
-            background: linear-gradient(to bottom, #001220, #001c30);
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
         }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #007bff; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; font-weight: 800; }
+        .hero p { color: var(--primary-blue); font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-top: 0; }
 
-        /* ABOUT SECTION */
-        .section-padding { padding: 80px 20px; }
-        #about { background-color: #001220; text-align: center; }
-        .container { max-width: 1000px; margin: auto; }
-        .about-text { font-size: 1.1rem; line-height: 1.8; color: #e0e0e0; }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        .section-padding { padding: 90px 0; }
 
-        /* COMPARISON SECTION */
-        #comparison { background-color: #001c30; }
-        .flex-container { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 40px; }
-        .card { 
-            flex: 1; 
-            min-width: 320px; 
+        /* FORENSIC FORM SECTION */
+        #analyze { background-color: var(--navy-light); border-top: 1px solid #333; }
+        .form-box { 
+            max-width: 600px; 
+            margin: 40px auto; 
+            background: var(--navy); 
             padding: 40px; 
             border-radius: 12px; 
-            background: rgba(255,255,255,0.03); 
+            border: 1px solid var(--primary-blue); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .form-input { 
+            width: 100%; 
+            padding: 15px; 
+            border-radius: 6px; 
             border: 1px solid #333; 
-        }
-        .summit-card { border: 2px solid #007bff; background: rgba(0, 123, 255, 0.05); }
-        .card h3 { font-size: 1.8rem; margin-top: 0; border-bottom: 2px solid; padding-bottom: 15px; }
-        .bank-title { color: #ff4d4d; border-color: #ff4d4d; }
-        .summit-title { color: #007bff; border-color: #007bff; }
-        .card ul { padding: 0; list-style: none; line-height: 2.5; font-size: 1.1rem; }
-
-        /* CONTACT SECTION */
-        #contact { background-color: #001220; text-align: center; }
-        .btn { 
-            background-color: #007bff; 
+            background: #000; 
             color: white; 
-            padding: 15px 40px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border-radius: 5px; 
-            display: inline-block;
-            margin-top: 20px;
+            margin-bottom: 20px; 
+            box-sizing: border-box; 
+            font-size: 1rem;
         }
+        .form-btn { 
+            width: 100%; 
+            background: var(--primary-blue); 
+            color: white; 
+            padding: 18px; 
+            border: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .form-btn:hover { background: #0056b3; transform: translateY(-2px); }
+        #resultMessage { margin-top: 20px; font-weight: bold; font-size: 1.1rem; }
+
+        /* COMPARISON CARDS */
+        .flex-container { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 50px; }
+        .card { 
+            flex: 1; 
+            min-width: 300px; 
+            padding: 40px; 
+            border-radius: 12px; 
+            background: rgba(255,255,255,0.02); 
+            border: 1px solid #222; 
+        }
+        .summit-card { border: 2px solid var(--primary-blue); background: rgba(0, 123, 255, 0.04); }
+        .card h3 { font-size: 1.8rem; margin: 0 0 20px 0; padding-bottom: 15px; border-bottom: 2px solid; }
+        .bank-title { color: var(--accent-red); border-color: var(--accent-red); }
+        .summit-title { color: var(--primary-blue); border-color: var(--primary-blue); }
+        .card ul { padding: 0; list-style: none; line-height: 2.8; font-weight: 500; }
+
+        footer { text-align: center; padding: 60px 20px; color: #555; font-size: 0.8rem; border-top: 1px solid #222; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo"><span>SUMMIT</span> COAST CAPITAL</div>
+        <div class="logo"><span>Summit</span> Coast Capital</div>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#comparison">Us vs. Banks</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#comparison">Us vs Banks</a></li>
+            <li><a href="#analyze">Analyze</a></li>
         </ul>
     </nav>
 
     <section id="home" class="hero">
-        <h1>Protect Your Equity.</h1>
-        <p>Strategic Liquidity Solutions for Distressed Homeowners</p>
+        <div class="container">
+            <h1>Protect Your Equity.</h1>
+            <p>Strategic Liquidity for Distressed Assets</p>
+        </div>
+    </section>
+
+    <section id="analyze" class="section-padding">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: var(--primary-blue); font-size: 2.2rem;">Live Forensic Analysis</h2>
+            <p style="color: #bbb;">Submit your address to check for Equity Protection eligibility instantly.</p>
+            
+            <div class="form-box">
+                <input type="text" id="propAddr" class="form-input" placeholder="Property Address (e.g. 123 Main St, Arvada, CO)">
+                <button onclick="runAnalysis()" id="analyzeBtn" class="form-btn">Analyze Property</button>
+                <div id="resultMessage"></div>
+            </div>
+        </div>
     </section>
 
     <section id="about" class="section-padding">
         <div class="container">
-            <h2 style="color: #007bff; font-size: 2.5rem;">Forensic Underwriting. Personal Solutions.</h2>
-            <p class="about-text">
-                At Summit Coast Capital, we specialize in forensic real estate underwriting. While traditional banks look for reasons to say "No," we look for the equity and the story behind the property. Our mission is to provide liquidity and solutions for homeowners in distress, ensuring that the equity they've built over years isn't lost to a cold, corporate foreclosure process.
-            </p>
+            <div style="max-width: 800px; margin: auto; text-align: center;">
+                <h2 style="color: var(--primary-blue); font-size: 2.2rem;">Our Forensic Approach</h2>
+                <p style="font-size: 1.2rem; color: var(--text-gray);">
+                    At Summit Coast Capital, we specialize in forensic real estate underwriting. While traditional banks look for reasons to say "No," we look for the equity and the story behind the property. We provide homeowners in distress with the liquidity needed to prevent corporate foreclosure.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="comparison" class="section-padding">
+    <section id="comparison" class="section-padding" style="background-color: var(--navy-light);">
         <div class="container">
-            <h2 style="text-align: center; color: #007bff; font-size: 2.2rem;">Why Summit Coast Capital?</h2>
-            
+            <h2 style="text-align: center; color: var(--primary-blue); font-size: 2.2rem;">The Summit Advantage</h2>
             <div class="flex-container">
                 <div class="card">
-                    <h3 class="bank-title">The Big Banks</h3>
+                    <h3 class="bank-title">Big Banks</h3>
                     <ul>
-                        <li>❌ 45-60 Day Closing Cycles</li>
-                        <li>❌ Predatory Foreclosure Tactics</li>
-                        <li>❌ Rigid "Box" Underwriting</li>
-                        <li>❌ Zero Personal Support</li>
+                        <li>❌ 60+ Day Closing Window</li>
+                        <li>❌ Predatory Foreclosure Cycles</li>
+                        <li>❌ Algorithmic Denial Bots</li>
+                        <li>❌ Zero Human Accountability</li>
                     </ul>
                 </div>
-
                 <div class="card summit-card">
                     <h3 class="summit-title">Summit Coast</h3>
                     <ul>
-                        <li>✅ Fast 7-14 Day Funding</li>
-                        <li>✅ Equity Protection Strategies</li>
-                        <li>✅ Creative Financing Solutions</li>
-                        <li>✅ Direct Access to Principals</li>
+                        <li>✅ 7-14 Day Expedited Funding</li>
+                        <li>✅ Equity Preservation Shield</li>
+                        <li>✅ Creative Forensic Solutions</li>
+                        <li>✅ Direct Principal Access</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <h2>Ready to secure your property's future?</h2>
-            <p>Our principals are standing by to review your file.</p>
-            <a href="mailto:samuel@summitcoastcapital.com" class="btn">REQUEST A REVIEW</a>
-        </div>
-    </section>
-
-    <footer style="text-align: center; padding: 40px; color: #666; font-size: 0.9rem;">
-        &copy; 2026 Summit Coast Capital. All Rights Reserved.
+    <footer>
+        &copy; 2026 Summit Coast Capital. All Rights Reserved. <br>
+        Confidential Forensic Underwriting Services.
     </footer>
 
+    <script>
+        async function runAnalysis() {
+            const addr = document.getElementById('propAddr').value;
+            const btn = document.getElementById('analyzeBtn');
+            const msg = document.getElementById('resultMessage');
+
+            if(!addr) { alert("Please provide an address."); return; }
+
+            btn.innerText = "Underwriting...";
+            btn.disabled = true;
+            msg.innerText = "Consulting the Vault...";
+            msg.style.color = var(--primary-blue);
+
+            try {
+                // Point this to your Replit URL after publishing
+                const response = await fetch('/analyze', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({address: addr})
+                });
+                const data = await response.json();
+                
+                if(data.priority) {
+                    msg.innerText = "✅ HIGH EQUITY DETECTED: You qualify for immediate review.";
+                    msg.style.color = "#28a745";
+                } else {
+                    msg.innerText = "Analysis Complete: Property does not meet 30% Equity threshold.";
+                    msg.style.color = var(--accent-red);
+                }
+            } catch (e) {
+                msg.innerText = "System Error. Please try again or contact a principal.";
+            }
+            btn.innerText = "Analyze Property";
+            btn.disabled = false;
+        }
+    </script>
 </body>
 </html>
