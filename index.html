@@ -20,53 +20,55 @@
         /* HEADER & UTILITY */
         .utility-bar { width: 100%; background: var(--navy); color: white; padding: 8px 5%; display: flex; justify-content: flex-end; font-size: 0.8rem; font-weight: 600; box-sizing: border-box; }
         .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
-        
-        .header-container { 
-            width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
-            background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; 
-        }
-        .logo-img { width: 180px; height: auto; } /* Scaled down for mobile safety */
-        .nav-right { display: flex; align-items: center; gap: 15px; }
-        .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+        .header-container { width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; }
+        .logo-img { width: 220px; height: auto; }
+        .nav-right { display: flex; align-items: center; gap: 25px; }
+        .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
 
         /* HERO & SLOGAN */
-        .hero { width: 100%; text-align: center; padding: 80px 20px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; box-sizing: border-box; }
-        h1 { font-size: clamp(1.8rem, 8vw, 4.5rem); font-weight: 900; color: var(--navy); margin: 0; line-height: 1.1; }
+        .hero { width: 100%; text-align: center; padding: 120px 20px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
+        h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); font-weight: 900; color: var(--navy); margin: 0; }
         .accent { color: var(--primary-blue); }
-        .slogan-highlight { font-size: 1.1rem; color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block; }
+        .slogan-highlight { font-size: 1.3rem; color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block; }
 
-        /* LENDING TERMINAL */
-        .section { max-width: 1200px; width: 92%; margin: 40px auto; padding: 20px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .view-btn { margin-top: 20px; padding: 12px 40px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; }
+        /* LENDING TERMINAL - CENTERED BUTTONS */
+        .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .view-btn { margin-top: 20px; padding: 12px 45px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: 800; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; }
+        .view-btn:hover { background: var(--primary-blue); color: white; }
 
         /* DATA COLLECTION TERMINAL */
-        .form-section { background: #f8f9fa; padding: 60px 5%; width: 100%; box-sizing: border-box; border-bottom: 1px solid var(--border); }
-        .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        input, textarea, select { width: 100%; padding: 15px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; /* Prevents iOS/Android zoom on focus */ }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 20px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; }
+        .form-section { background: #f8f9fa; padding: 100px 5%; width: 100%; box-sizing: border-box; border-bottom: 1px solid var(--border); }
+        .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 60px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; }
 
-        /* THE VAULT BOX */
+        /* THE VAULT - RESTORED TERMINAL LOOK */
         .vault-box {
-            max-width: 1200px; margin: 0 auto; padding: 60px 20px; color: white; text-align: center; border-radius: 20px; box-sizing: border-box;
-            background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9));
+            max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; box-sizing: border-box;
+            background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover; background-position: center; border: 1px solid rgba(0, 123, 255, 0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
         }
-        .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 25px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; margin-bottom: 15px; }
+        .vault-badge { display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid #007bff; border-radius: 50px; color: #007bff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
+        .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; transition: 0.3s; }
+        .pillar-card:hover { background: rgba(255,255,255,0.12); border-color: var(--primary-blue); transform: translateY(-3px); }
 
-        /* MOBILE OVERRIDES */
+        /* ANDROID/MOBILE FIXES */
         @media (max-width: 768px) {
-            .utility-bar { display: none; } /* Hide utility bar to save vertical space */
-            .header-container { padding: 10px 4%; }
-            .logo-img { width: 140px; }
+            .utility-bar { display: none; }
+            .header-container { padding: 10px 5%; }
+            .logo-img { width: 160px; }
             .nav-link { font-size: 0.7rem; gap: 10px; }
             .hero { padding: 60px 15px; }
-            .form-grid { grid-template-columns: 1fr; } /* Stack form inputs on mobile */
-            .form-wrap { padding: 25px 15px; }
-            .section { margin: 20px auto; }
-            h1 { font-size: 2.2rem; }
-            .vault-box { padding: 40px 15px; }
+            h1 { font-size: 2rem; }
+            .slogan-highlight { font-size: 0.9rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-wrap { padding: 30px 20px; }
+            .vault-box { padding: 50px 20px; border-radius: 0; }
+            .view-btn { width: 100%; box-sizing: border-box; }
         }
     </style>
 </head>
@@ -90,23 +92,18 @@
         <div class="slogan-highlight">WE APPROVE THE ASSET, NOT THE PERSON.</div>
     </div>
 
-    <section id="about" class="section" style="text-align:center;">
-        <h2 style="font-weight: 900; text-transform: uppercase; font-size: 1.8rem;">Our Forensic Approach</h2>
-        <p style="color:var(--gray-sub); font-size: 1rem; padding: 0 10px;">At Summit Coast Capital, we specialize in forensic real estate underwriting. We look for the equity and the story behind the property.</p>
-    </section>
-
     <section id="terminal" class="section">
         <div class="grid">
             <div class="card">
-                <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding.</p></div>
+                <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding. Underwritten on asset value.</p></div>
                 <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
             <div class="card">
-                <div><h3>DSCR Rental</h3><p>30-year fixed based on property cash flow.</p></div>
+                <div><h3>DSCR Rental</h3><p>30-year fixed based on property cash flow. No personal DTI required.</p></div>
                 <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
             <div class="card">
-                <div><h3>Bridge & Bailout</h3><p>Emergency capital for foreclosure/NED scenarios.</p></div>
+                <div><h3>Bridge & Bailout</h3><p>Principal-led emergency capital for foreclosure and NED scenarios.</p></div>
                 <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
         </div>
@@ -114,8 +111,8 @@
 
     <section id="deal-submission" class="form-section">
         <div class="form-wrap">
-            <h2 style="text-align: center; font-weight: 900; text-transform: uppercase; font-size: 1.6rem; margin-top: 0;">Underwriting Terminal</h2>
-            <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
+            <h2 style="text-align: center; font-weight: 900; text-transform: uppercase;">Asset Underwriting Terminal</h2>
+            <form action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
@@ -123,7 +120,7 @@
                 <input type="email" name="email" placeholder="Professional Email" required>
                 <div class="form-grid">
                     <select name="loan_type" required>
-                        <option value="" disabled selected>Program</option>
+                        <option value="" disabled selected>Program Selection</option>
                         <option value="FixFlip">Fix & Flip</option>
                         <option value="DSCR">DSCR Rental</option>
                         <option value="Bridge">Bridge / Bailout</option>
@@ -136,32 +133,35 @@
                         <option value="Sub650">Sub-650</option>
                     </select>
                 </div>
-                <input type="text" name="address" placeholder="Property Address (FL or CO)" required>
-                <textarea name="situation_story" placeholder="Briefly describe the situation..." rows="5" required></textarea>
-                <button type="submit" class="submit-btn">INITIATE UNDERWRITE</button>
+                <input type="text" name="address" placeholder="Property Address" required>
+                <textarea name="situation_story" placeholder="Describe the situation..." rows="5" required></textarea>
+                <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
             </form>
         </div>
     </section>
 
     <section class="section">
         <div class="vault-box">
-            <h2 style="font-size: 1.8rem; font-weight: 900; text-transform: uppercase;">The Vault Protocol<span class="accent">.</span></h2>
-            <div style="margin: 30px 0;">
+            <div class="vault-badge"><i class="fa-solid fa-lock"></i> Secured Data Terminal</div>
+            <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; text-transform: uppercase;">The Vault Protocol<span class="accent">.</span></h2>
+            <div class="grid" style="margin-top: 40px; margin-bottom: 40px;">
                 <div class="pillar-card">
-                    <h3 style="color:#fff; margin:0; font-size:1.1rem;">Automated Scrapers</h3>
-                    <p style="color:#b0c4de; font-size:0.85rem; margin:5px 0 0 0;">Access live NED and COP data instantly.</p>
+                    <i class="fa-solid fa-satellite-dish" style="color:var(--primary-blue); font-size:1.5rem; margin-bottom:15px; display:block;"></i>
+                    <h3 style="color:#fff; text-transform: uppercase;">Automated Scrapers</h3>
+                    <p style="color:#b0c4de; font-size:0.85rem;">Live NED and COP data 14 days before the general public.</p>
                 </div>
                 <div class="pillar-card">
-                    <h3 style="color:#fff; margin:0; font-size:1.1rem;">Equity Gap Analysis</h3>
-                    <p style="color:#b0c4de; font-size:0.85rem; margin:5px 0 0 0;">Calculate spreads between debt and ARV.</p>
+                    <i class="fa-solid fa-calculator" style="color:var(--primary-blue); font-size:1.5rem; margin-bottom:15px; display:block;"></i>
+                    <h3 style="color:#fff; text-transform: uppercase;">Equity Gap Analysis</h3>
+                    <p style="color:#b0c4de; font-size:0.85rem;">Instantly calculate spreads between debt, ARV, and liquidation value.</p>
                 </div>
             </div>
-            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:18px 40px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; font-size: 0.9rem;">Reserve Access — $497</a>
+            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase;">Reserve Access — $497</a>
         </div>
     </section>
 
-    <footer style="padding: 40px 5%; text-align: center; color: #999; font-size: 0.75rem; border-top: 1px solid #eee;">
-        © 2026 SUMMIT COAST CAPITAL<br>(720) 422-1571
+    <footer style="text-align: center; padding: 60px 5%; color: #999; font-size: 0.8rem; border-top: 1px solid #eee;">
+        © 2026 SUMMIT COAST CAPITAL | (720) 422-1571
     </footer>
 </body>
 </html>
