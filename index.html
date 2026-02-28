@@ -48,9 +48,7 @@
         .card { 
             background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); 
             border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; align-items: center; text-align: center; 
-            transition: transform 0.3s ease;
         }
-        .card:hover { transform: translateY(-5px); }
         .view-btn { margin-top: 20px; padding: 12px 40px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; }
         .view-btn:hover { background: var(--primary-blue); color: white; }
 
@@ -58,27 +56,25 @@
         .form-section { background: #f8f9fa; padding: clamp(60px, 10vw, 100px) 5%; width: 100%; box-sizing: border-box; border-bottom: 1px solid var(--border); }
         .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: clamp(30px, 5vw, 60px); border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; /* Prevents mobile zoom */ }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(0,123,255,0.3); }
+        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
+        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; }
 
-        /* THE VAULT - PREMIUM MOBILE READY */
+        /* THE VAULT */
         .vault-box { 
             max-width: 1200px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) 30px; color: white; text-align: center; border-radius: 24px; 
             background: linear-gradient(135deg, rgba(0, 18, 32, 0.98), rgba(0, 40, 70, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover; background-position: center; border: 1px solid rgba(0, 123, 255, 0.3);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
         .vault-badge { display: inline-block; padding: 6px 16px; background: rgba(0,123,255,0.2); border: 1px solid var(--primary-blue); border-radius: 50px; color: var(--primary-blue); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
         .pillar-card { 
             text-decoration: none; background: rgba(255,255,255,0.06); padding: 30px; border-radius: 12px; 
             border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; transition: 0.3s; 
         }
-        .pillar-card:hover { border-color: var(--primary-blue); background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+        .pillar-card:hover { border-color: var(--primary-blue); transform: translateY(-3px); }
 
         /* MOBILE OVERRIDES */
         @media (max-width: 768px) { 
             .utility-bar { display: none; }
-            .nav-link { font-size: 0.75rem; }
             .form-grid { grid-template-columns: 1fr; } 
             .view-btn { width: 100%; }
             .vault-box { border-radius: 0; width: 100vw; margin-left: -4%; }
@@ -106,25 +102,20 @@
         <div class="slogan-highlight">WE APPROVE THE ASSET, NOT THE PERSON.</div>
     </div>
 
-    <section id="about" class="section" style="text-align:center;">
-        <h2 style="font-weight: 900; text-transform: uppercase;">Our Forensic Approach</h2>
-        <p style="max-width:800px; margin:0 auto; font-size:1.1rem; color:var(--gray-sub);">At Summit Coast Capital, we specialize in forensic real estate underwriting. While traditional banks look for reasons to say "No," we look for the equity and the story behind the property.</p>
-    </section>
-
     <section id="terminal" class="section">
         <h2 style="text-align: center; font-weight: 800; margin-bottom: 50px; text-transform: uppercase; color: var(--navy);">Lending Terminal</h2>
         <div class="grid">
             <div class="card">
                 <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding. Underwritten on asset value.</p></div>
-                <a href="#deal-submission" class="view-btn">VIEW</a>
+                <a href="fix-and-flip.html" class="view-btn">VIEW</a>
             </div>
             <div class="card">
                 <div><h3>DSCR Rental</h3><p>30-year fixed based on property cash flow. No personal DTI required.</p></div>
-                <a href="#deal-submission" class="view-btn">VIEW</a>
+                <a href="dscr.html" class="view-btn">VIEW</a>
             </div>
             <div class="card">
                 <div><h3>Bridge & Bailout</h3><p>Principal-led emergency capital for foreclosure and NED scenarios.</p></div>
-                <a href="#deal-submission" class="view-btn">VIEW</a>
+                <a href="bridge.html" class="view-btn">VIEW</a>
             </div>
         </div>
     </section>
@@ -132,7 +123,6 @@
     <section id="deal-submission" class="form-section">
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: 2.2rem; text-transform: uppercase;">Asset Underwriting Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Submit your scenario for a 24-hour Forensic Review by the Principal.</p>
             <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
@@ -179,7 +169,7 @@
                 </a>
             </div>
 
-            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.3);">Reserve Access — $497</a>
+            <a href="the-vault/index.html" style="display:inline-block; background:var(--primary-blue); color:white; padding:22px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase;">Reserve Access — $497</a>
         </div>
     </section>
 
