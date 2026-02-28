@@ -32,23 +32,27 @@
         .accent { color: var(--primary-blue); }
         .slogan-highlight { font-size: clamp(0.9rem, 2.5vw, 1.3rem); color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block; }
 
-        /* LENDING TERMINAL */
+        /* TRUST BAR - 16YRS / 5-7 DAY CLOSE */
+        .trust-bar { background: #f8f9fa; padding: 20px 5%; display: flex; justify-content: center; gap: clamp(20px, 10vw, 100px); border-bottom: 1px solid var(--border); }
+        .trust-item { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--navy); text-transform: uppercase; font-size: clamp(0.7rem, 2vw, 0.9rem); }
+        .trust-item i { color: var(--primary-blue); font-size: 1.2rem; }
+
+        /* ABOUT */
         .section { max-width: 1200px; width: 92%; margin: 40px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: #fff; padding: 40px 25px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; align-items: center; text-align: center; }
         .view-btn { margin-top: 20px; padding: 12px 40px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; width: fit-content; }
-        .view-btn:hover { background: var(--primary-blue); color: white; }
 
-        /* DATA COLLECTION TERMINAL */
-        .form-section { background: #f8f9fa; padding: clamp(50px, 10vw, 100px) 5%; width: 100%; box-sizing: border-box; border-bottom: 1px solid var(--border); }
+        /* DATA FORM */
+        .form-section { background: #f8f9fa; padding: clamp(50px, 10vw, 100px) 5%; border-bottom: 1px solid var(--border); }
         .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: clamp(25px, 5vw, 60px); border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; /* Stop auto-zoom */ }
+        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; }
 
-        /* THE VAULT */
+        /* VAULT */
         .vault-box { max-width: 1200px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) 30px; color: white; text-align: center; border-radius: 24px; background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9)); position: relative; }
-        .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; transition: 0.3s; color: inherit; }
+        .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; color: inherit; }
 
         /* MOBILE FIXES */
         @media (max-width: 768px) { 
@@ -57,7 +61,7 @@
             .form-grid { grid-template-columns: 1fr; } 
             .view-btn { width: 100%; }
             .vault-box { border-radius: 0; width: 100vw; margin-left: calc(-50vw + 50%); }
-            .section { padding: 0; margin: 30px auto; }
+            .trust-bar { flex-direction: column; align-items: center; gap: 15px; }
         }
     </style>
 </head>
@@ -82,9 +86,16 @@
         <div class="slogan-highlight">WE APPROVE THE ASSET, NOT THE PERSON.</div>
     </div>
 
+    <div class="trust-bar">
+        <div class="trust-item"><i class="fa-solid fa-calendar-check"></i> 16 Years Sales & Foreclosure Exp.</div>
+        <div class="trust-item"><i class="fa-solid fa-bolt"></i> 5-7 Day Fast Closings</div>
+    </div>
+
     <section id="about" class="section" style="text-align:center;">
         <h2 style="font-weight: 900; text-transform: uppercase;">Our Forensic Approach</h2>
-        <p style="max-width:800px; margin:0 auto; font-size:1.1rem; color:var(--gray-sub);">At Summit Coast Capital, we specialize in forensic real estate underwriting. While traditional banks look for reasons to say "No," we look for the equity and the story behind the property.</p>
+        <p style="max-width:850px; margin:0 auto; font-size:1.1rem; color:var(--gray-sub);">
+            At Summit Coast Capital, we specialize in forensic real estate underwriting. Leveraging over <strong>16 years of experience</strong> in sales and foreclosures, we provide homeowners and investors the liquidity to bypass institutional red tape. While banks look for "No," we look for the story and the equity.
+        </p>
     </section>
 
     <section id="terminal" class="section">
@@ -143,7 +154,6 @@
                 <i class="fa-solid fa-lock"></i> Secured Data Terminal
             </div>
             <h2 style="font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 900; margin: 0 0 40px 0; text-transform: uppercase; line-height: 1;">The Vault Protocol<span style="color:#007bff;">.</span></h2>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
                 <div class="pillar-card">
                     <i class="fa-solid fa-satellite-dish" style="color: #007bff; font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
