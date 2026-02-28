@@ -23,10 +23,7 @@
             line-height: 1.6; overflow-x: hidden;
         }
 
-        /* HEADER (MOBILE-FIRST) */
-        .utility-bar { width: 100%; background: var(--navy); color: white; padding: 6px 5%; display: flex; justify-content: flex-end; font-size: 0.75rem; font-weight: 600; }
-        .utility-bar a { color: white; text-decoration: none; margin-left: 15px; display: flex; align-items: center; gap: 5px; }
-        
+        /* HEADER */
         .header-container { 
             width: 100%; padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; 
             background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000;
@@ -35,13 +32,14 @@
         .nav-right { display: flex; align-items: center; gap: clamp(8px, 2vw, 20px); }
         .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
 
-        /* HERO & SLOGAN */
+        /* HERO */
         .hero { 
             width: 100%; text-align: center; padding: clamp(60px, 10vh, 120px) 20px; 
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); 
             background-size: cover; background-position: center; 
         }
         h1 { font-size: clamp(2rem, 7vw, 4rem); font-weight: 900; color: var(--navy); margin: 0; line-height: 1.1; }
+        .accent { color: var(--primary-blue); }
         .slogan-highlight { font-size: clamp(0.9rem, 2.5vw, 1.2rem); color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block; }
 
         /* LENDING TERMINAL */
@@ -60,57 +58,32 @@
         input, select, textarea { width: 100%; padding: 16px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; background: #fdfdfd; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 20px; font-size: 1.1rem; font-weight: 900; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 20px; text-transform: uppercase; }
 
-        /* --- THE VAULT: 1:1 MIRROR DESIGN --- */
-        .vault-container { padding: 100px 5%; background: #ffffff; }
+        /* VAULT MIRROR DESIGN */
         .vault-box {
-            max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; position: relative;
+            max-width: 1100px; margin: 0 auto; padding: 80px 30px; color: white; text-align: center; border-radius: 24px; position: relative;
             background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center; border: 1px solid rgba(0, 123, 255, 0.2);
             box-shadow: 0 20px 50px rgba(0,0,0,0.2);
         }
-        .vault-badge { 
-            display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid #007bff; 
-            border-radius: 50px; color: #007bff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; 
-        }
-        .vault-title { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; margin: 0 0 40px 0; text-transform: uppercase; line-height: 1; }
-        
-        .pillar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
-        .pillar-card { 
-            text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; 
-            border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; text-align: left; display: block;
-        }
+        .vault-badge { display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid #007bff; border-radius: 50px; color: #007bff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px; }
+        .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; }
         .pillar-card i { color: #007bff; font-size: 1.5rem; margin-bottom: 15px; display: block; }
-        .pillar-card h3 { color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; font-weight: 800; }
-        .pillar-card p { color: #b0c4de; font-size: 0.85rem; margin: 0; line-height: 1.4; }
-        .pillar-card:hover { background: rgba(255,255,255,0.12); border-color: var(--primary-blue); transform: translateY(-3px); }
-
-        .vault-cta { 
-            display: inline-block; background: #007bff; color: white; padding: 22px 60px; text-decoration: none; 
-            border-radius: 4px; font-weight: 900; text-transform: uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.3); 
-        }
 
         @media (max-width: 768px) {
-            .utility-bar { display: none; }
             .header-container { padding: 10px 4%; }
             .logo-img { width: 130px; }
             .nav-link { font-size: 0.65rem; }
             .form-grid { grid-template-columns: 1fr; }
             .vault-box { border-radius: 0; width: 100vw; margin-left: calc(-50vw + 50%); padding: 60px 20px; }
-            .vault-cta { width: 100%; padding: 20px 10px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="utility-bar">
-        <a href="tel:7204221571"><i class="fa-solid fa-phone"></i> (720) 422-1571</a>
-        <a href="mailto:samuel@summitcoastcapital.com"><i class="fa-solid fa-envelope"></i> CONTACT PRINCIPAL</a>
-    </div>
-
     <div class="header-container">
         <a href="index.html"><img src="LOGO.png" alt="Summit Coast Capital" class="logo-img"></a>
         <div class="nav-right">
-            <a href="fix-and-flip.html" class="nav-link">Programs</a>
+            <a href="#terminal" class="nav-link">Programs</a>
             <a href="#deal-submission" class="nav-link">Submit</a>
             <a href="the-vault/index.html" class="nav-link" style="color:var(--primary-blue);">Vault</a>
         </div>
@@ -122,18 +95,19 @@
     </div>
 
     <section id="terminal" class="section">
+        <h2 style="text-align: center; font-weight: 900; text-transform: uppercase; color: var(--navy); margin-bottom: 50px;">Lending Terminal</h2>
         <div class="grid">
             <div class="card">
                 <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding. Underwritten on asset value.</p></div>
-                <a href="fix-and-flip.html" class="view-btn">VIEW</a>
+                <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
             <div class="card">
                 <div><h3>DSCR Rental</h3><p>30-year fixed based on property cash flow. No personal DTI required.</p></div>
-                <a href="dscr.html" class="view-btn">VIEW</a>
+                <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
             <div class="card">
                 <div><h3>Bridge & Bailout</h3><p>Principal-led emergency capital for foreclosure and NED scenarios.</p></div>
-                <a href="bridge.html" class="view-btn">VIEW</a>
+                <a href="#deal-submission" class="view-btn">VIEW</a>
             </div>
         </div>
     </section>
@@ -149,7 +123,7 @@
                 <input type="email" name="email" placeholder="Professional Email" required>
                 <div class="form-grid">
                     <select name="loan_type" required>
-                        <option value="" disabled selected>Program</option>
+                        <option value="" disabled selected>Program Selection</option>
                         <option value="FixFlip">Fix & Flip</option>
                         <option value="DSCR">DSCR Rental</option>
                         <option value="Bridge">Bridge / Bailout</option>
@@ -169,25 +143,23 @@
         </div>
     </section>
 
-    <section class="vault-container">
+    <section class="section">
         <div class="vault-box">
             <div class="vault-badge"><i class="fa-solid fa-lock"></i> Secured Data Terminal</div>
-            <h2 class="vault-title">The Vault Protocol<span style="color:#007bff;">.</span></h2>
-            
-            <div class="pillar-grid">
+            <h2 style="font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; margin: 0 0 40px 0; text-transform: uppercase;">The Vault Protocol<span style="color:#007bff;">.</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px;">
                 <a href="the-vault/index.html" class="pillar-card">
                     <i class="fa-solid fa-satellite-dish"></i>
-                    <h3>Automated Scrapers</h3>
-                    <p>Access live NED and COP data 14 days before the public in FL & CO.</p>
+                    <h3 style="color:#fff;">Automated Scrapers</h3>
+                    <p style="color:#b0c4de;">Live NED and COP data 14 days before the public.</p>
                 </a>
                 <a href="the-vault/index.html" class="pillar-card">
                     <i class="fa-solid fa-calculator"></i>
-                    <h3>Equity Gap Analysis</h3>
-                    <p>Apply Principal logic to calculate debt and liquidation value instantly.</p>
+                    <h3 style="color:#fff;">Equity Gap Analysis</h3>
+                    <p style="color:#b0c4de;">Calculate debt and liquidation value instantly.</p>
                 </a>
             </div>
-
-            <a href="the-vault/index.html" class="vault-cta">Reserve Access — $497</a>
+            <a href="the-vault/index.html" style="display:inline-block; background:#007bff; color:white; padding:22px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; width: 100%; box-sizing: border-box;">Reserve Access — $497</a>
         </div>
     </section>
 
