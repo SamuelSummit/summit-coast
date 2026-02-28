@@ -3,235 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit Coast Capital | Direct Private Lending FL & CO</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Summit Coast Capital | Forensic Real Estate Underwriting</title>
     <style>
-        :root { 
-            --primary-blue: #007bff; 
-            --navy: #001220; 
-            --light-bg: #ffffff; 
-            --text-dark: #1a1a1a; 
-            --gray-sub: #555; 
-            --border: #ececec; 
-        }
+        /* BRAND COLORS & BASE STYLES */
         html { scroll-behavior: smooth; }
-        body { margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; overflow-x: hidden; }
-
-        /* UTILITY BAR */
-        .utility-bar {
-            width: 100%; background: var(--navy); color: white; padding: 8px 5%;
-            display: flex; justify-content: flex-end; font-size: 0.8rem; font-weight: 600;
-            box-sizing: border-box; letter-spacing: 1px;
-        }
-        .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
-
-        /* HEADER */
-        .header-container { 
-            width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
-            background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box;
-        }
-        .logo-img { width: 220px; height: auto; display: block; }
-        .nav-right { display: flex; align-items: center; gap: 25px; }
-        .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
-        .contact-btn { 
-            background: var(--primary-blue); color: white !important; padding: 10px 20px; 
-            border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase;
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #001220; 
+            color: white; 
         }
 
-        /* HERO */
+        /* NAVIGATION */
+        nav {
+            background-color: #001220;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #007bff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-weight: bold; font-size: 1.5rem; letter-spacing: 1px; }
+        .logo span { color: #007bff; }
+        nav ul { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #007bff; }
+
+        /* HERO SECTION */
         .hero {
-            width: 100%; text-align: center; padding: 120px 20px; box-sizing: border-box;
-            background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #001220, #001c30);
         }
-        h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); letter-spacing: -1px; margin: 0; font-weight: 900; line-height: 1.1; color: var(--navy); }
-        .accent { color: var(--primary-blue); }
-        .tagline { font-size: 1.2rem; color: var(--navy); margin: 20px 0 30px 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
-        .cta-btn-hero { display: inline-block; padding: 18px 45px; font-size: 1.1rem; font-weight: 800; color: #fff; background: var(--primary-blue); border-radius: 4px; text-decoration: none; transition: 0.3s; text-transform: uppercase; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #007bff; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* TRUST BAR */
-        .trust-bar {
-            width: 100%; background: var(--navy); color: white; padding: 35px 20px;
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px; text-align: center; box-sizing: border-box;
+        /* ABOUT SECTION */
+        .section-padding { padding: 80px 20px; }
+        #about { background-color: #001220; text-align: center; }
+        .container { max-width: 1000px; margin: auto; }
+        .about-text { font-size: 1.1rem; line-height: 1.8; color: #e0e0e0; }
+
+        /* COMPARISON SECTION */
+        #comparison { background-color: #001c30; }
+        .flex-container { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 40px; }
+        .card { 
+            flex: 1; 
+            min-width: 320px; 
+            padding: 40px; 
+            border-radius: 12px; 
+            background: rgba(255,255,255,0.03); 
+            border: 1px solid #333; 
         }
-        .trust-item h3 { margin: 0; color: var(--primary-blue); font-size: 2rem; font-weight: 800; }
-        .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        .summit-card { border: 2px solid #007bff; background: rgba(0, 123, 255, 0.05); }
+        .card h3 { font-size: 1.8rem; margin-top: 0; border-bottom: 2px solid; padding-bottom: 15px; }
+        .bank-title { color: #ff4d4d; border-color: #ff4d4d; }
+        .summit-title { color: #007bff; border-color: #007bff; }
+        .card ul { padding: 0; list-style: none; line-height: 2.5; font-size: 1.1rem; }
 
-        /* SECTIONS */
-        .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .card { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
-        .loan-btn { margin-top: 20px; padding: 12px 20px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 6px; transition: 0.3s; text-transform: uppercase; }
-        .loan-btn:hover { background: var(--primary-blue); color: #fff; }
-
-        /* FORM SECTION */
-        .form-section { background: #f8f9fa; padding: 100px 5%; width: 100%; box-sizing: border-box; border-bottom: 1px solid var(--border); }
-        .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: 60px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 1rem; outline-color: var(--primary-blue); }
-        .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.2rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; transition: 0.3s; }
-        .submit-btn:hover { background: var(--navy); }
-
-        /* THE VAULT - EXACT INDEX SYNC */
-        .vault-section { padding: 100px 5%; background: #ffffff; width: 100%; box-sizing: border-box; }
-        .vault-box {
-            max-width: 1200px; margin: 0 auto; padding: 80px 40px; color: white; text-align: center; border-radius: 24px; box-sizing: border-box;
-            background: linear-gradient(135deg, rgba(0, 18, 32, 0.98), rgba(0, 40, 70, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover; background-position: center; border: 1px solid rgba(0, 123, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-        }
-        .v-pillar { background: rgba(255,255,255,0.03); padding: 40px 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); text-align: left; backdrop-filter: blur(10px); transition: 0.3s; }
-        .v-pillar:hover { border-color: var(--primary-blue); background: rgba(255,255,255,0.06); transform: translateY(-3px); }
-
-        @media (max-width: 768px) {
-            .nav-right, .utility-bar { display: none; }
-            .form-grid { grid-template-columns: 1fr; }
+        /* CONTACT SECTION */
+        #contact { background-color: #001220; text-align: center; }
+        .btn { 
+            background-color: #007bff; 
+            color: white; 
+            padding: 15px 40px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            display: inline-block;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="utility-bar">
-        <a href="tel:7204221571"><i class="fa-solid fa-phone"></i> (720) 422-1571</a>
-        <a href="mailto:samuel@summitcoastcapital.com"><i class="fa-solid fa-envelope"></i> CONTACT PRINCIPAL</a>
-    </div>
+    <nav>
+        <div class="logo"><span>SUMMIT</span> COAST CAPITAL</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#comparison">Us vs. Banks</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="header-container">
-        <a href="https://samuelsummit.github.io/summit-coast/">
-            <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
-        </a>
-        <div class="nav-right">
-            <a href="#deal-submission" class="nav-link">Submit Deal</a>
-            <a href="the-vault/index.html" class="nav-link">The Vault</a>
-            <a href="mailto:samuel@summitcoastcapital.com" class="contact-btn">Initiate Funding</a>
-        </div>
-    </div>
-
-    <div class="hero">
-        <h1>STOP CHASING BANKS<span class="accent">.</span><br>START CLOSING DEALS<span class="accent">.</span></h1>
-        <p class="tagline">Direct Asset-Based Funding | 5-7 Day Closings</p>
-        <a href="#deal-submission" class="cta-btn-hero">INITIATE FUNDING NOW</a>
-    </div>
-
-    <div class="trust-bar">
-        <div class="trust-item"><h3>16+ YEARS</h3><p>Foreclosure Logic</p></div>
-        <div class="trust-item"><h3>DIRECT</h3><p>Principal Capital</p></div>
-        <div class="trust-item"><h3>5-7 DAYS</h3><p>Avg Closing Speed</p></div>
-        <div class="trust-item"><h3>FL & CO</h3><p>Primary Markets</p></div>
-    </div>
-
-    <section class="section">
-        <h2 style="text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 50px; text-transform: uppercase; color: var(--navy);">Lending Terminal</h2>
-        <div class="grid">
-            <div class="card">
-                <div>
-                    <h3 style="text-transform: uppercase;">Fix & Flip</h3>
-                    <p style="color: var(--gray-sub);">90% Purchase / 100% Rehab funding. 5-7 day closings for high-equity acquisitions.</p>
-                </div>
-                <a href="fix-and-flip.html" class="loan-btn">View Leverage</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3 style="text-transform: uppercase;">DSCR Rental</h3>
-                    <p style="color: var(--gray-sub);">30-year fixed rates based on property cash flow. No DTI or tax verification.</p>
-                </div>
-                <a href="dscr.html" class="loan-btn">View Rates</a>
-            </div>
-            <div class="card">
-                <div>
-                    <h3 style="text-transform: uppercase;">Bridge & Bailout</h3>
-                    <p style="color: var(--gray-sub);">Principal-led emergency capital for foreclosure rescues and NED scenarios.</p>
-                </div>
-                <a href="bridge.html" class="loan-btn">View Logic</a>
-            </div>
-        </div>
+    <section id="home" class="hero">
+        <h1>Protect Your Equity.</h1>
+        <p>Strategic Liquidity Solutions for Distressed Homeowners</p>
     </section>
 
-    <section id="deal-submission" class="form-section">
-        <div class="form-wrap">
-            <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: 2.2rem; text-transform: uppercase;">Asset Underwriting Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Submit your scenario for a 24-hour Forensic Review by the Principal.</p>
-            <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
-                <div class="form-grid">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Professional Email" required>
-                <div class="form-grid">
-                    <select name="loan_type" required>
-                        <option value="" disabled selected>Select Program</option>
-                        <option value="FixFlip">Fix & Flip</option>
-                        <option value="DSCR">DSCR Rental</option>
-                        <option value="Bridge">Bridge / Bailout</option>
-                    </select>
-                    <select name="credit_estimate" required>
-                        <option value="" disabled selected>Credit Tier</option>
-                        <option value="740+">740+ (Tier 1)</option>
-                        <option value="700-739">700-739 (Tier 2)</option>
-                        <option value="650-699">650-699 (Tier 3)</option>
-                        <option value="Under650">Sub-650 (Logic Review)</option>
-                    </select>
-                </div>
-                <input type="text" name="address" placeholder="Property Address (FL or CO)" required>
-                <div class="form-grid">
-                    <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
-                    <input type="number" name="loan_request" placeholder="Requested Capital ($)" required>
-                </div>
-                <textarea name="situation_story" placeholder="Briefly describe the situation or distress trigger..." rows="5" required></textarea>
-                <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
-            </form>
-        </div>
-    </section>
-
-    <section class="vault-section">
-        <div class="vault-box">
-            <div style="display: inline-block; padding: 6px 18px; background: rgba(0,123,255,0.15); border: 1px solid #007bff; border-radius: 50px; color: #007bff; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; box-shadow: 0 0 15px rgba(0,123,255,0.2);">
-                <i class="fa-solid fa-shield-halved"></i> Principal Access Only
-            </div>
-            
-            <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: -1px; line-height: 1;">
-                The Vault Protocol<span style="color:#007bff;">.</span>
-            </h2>
-            <p style="font-size: 1.1rem; color: #b0c4de; max-width: 700px; margin: 0 auto 50px; font-weight: 400;">
-                Institutional-grade data scrapers and forensic equity logic, distilled into a single private terminal.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 60px;">
-                
-                <div class="v-pillar">
-                    <i class="fa-solid fa-satellite-dish" style="color: #007bff; font-size: 1.8rem; margin-bottom: 20px; display: block; filter: drop-shadow(0 0 8px rgba(0,123,255,0.4));"></i>
-                    <h3 style="color: #fff; margin: 0 0 12px 0; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Automated Scrapers</h3>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.6;">Access live NED and COP data. Identify high-equity distress 14 days before the general public in FL & CO.</p>
-                </div>
-
-                <div class="v-pillar">
-                    <i class="fa-solid fa-microchip" style="color: #007bff; font-size: 1.8rem; margin-bottom: 20px; display: block; filter: drop-shadow(0 0 8px rgba(0,123,255,0.4));"></i>
-                    <h3 style="color: #fff; margin: 0 0 12px 0; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Equity Gap Analysis</h3>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.6;">Apply the Principal’s logic. Calculate the spread between debt, ARV, and liquidation value instantly.</p>
-                </div>
-
-                <div class="v-pillar">
-                    <i class="fa-solid fa-bolt-lightning" style="color: #007bff; font-size: 1.8rem; margin-bottom: 20px; display: block; filter: drop-shadow(0 0 8px rgba(0,123,255,0.4));"></i>
-                    <h3 style="color: #fff; margin: 0 0 12px 0; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px;">Direct Funding Track</h3>
-                    <p style="color: #94a3b8; font-size: 0.9rem; margin: 0; line-height: 1.6;">Vault deals bypass the queue. Receive a 24-hour forensic underwrite and expedited capital deployment.</p>
-                </div>
-
-            </div>
-
-            <a href="the-vault/index.html" style="display:inline-block; background:#007bff; color:white; padding:24px 70px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; letter-spacing: 1px; box-shadow: 0 15px 30px rgba(0,123,255,0.4); transition: 0.3s;">Reserve My Access — $497</a>
-            
-            <p style="font-size: 0.85rem; color: #64748b; margin-top: 30px; font-weight: 500;">
-                <i class="fa-solid fa-circle-check" style="color: #007bff; margin-right: 5px;"></i> Phase 1 Beta: Only 10 Slots Remaining
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 style="color: #007bff; font-size: 2.5rem;">Forensic Underwriting. Personal Solutions.</h2>
+            <p class="about-text">
+                At Summit Coast Capital, we specialize in forensic real estate underwriting. While traditional banks look for reasons to say "No," we look for the equity and the story behind the property. Our mission is to provide liquidity and solutions for homeowners in distress, ensuring that the equity they've built over years isn't lost to a cold, corporate foreclosure process.
             </p>
         </div>
     </section>
 
-    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; background: #fafafa;">
-        <p>TARPON SPRINGS, FL | ARVADA, CO | (720) 422-1571</p>
-        <p>© 2026 SUMMIT COAST CAPITAL</p>
+    <section id="comparison" class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; color: #007bff; font-size: 2.2rem;">Why Summit Coast Capital?</h2>
+            
+            <div class="flex-container">
+                <div class="card">
+                    <h3 class="bank-title">The Big Banks</h3>
+                    <ul>
+                        <li>❌ 45-60 Day Closing Cycles</li>
+                        <li>❌ Predatory Foreclosure Tactics</li>
+                        <li>❌ Rigid "Box" Underwriting</li>
+                        <li>❌ Zero Personal Support</li>
+                    </ul>
+                </div>
+
+                <div class="card summit-card">
+                    <h3 class="summit-title">Summit Coast</h3>
+                    <ul>
+                        <li>✅ Fast 7-14 Day Funding</li>
+                        <li>✅ Equity Protection Strategies</li>
+                        <li>✅ Creative Financing Solutions</li>
+                        <li>✅ Direct Access to Principals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2>Ready to secure your property's future?</h2>
+            <p>Our principals are standing by to review your file.</p>
+            <a href="mailto:samuel@summitcoastcapital.com" class="btn">REQUEST A REVIEW</a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; color: #666; font-size: 0.9rem;">
+        &copy; 2026 Summit Coast Capital. All Rights Reserved.
     </footer>
 
 </body>
