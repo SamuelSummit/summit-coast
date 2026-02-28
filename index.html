@@ -31,19 +31,15 @@
         .logo-img { width: 220px; height: auto; display: block; }
         .nav-right { display: flex; align-items: center; gap: 25px; }
         .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; }
-        .contact-btn { 
-            background: var(--primary-blue); color: white !important; padding: 10px 20px; 
-            border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.85rem; text-transform: uppercase;
-        }
 
         .hero {
-            width: 100%; text-align: center; padding: 120px 20px; box-sizing: border-box;
+            width: 100%; text-align: center; padding: 140px 20px; box-sizing: border-box;
             background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80');
             background-size: cover; background-position: center;
         }
         h1 { font-size: clamp(2.2rem, 6vw, 4.5rem); letter-spacing: -1px; margin: 0; font-weight: 900; line-height: 1.1; color: var(--navy); }
         .accent { color: var(--primary-blue); }
-        .tagline { font-size: 1.2rem; color: var(--navy); margin: 20px 0 30px 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
+        .tagline { font-size: 1.2rem; color: var(--navy); margin: 20px 0 0 0; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; }
 
         .trust-bar {
             width: 100%; background: var(--navy); color: white; padding: 35px 20px;
@@ -52,6 +48,12 @@
         }
         .trust-item h3 { margin: 0; color: var(--primary-blue); font-size: 2rem; font-weight: 800; }
         .trust-item p { margin: 5px 0 0 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* ABOUT SECTION */
+        .about-section { padding: 100px 5%; background: #fdfdfd; text-align: center; border-bottom: 1px solid var(--border); }
+        .about-container { max-width: 900px; margin: 0 auto; }
+        .about-section h2 { font-size: 2.2rem; font-weight: 800; color: var(--navy); text-transform: uppercase; margin-bottom: 25px; }
+        .about-section p { font-size: 1.15rem; color: var(--gray-sub); line-height: 1.8; }
 
         .section { max-width: 1200px; width: 92%; margin: 60px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
@@ -94,114 +96,6 @@
             <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
         </a>
         <div class="nav-right">
+            <a href="#about" class="nav-link">About</a>
             <a href="#deal-submission" class="nav-link">Submit Deal</a>
-            <a href="#vault" class="nav-link">The Vault</a>
-            <a href="mailto:samuel@summitcoastcapital.com" class="contact-btn">Initiate Funding</a>
-        </div>
-    </div>
-
-    <div class="hero">
-        <h1>STOP CHASING BANKS<span class="accent">.</span><br>START CLOSING DEALS<span class="accent">.</span></h1>
-        <p class="tagline">Direct Asset-Based Funding | 5-7 Day Closings</p>
-        <a href="#deal-submission" style="display:inline-block; padding:18px 45px; font-size:1.1rem; font-weight:800; color:#fff; background:var(--primary-blue); border-radius:4px; text-decoration:none; text-transform:uppercase;">INITIATE FUNDING NOW</a>
-    </div>
-
-    <div class="trust-bar">
-        <div class="trust-item"><h3>16+ YEARS</h3><p>Foreclosure Logic</p></div>
-        <div class="trust-item"><h3>DIRECT</h3><p>Principal Capital</p></div>
-        <div class="trust-item"><h3>5-7 DAYS</h3><p>Avg Closing Speed</p></div>
-        <div class="trust-item"><h3>FL & CO</h3><p>Primary Markets</p></div>
-    </div>
-
-    <section class="section">
-        <h2 style="text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 50px; text-transform: uppercase; color: var(--navy);">Lending Terminal</h2>
-        <div class="grid">
-            <div class="card">
-                <div><h3>Fix & Flip</h3><p>90% Purchase / 100% Rehab funding. Underwritten on asset value.</p></div>
-                <a href="#" class="loan-btn">View Leverage</a>
-            </div>
-            <div class="card">
-                <div><h3>DSCR Rental</h3><p>30-year fixed based on property cash flow. No personal DTI required.</p></div>
-                <a href="#" class="loan-btn">View Rates</a>
-            </div>
-            <div class="card">
-                <div><h3>Bridge & Bailout</h3><p>Principal-led emergency capital for foreclosure and NED scenarios.</p></div>
-                <a href="#" class="loan-btn">View Logic</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="deal-submission" class="form-section">
-        <div class="form-wrap">
-            <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: 2.2rem; text-transform: uppercase;">Asset Underwriting Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 40px;">Submit your scenario for a 24-hour Forensic Review by the Principal.</p>
-            <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
-                <div class="form-grid">
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                </div>
-                <input type="email" name="email" placeholder="Professional Email" required>
-                <div class="form-grid">
-                    <select name="loan_type" required>
-                        <option value="" disabled selected>Select Program</option>
-                        <option value="FixFlip">Fix & Flip</option>
-                        <option value="DSCR">DSCR Rental</option>
-                        <option value="Bridge">Bridge / Bailout</option>
-                    </select>
-                    <select name="credit_estimate" required>
-                        <option value="" disabled selected>Credit Tier</option>
-                        <option value="740+">740+</option>
-                        <option value="700-739">700-739</option>
-                        <option value="650-699">650-699</option>
-                        <option value="Under650">Sub-650</option>
-                    </select>
-                </div>
-                <input type="text" name="address" placeholder="Property Address (FL or CO)" required>
-                <div class="form-grid">
-                    <input type="number" name="arv" placeholder="Estimated ARV ($)" required>
-                    <input type="number" name="loan_request" placeholder="Requested Capital ($)" required>
-                </div>
-                <textarea name="situation_story" placeholder="Briefly describe the situation..." rows="5" required></textarea>
-                <button type="submit" class="submit-btn">INITIATE FORENSIC UNDERWRITE</button>
-            </form>
-        </div>
-    </section>
-
-    <section id="vault" class="vault-section">
-        <div class="vault-box">
-            <div style="display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid #007bff; border-radius: 50px; color: #007bff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px;">
-                <i class="fa-solid fa-lock"></i> Secured Data Terminal
-            </div>
-            <h2 style="font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; margin: 0 0 40px 0; text-transform: uppercase; line-height: 1;">
-                The Vault Protocol<span style="color:#007bff;">.</span>
-            </h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px;">
-                <div class="pillar-card">
-                    <i class="fa-solid fa-satellite-dish" style="color: #007bff; font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
-                    <h3 style="color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase;">Automated Scrapers</h3>
-                    <p style="color: #b0c4de; font-size: 0.85rem; margin: 0; line-height: 1.4;">Access live NED and COP data. Identify high-equity distress 14 days before the general public in FL & CO.</p>
-                </div>
-                <div class="pillar-card">
-                    <i class="fa-solid fa-calculator" style="color: #007bff; font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
-                    <h3 style="color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase;">Equity Gap Analysis</h3>
-                    <p style="color: #b0c4de; font-size: 0.85rem; margin: 0; line-height: 1.4;">Apply the Principal’s logic. Calculate the spread between debt, ARV, and liquidation value instantly.</p>
-                </div>
-                <div class="pillar-card">
-                    <i class="fa-solid fa-bolt" style="color: #007bff; font-size: 1.5rem; margin-bottom: 15px; display: block;"></i>
-                    <h3 style="color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase;">Direct Funding Track</h3>
-                    <p style="color: #b0c4de; font-size: 0.85rem; margin: 0; line-height: 1.4;">Vault deals bypass the queue. Receive a 24-hour forensic underwrite and expedited capital deployment.</p>
-                </div>
-            </div>
-
-            <a href="#" style="display:inline-block; background:#007bff; color:white; padding:22px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; box-shadow: 0 10px 20px rgba(0,123,255,0.3);">Reserve My Access — $497</a>
-            <p style="font-size: 0.8rem; color: #999; margin-top: 25px;">*Only 10 slots remaining for Phase 1 Beta. Access is manually vetted by the Principal.</p>
-        </div>
-    </section>
-
-    <footer style="padding: 80px 5%; text-align: center; color: #999; font-size: 0.85rem; border-top: 1px solid #eee;">
-        <p>TARPON SPRINGS, FL | ARVADA, CO | (720) 422-1571</p>
-        <p>© 2026 SUMMIT COAST CAPITAL</p>
-    </footer>
-</body>
-</html>
+            <a href="#vault" class="nav-link">The
