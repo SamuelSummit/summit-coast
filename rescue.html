@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreclosure Rescue Program | Summit Coast Capital</title>
+    <style>
+        :root {
+            --primary-blue: #002e5d;
+            --rescue-green: #28a745;
+            --danger-red: #d9534f;
+            --light-gray: #f4f7f6;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-gray);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: white;
+            padding: 20px 5%;
+            border-bottom: 3px solid var(--primary-blue);
+            text-align: center;
+        }
+
+        .hero {
+            background: var(--primary-blue);
+            color: white;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .card.auction { border-top: 8px solid var(--danger-red); }
+        .card.rescue { border-top: 8px solid var(--rescue-green); background-color: #f9fffb; }
+
+        .card h3 { margin-top: 0; }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefit-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .auction-list li::before { content: "❌"; position: absolute; left: 0; }
+        .rescue-list li::before { content: "✅"; position: absolute; left: 0; }
+
+        .cta-box {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: #f0f4f8;
+            border-radius: 8px;
+        }
+
+        .btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover { transform: scale(1.05); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="font-size: 24px; font-weight: bold; color: var(--primary-blue);">SUMMIT COAST CAPITAL</div>
+</header>
+
+<div class="hero">
+    <h1>Stop Foreclosure. Save Your Equity.</h1>
+    <p>Specialized Rescue Loans for Denver & Tampa Bay Homeowners.</p>
+</div>
+
+<div class="container">
+    <p style="font-size: 1.1rem; text-align: center; color: #555;">
+        Facing a foreclosure auction date? You don't have to lose your home's value. 
+        Our <strong>Equity Rescue Program</strong> provides immediate bridge capital to cure your default and stop the auction.
+    </p>
+
+    <div class="comparison-grid">
+        <div class="card auction">
+            <h3 style="color: var(--danger-red);">The Auction Outcome</h3>
+            <ul class="benefit-list auction-list">
+                <li><strong>Homeowner Walkaway:</strong> Usually $0</li>
+                <li><strong>Credit Impact:</strong> 7-Year Foreclosure Record</li>
+                <li><strong>Timeline:</strong> Bank dictates the date</li>
+                <li><strong>Asset:</strong> You lose the house and the equity</li>
+            </ul>
+        </div>
+
+        <div class="card rescue">
+            <h3 style="color: var(--rescue-green);">The Summit Coast Rescue</h3>
+            <ul class="benefit-list rescue-list">
+                <li><strong>Homeowner Walkaway:</strong> Keep your Equity ($$$)</li>
+                <li><strong>Credit Impact:</strong> Default Cured Immediately</li>
+                <li><strong>Timeline:</strong> We fund in 48-72 hours</li>
+                <li><strong>Asset:</strong> You keep control of the home</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cta-box">
+        <h2>Is your equity worth saving?</h2>
+        <p>If you have at least 25% equity in your home, we can help you stop the foreclosure process today.</p>
+        <a href="tel:7204221571" class="btn">Call for a Rescue Quote: 720-422-1571</a>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Private Funds Available. No Credit Check Required for Equity Loans.</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Summit Coast Capital. All Rights Reserved. <br>
+    Denver Office | Tampa Office <br>
+    Licensed Private Lender
+</footer>
+
+</body>
+</html>
