@@ -20,26 +20,26 @@
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; overflow-x: hidden; }
 
-        /* UTILITY & HEADER */
+        /* HEADER & UTILITY - MATCHED TO INDEX.HTML */
         .utility-bar { width: 100%; background: var(--navy); color: white; padding: 8px 5%; display: flex; justify-content: flex-end; font-size: 0.8rem; font-weight: 600; box-sizing: border-box; }
         .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
         .header-container { width: 100%; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-sizing: border-box; }
         .logo-img { width: clamp(140px, 18vw, 220px); height: auto; }
         .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: clamp(0.7rem, 2vw, 0.9rem); text-transform: uppercase; margin-left: 20px; }
 
-        /* HERO */
+        /* HERO - FORENSIC THEME */
         .hero { width: 100%; text-align: center; padding: clamp(60px, 10vh, 120px) 20px; background: linear-gradient(rgba(0,18,32,0.92), rgba(0,18,32,0.95)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; color: white; }
         h1 { font-size: clamp(1.8rem, 6vw, 4rem); font-weight: 900; margin: 0; line-height: 1.1; text-transform: uppercase; }
         .accent { color: var(--primary-blue); }
 
-        /* THE COMPARISON GRID */
+        /* COMPARISON GRID */
         .section { max-width: 1200px; width: 92%; margin: 40px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .rescue-card { background: #fff; padding: 40px 25px; border-radius: 12px; border: 1px solid var(--border); border-top: 8px solid var(--primary-blue); text-align: left; }
         .danger-card { border-top: 8px solid var(--danger-red); }
         .success-card { border-top: 8px solid var(--rescue-green); background: #f9fffb; box-shadow: 0 10px 30px rgba(40, 167, 69, 0.1); }
 
-        /* FORM */
+        /* FORM SECTION */
         .form-section { background: #f8f9fa; padding: clamp(50px, 10vw, 100px) 5%; border-bottom: 1px solid var(--border); }
         .form-wrap { max-width: 800px; margin: 0 auto; background: #fff; padding: clamp(25px, 5vw, 60px); border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -71,36 +71,36 @@
     <div class="hero">
         <h1>STOP THE AUCTION<span class="accent">.</span><br>SAVE YOUR EQUITY<span class="accent">.</span></h1>
         <div style="font-size: clamp(0.9rem, 2.5vw, 1.3rem); color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block;">
-            Foreclosure Rescue Loans | CO & FL
+            Private Equity Rescue | Colorado & Florida
         </div>
     </div>
 
     <section class="section" style="text-align:center;">
-        <h2 style="font-weight: 900; text-transform: uppercase;">The Equity Preservation Protocol</h2>
+        <h2 style="font-weight: 900; text-transform: uppercase;">Forensic Preservation Protocol</h2>
         <p style="max-width:850px; margin:0 auto; font-size:1.1rem; color:var(--gray-sub);">
-            At Summit Coast Capital, we specialize in forensic real estate underwriting. Leveraging over <strong>16 years of experience</strong>, we provide the emergency liquidity homeowners need to bypass institutional foreclosures. We approve the equity, not the credit score.
+            At Summit Coast Capital, we specialize in forensic real estate underwriting. Leveraging <strong>16 years of experience</strong>, we provide the liquidity homeowners need to bypass institutional foreclosures. We approve the equity, not the credit score.
         </p>
     </section>
 
     <section class="section">
         <div class="grid">
             <div class="rescue-card danger-card">
-                <h3 style="color: var(--danger-red); font-weight: 900;">THE AUCTION PATH</h3>
-                <p>Doing nothing results in total asset forfeiture:</p>
-                <ul style="list-style: none; padding: 0; line-height: 2;">
+                <h3 style="color: var(--danger-red); font-weight: 900; text-transform: uppercase;">The Auction Outcome</h3>
+                <p>If you take no action, the bank takes the value:</p>
+                <ul style="list-style: none; padding: 0; line-height: 2.2;">
                     <li><i class="fa-solid fa-xmark" style="color: var(--danger-red);"></i> Homeowner Walkaway: <strong>$0</strong></li>
-                    <li><i class="fa-solid fa-xmark" style="color: var(--danger-red);"></i> Credit Standing: <strong>7-Year Damage</strong></li>
-                    <li><i class="fa-solid fa-xmark" style="color: var(--danger-red);"></i> 100% Equity Loss to the Bank</li>
+                    <li><i class="fa-solid fa-xmark" style="color: var(--danger-red);"></i> Credit Impact: <strong>7-Year Record</strong></li>
+                    <li><i class="fa-solid fa-xmark" style="color: var(--danger-red);"></i> Full Equity Loss to Lender</li>
                 </ul>
             </div>
 
             <div class="rescue-card success-card">
-                <h3 style="color: var(--rescue-green); font-weight: 900;">THE RESCUE BRIDGE</h3>
-                <p>Our forensic bridge loan preserves your wealth:</p>
-                <ul style="list-style: none; padding: 0; line-height: 2;">
+                <h3 style="color: var(--rescue-green); font-weight: 900; text-transform: uppercase;">The Rescue Bridge</h3>
+                <p>Our bridge loan cures the default immediately:</p>
+                <ul style="list-style: none; padding: 0; line-height: 2.2;">
                     <li><i class="fa-solid fa-check" style="color: var(--rescue-green);"></i> <strong>You Preserve Your Equity</strong></li>
-                    <li><i class="fa-solid fa-check" style="color: var(--rescue-green);"></i> Default Cured in 48-72 Hours</li>
-                    <li><i class="fa-solid fa-check" style="color: var(--rescue-green);"></i> Immediate Stop to Auction Sale</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--rescue-green);"></i> Auction Stopped in 48-72 Hours</li>
+                    <li><i class="fa-solid fa-check" style="color: var(--rescue-green);"></i> You Maintain Title & Control</li>
                 </ul>
             </div>
         </div>
@@ -109,9 +109,11 @@
     <section id="rescue-underwrite" class="form-section">
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.2rem); text-transform: uppercase;">Rescue Submission Terminal</h2>
-            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 30px;">Direct Principal review for emergency capital within 24 hours.</p>
+            <p style="text-align: center; color: var(--gray-sub); margin-bottom: 30px;">Emergency capital underwriting within 24 hours.</p>
             
             <form action="https://formspree.io/f/xbdaqkjv" method="POST">
+                <input type="hidden" name="_subject" value="URGENT: New Rescue Submission">
+                
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
@@ -120,11 +122,11 @@
                 <input type="text" name="property_address" placeholder="Property Address (CO or FL)" required>
                 
                 <div class="form-grid">
-                    <input type="text" name="est_arrearage" placeholder="Arrearage Amount ($)" required>
-                    <input type="text" name="est_value" placeholder="Home Value ($)" required>
+                    <input type="text" name="est_arrearage" placeholder="Estimated Arrearage ($)" required>
+                    <input type="text" name="est_value" placeholder="Estimated Home Value ($)" required>
                 </div>
                 
-                <textarea name="situation" placeholder="Foreclosure status and timeline..." rows="5" required></textarea>
+                <textarea name="situation" placeholder="Describe the current status and auction date..." rows="5" required></textarea>
                 
                 <button type="submit" class="submit-btn">INITIATE RESCUE UNDERWRITE</button>
             </form>
