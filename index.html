@@ -17,7 +17,6 @@
         * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); font-family: 'Segoe UI', Roboto, sans-serif; line-height: 1.6; overflow-x: hidden; }
-
         /* HEADER & UTILITY */
         .utility-bar { width: 100%; background: var(--navy); color: white; padding: 8px 5%; display: flex; justify-content: flex-end; font-size: 0.8rem; font-weight: 600; box-sizing: border-box; }
         .utility-bar a { color: white; text-decoration: none; margin-left: 20px; display: flex; align-items: center; gap: 8px; }
@@ -25,44 +24,31 @@
         .logo-img { width: clamp(140px, 18vw, 220px); height: auto; }
         .nav-right { display: flex; align-items: center; gap: clamp(10px, 3vw, 25px); }
         .nav-link { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: clamp(0.7rem, 2vw, 0.9rem); text-transform: uppercase; }
-
         /* HERO & SLOGAN */
         .hero { width: 100%; text-align: center; padding: clamp(60px, 10vh, 120px) 20px; background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
         h1 { font-size: clamp(1.8rem, 6vw, 4.5rem); font-weight: 900; color: var(--navy); margin: 0; line-height: 1.1; }
         .accent { color: var(--primary-blue); }
         .slogan-highlight { font-size: clamp(0.9rem, 2.5vw, 1.3rem); color: var(--primary-blue); font-weight: 900; text-transform: uppercase; margin-top: 15px; border-top: 2px solid var(--primary-blue); padding-top: 10px; display: inline-block; }
-
         /* TRUST BAR - 16YRS / 5-7 DAY CLOSE */
         .trust-bar { background: #f8f9fa; padding: 20px 5%; display: flex; justify-content: center; gap: clamp(20px, 10vw, 100px); border-bottom: 1px solid var(--border); }
         .trust-item { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--navy); text-transform: uppercase; font-size: clamp(0.7rem, 2vw, 0.9rem); }
         .trust-item i { color: var(--primary-blue); font-size: 1.2rem; }
-
         /* ABOUT */
         .section { max-width: 1200px; width: 92%; margin: 40px auto; padding: 20px 0; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .card { background: #fff; padding: 40px 25px; border-radius: 12px; border: 1px solid var(--border); border-top: 5px solid var(--primary-blue); display: flex; flex-direction: column; align-items: center; text-align: center; }
         .view-btn { margin-top: 20px; padding: 12px 40px; background: transparent; color: var(--primary-blue); border: 2px solid var(--primary-blue); text-decoration: none; font-weight: bold; text-align: center; border-radius: 4px; transition: 0.3s; text-transform: uppercase; font-size: 0.85rem; width: fit-content; }
-
         /* DATA FORM */
         .form-section { background: #f8f9fa; padding: clamp(50px, 10vw, 100px) 5%; border-bottom: 1px solid var(--border); }
         .form-wrap { max-width: 900px; margin: 0 auto; background: #fff; padding: clamp(25px, 5vw, 60px); border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 15px 50px rgba(0,0,0,0.05); }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         input, textarea, select { width: 100%; padding: 18px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; font-size: 16px; }
         .submit-btn { background: var(--primary-blue); color: white; border: none; padding: 22px; font-size: 1.1rem; font-weight: 900; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 25px; text-transform: uppercase; }
-
         /* VAULT */
         .vault-box { max-width: 1200px; margin: 0 auto; padding: clamp(40px, 8vw, 80px) 30px; color: white; text-align: center; border-radius: 24px; background: linear-gradient(135deg, rgba(0, 18, 32, 0.95), rgba(0, 40, 70, 0.9)); position: relative; }
         .pillar-card { text-decoration: none; background: rgba(255,255,255,0.07); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left; display: block; color: inherit; }
-
         /* MOBILE FIXES */
-        @media (max-width: 768px) { 
-            .utility-bar { display: none; }
-            .header-container { padding: 12px 5%; }
-            .form-grid { grid-template-columns: 1fr; } 
-            .view-btn { width: 100%; }
-            .vault-box { border-radius: 0; width: 100vw; margin-left: calc(-50vw + 50%); }
-            .trust-bar { flex-direction: column; align-items: center; gap: 15px; }
-        }
+        @media (max-width: 768px) { .utility-bar { display: none; } .header-container { padding: 12px 5%; } .form-grid { grid-template-columns: 1fr; } .view-btn { width: 100%; } .vault-box { border-radius: 0; width: 100vw; margin-left: calc(-50vw + 50%); } .trust-bar { flex-direction: column; align-items: center; gap: 15px; } }
     </style>
 </head>
 <body>
@@ -70,34 +56,30 @@
         <a href="tel:7204221571"><i class="fa-solid fa-phone"></i> (720) 422-1571</a>
         <a href="mailto:samuel@summitcoastcapital.com"><i class="fa-solid fa-envelope"></i> CONTACT PRINCIPAL</a>
     </div>
-
     <div class="header-container">
         <img src="LOGO.png" alt="Summit Coast Capital" class="logo-img">
         <div class="nav-right">
             <a href="#about" class="nav-link">About</a>
             <a href="#terminal" class="nav-link">Lending</a>
+            <a href="rescue.html" class="nav-link" style="color:var(--primary-blue);">Rescue</a>
             <a href="#deal-submission" class="nav-link">Submit</a>
-            <a href="the-vault/index.html" class="nav-link" style="color:var(--primary-blue);">Vault</a>
+            <a href="the-vault/index.html" class="nav-link">Vault</a>
         </div>
     </div>
-
     <div class="hero">
         <h1>STOP CHASING BANKS<span class="accent">.</span><br>START CLOSING DEALS<span class="accent">.</span></h1>
         <div class="slogan-highlight">WE APPROVE THE ASSET, NOT THE PERSON.</div>
     </div>
-
     <div class="trust-bar">
         <div class="trust-item"><i class="fa-solid fa-calendar-check"></i> 16 Years Sales & Foreclosure Exp.</div>
         <div class="trust-item"><i class="fa-solid fa-bolt"></i> 5-7 Day Fast Closings</div>
     </div>
-
     <section id="about" class="section" style="text-align:center;">
         <h2 style="font-weight: 900; text-transform: uppercase;">Our Forensic Approach</h2>
         <p style="max-width:850px; margin:0 auto; font-size:1.1rem; color:var(--gray-sub);">
             At Summit Coast Capital, we specialize in forensic real estate underwriting. Leveraging over <strong>16 years of experience</strong> in sales and foreclosures, we provide homeowners and investors the liquidity to bypass institutional red tape. While banks look for "No," we look for the story and the equity.
         </p>
     </section>
-
     <section id="terminal" class="section">
         <h2 style="text-align: center; font-weight: 800; margin-bottom: 40px; text-transform: uppercase; color: var(--navy);">Lending Terminal</h2>
         <div class="grid">
@@ -115,12 +97,13 @@
             </div>
         </div>
     </section>
-
     <section id="deal-submission" class="form-section">
         <div class="form-wrap">
             <h2 style="text-align: center; margin-bottom: 10px; font-weight: 900; font-size: clamp(1.5rem, 4vw, 2.2rem); text-transform: uppercase;">Asset Underwriting Terminal</h2>
             <p style="text-align: center; color: var(--gray-sub); margin-bottom: 30px;">Submit your scenario for a 24-hour Forensic Review by the Principal.</p>
             <form id="deal-form" action="https://formspree.io/f/xbdaqkjv" method="POST">
+                <input type="hidden" name="_subject" value="New Loan Inquiry: Summit Coast Capital">
+                
                 <div class="form-grid">
                     <input type="text" name="first_name" placeholder="First Name" required>
                     <input type="text" name="last_name" placeholder="Last Name" required>
@@ -147,7 +130,6 @@
             </form>
         </div>
     </section>
-
     <section class="section">
         <div class="vault-box">
             <div style="display: inline-block; padding: 5px 15px; background: rgba(0,123,255,0.2); border: 1px solid #007bff; border-radius: 50px; color: #007bff; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px;">
@@ -169,7 +151,6 @@
             <a href="the-vault/index.html" style="display:inline-block; background:#007bff; color:white; padding:20px 60px; text-decoration:none; border-radius:4px; font-weight:900; text-transform:uppercase; width: 100%; box-sizing: border-box;">Reserve Access — $497</a>
         </div>
     </section>
-
     <footer style="padding: 60px 5%; text-align: center; color: #999; font-size: 0.8rem; border-top: 1px solid #eee;">
         <p>TARPON SPRINGS, FL | ARVADA, CO | (720) 422-1571</p>
         <p>© 2026 SUMMIT COAST CAPITAL</p>
